@@ -146,6 +146,32 @@ def norm_date(v):
         return s
 
 
+_OG_CACHE = {}
+
+def fetch_og_image(url):
+    if not url or url == "#":
+        return ""
+    if url in _OG_CACHE:
+        return _OG_CACHE[url]
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=20, allow_redirects=True)
+        if r.status_code != 200:
+            _OG_CACHE[url] = ""
+            return ""
+        m = re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']', r.text, re.I)
+        if not m:
+            m = re.search(r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']', r.text, re.I)
+        if not m:
+            m = re.search(r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)["\']', r.text, re.I)
+        img = m.group(1).strip() if m else ""
+        if img and not img.startswith("http"):
+            img = urljoin(url, img)
+        _OG_CACHE[url] = img
+        return img
+    except Exception:
+        _OG_CACHE[url] = ""
+        return ""
+
 def clean_text(s):
     if s is None:
         return ""
@@ -207,6 +233,8 @@ def parse_jsonld(html_text, source_name, base_url):
                 image = image[0] if image else ""
             if isinstance(image, dict):
                 image = image.get("url", "")
+            if not image:
+                image = fetch_og_image(e.get("url") or base_url)
             url = e.get("url") or base_url
             desc = clean_text(e.get("description", ""))
             category = e.get("eventCategory") or e.get("category")
@@ -302,6 +330,8 @@ def parse_eventbrite(html_text, source_name, base_url):
         # image
         imgs = container.xpath('.//img')
         image = imgs[0].get("src", "") if imgs else ""
+        if not image:
+            image = fetch_og_image(url)
         # paragraphs for date/location
         ps = [clean_text(p.text_content()) for p in container.xpath('.//p')]
         date_text = ""
