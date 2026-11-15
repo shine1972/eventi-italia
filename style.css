@@ -173,6 +173,9 @@ body {
 .g-result a { color: var(--primary); font-weight: 600; text-decoration: none; }
 .g-result a:hover { text-decoration: underline; }
 .g-result .snippet { font-size: 0.88rem; color: var(--muted); margin-top: 4px; }
+.g-result { display: flex; gap: 12px; align-items: flex-start; }
+.g-thumb { width: 80px; height: 60px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+.g-result-body { flex: 1; min-width: 0; }
 .g-loading { color: var(--muted); font-style: italic; }
 .checkbox-field {
   display: flex; align-items: center; gap: 8px;

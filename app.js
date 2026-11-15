@@ -291,8 +291,8 @@
   els.scrollTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
   // Google Custom Search
-  const G_API_KEY = "AIzaSyBzatinKBAVTH0zrYEjVsLuU8lUS4rShSc";
-  const G_CX = "94c5f550c6c6449ac";
+  const G_API_KEY = "__GOOGLE_API_KEY__";
+  const G_CX = "__GOOGLE_CX__";
 
   function cacheKey(q) { return "gsearch:" + q.toLowerCase().trim(); }
   function getCached(q) {
@@ -330,12 +330,18 @@
   function renderGoogleResults(items) {
     const container = els.gResults;
     if (!items.length) { container.innerHTML = '<div class="g-loading">Nessun risultato.</div>'; return; }
-    container.innerHTML = items.map(it => `
+    container.innerHTML = items.map(it => {
+      const thumb = (it.pagemap?.cse_thumbnail?.[0]?.src) || (it.pagemap?.cse_image?.[0]?.src) || "";
+      const imgHtml = thumb ? `<img class="g-thumb" src="${escapeHtml(thumb)}" alt="" loading="lazy" />` : "";
+      return `
       <div class="g-result">
-        <a href="${escapeHtml(it.link)}" target="_blank" rel="noopener">${escapeHtml(it.title)}</a>
-        <div class="snippet">${escapeHtml(it.snippet || "")}</div>
-      </div>
-    `).join("");
+        ${imgHtml}
+        <div class="g-result-body">
+          <a href="${escapeHtml(it.link)}" target="_blank" rel="noopener">${escapeHtml(it.title)}</a>
+          <div class="snippet">${escapeHtml(it.snippet || "")}</div>
+        </div>
+      </div>`;
+    }).join("");
   }
 
   els.gQuery = document.getElementById("gQuery");
