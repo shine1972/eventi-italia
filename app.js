@@ -25,7 +25,6 @@
     modalBody: document.getElementById("modalBody"),
     themeToggle: document.getElementById("themeToggle"),
     scrollTop: document.getElementById("scrollTop"),
-    sagreLink: document.getElementById("sagreLink"),
   };
 
   function escapeHtml(s) {
@@ -131,15 +130,6 @@
     fillSelect(els.city, cities, "Tutte le città");
   }
 
-  function updateSagreLink() {
-    const city = state.filters.city || state.filters.region || "";
-    const q = city ? encodeURIComponent("sagre " + city) : encodeURIComponent("sagre italia");
-    if (els.sagreLink) {
-      els.sagreLink.href = "https://www.google.com/search?q=" + q;
-      els.sagreLink.textContent = city ? "🔍 Cerca sagre a " + city : "🔍 Cerca sagre online";
-    }
-  }
-
   function applyFilters() {
     const f = state.filters;
     let list = state.events.filter(e => {
@@ -190,7 +180,6 @@
           </div>
           <div class="card-actions">
             <button class="btn btn-ghost" data-detail="${escapeHtml(e.id)}">Dettagli</button>
-            ${e.url && e.url !== "#" ? `<a class="btn btn-primary" href="${escapeHtml(e.url)}" target="_blank" rel="noopener">Vai al sito ↗</a>` : ""}
           </div>
         </div>`;
       els.grid.appendChild(card);
@@ -213,7 +202,6 @@
         <div>🏷️ <span style="color:${color};font-weight:600">${escapeHtml(e.category || "Evento")}</span> · Fonte: ${escapeHtml(e.source || "-")}</div>
       </div>
       ${e.description ? `<p class="desc">${escapeHtml(e.description)}</p>` : ""}
-      ${e.url && e.url !== "#" ? `<div class="modal-actions"><a class="btn btn-primary" href="${escapeHtml(e.url)}" target="_blank" rel="noopener">Apri pagina ufficiale ↗</a></div>` : ""}
     `;
     els.modal.hidden = false;
     document.body.style.overflow = "hidden";
@@ -233,19 +221,18 @@
     state.filters.city = "";
     cascadedOptions();
     applyFilters();
-    updateSagreLink();
   });
   els.province.addEventListener("change", e => {
     state.filters.province = e.target.value;
     state.filters.city = "";
     cascadedOptions();
     applyFilters();
-    updateSagreLink();
+
   });
   els.city.addEventListener("change", e => {
     state.filters.city = e.target.value;
     applyFilters();
-    updateSagreLink();
+
   });
 
   els.dateFrom.addEventListener("change", e => { state.filters.dateFrom = e.target.value; applyFilters(); });
@@ -303,7 +290,7 @@
       populateFilters();
       cascadedOptions();
       applyFilters();
-      updateSagreLink();
+  
     } catch (err) {
       els.loading.innerHTML = `<div class="empty"><div class="empty-illustration">⚠️</div><h3>Impossibile caricare gli eventi</h3><p>${escapeHtml(err.message)}</p></div>`;
       console.error(err);
