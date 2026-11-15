@@ -26,6 +26,9 @@
     modalBody: document.getElementById("modalBody"),
     themeToggle: document.getElementById("themeToggle"),
     scrollTop: document.getElementById("scrollTop"),
+    gQuery: null,
+    gSearchBtn: null,
+    gResults: null,
   };
 
   function escapeHtml(s) {
@@ -286,6 +289,60 @@
     els.scrollTop.classList.toggle("show", window.scrollY > 400);
   });
   els.scrollTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+  // Google Custom Search
+  const G_API_KEY = "AIzaSyBzatinKBAVTH0zrYEjVsLuU8lUS4rShSc";
+  const G_CX = "94c5f550c6c6449ac";
+
+  function cacheKey(q) { return "gsearch:" + q.toLowerCase().trim(); }
+  function getCached(q) {
+    try {
+      const raw = localStorage.getItem(cacheKey(q));
+      if (!raw) return null;
+      const obj = JSON.parse(raw);
+      if (Date.now() - obj.ts > 24 * 60 * 60 * 1000) { localStorage.removeItem(cacheKey(q)); return null; }
+      return obj.data;
+    } catch { return null; }
+  }
+  function setCached(q, data) {
+    try { localStorage.setItem(cacheKey(q), JSON.stringify({ ts: Date.now(), data })); } catch {}
+  }
+
+  async function googleSearch() {
+    const q = (els.gQuery.value || "").trim();
+    if (!q) return;
+    const container = els.gResults;
+    container.innerHTML = '<div class="g-loading">Ricerca in corso...</div>';
+    const cached = getCached(q);
+    if (cached) { renderGoogleResults(cached); return; }
+    try {
+      const url = `https://www.googleapis.com/customsearch/v1?key=${encodeURIComponent(G_API_KEY)}&cx=${encodeURIComponent(G_CX)}&q=${encodeURIComponent(q)}&num=8`;
+      const res = await fetch(url);
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const data = await res.json();
+      const items = data.items || [];
+      setCached(q, items);
+      renderGoogleResults(items);
+    } catch (err) {
+      container.innerHTML = `<div class="g-loading">Errore ricerca: ${escapeHtml(err.message)}</div>`;
+    }
+  }
+  function renderGoogleResults(items) {
+    const container = els.gResults;
+    if (!items.length) { container.innerHTML = '<div class="g-loading">Nessun risultato.</div>'; return; }
+    container.innerHTML = items.map(it => `
+      <div class="g-result">
+        <a href="${escapeHtml(it.link)}" target="_blank" rel="noopener">${escapeHtml(it.title)}</a>
+        <div class="snippet">${escapeHtml(it.snippet || "")}</div>
+      </div>
+    `).join("");
+  }
+
+  els.gQuery = document.getElementById("gQuery");
+  els.gSearchBtn = document.getElementById("gSearchBtn");
+  els.gResults = document.getElementById("gResults");
+  els.gSearchBtn.addEventListener("click", googleSearch);
+  els.gQuery.addEventListener("keydown", e => { if (e.key === "Enter") googleSearch(); });
 
   // load data
   async function load() {
