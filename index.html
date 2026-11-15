@@ -24,6 +24,7 @@
         <span class="logo">📅</span>
         <span class="brand-name">Eventi Locali</span>
       </div>
+      <button id="prolocoBtn" class="btn-reset" style="margin-right:8px;">🏛️ Area Pro Loco</button>
       <button id="themeToggle" class="theme-toggle" aria-label="Cambia tema">
         <span class="theme-icon">🌙</span>
       </button>
@@ -163,6 +164,15 @@
     </div>
   </div>
 
+  <div id="prolocoModal" class="modal" hidden>
+    <div class="modal-backdrop" data-close-proloco></div>
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button class="modal-close" data-close-proloco aria-label="Chiudi">×</button>
+      <div id="prolocoBody"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="app.js"></script>
 </body>
 </html>

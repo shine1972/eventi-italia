@@ -1,4 +1,8 @@
 (() => {
+  const SUPABASE_URL = "https://fnhzcphwfedmhoigyyet.supabase.co";
+  const SUPABASE_KEY = "sb_publishable_jos0Aj1lGdA_khgaiqXCTA___I4B6gL";
+  const supabase = (window.supabase) ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
+
   const state = {
     events: [],
     filtered: [],
@@ -28,6 +32,9 @@
     modalBody: document.getElementById("modalBody"),
     themeToggle: document.getElementById("themeToggle"),
     scrollTop: document.getElementById("scrollTop"),
+    prolocoBtn: document.getElementById("prolocoBtn"),
+    prolocoModal: document.getElementById("prolocoModal"),
+    prolocoBody: document.getElementById("prolocoBody"),
     gQuery: null,
     gSearchBtn: null,
     gResults: null,
@@ -346,6 +353,100 @@
   });
   els.scrollTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
+  // Area Pro Loco
+  async function renderProlocoModal() {
+    if (!els.prolocoBody) return;
+    if (!supabase) { els.prolocoBody.innerHTML = "<p>Supabase non disponibile.</p>"; return; }
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) {
+      els.prolocoBody.innerHTML = `
+        <h2>🏛️ Area Pro Loco</h2>
+        <p>Accedi per inserire le sagre del tuo comune.</p>
+        <div class="field" style="margin-bottom:10px;"><input type="email" id="plEmail" placeholder="Email" /></div>
+        <div class="field" style="margin-bottom:10px;"><input type="password" id="plPassword" placeholder="Password" /></div>
+        <div style="display:flex;gap:8px;">
+          <button class="btn btn-primary" id="plLogin">Accedi</button>
+          <button class="btn btn-ghost" id="plSignup">Registrati</button>
+        </div>
+        <p id="plMsg" style="margin-top:10px;color:var(--muted);"></p>
+      `;
+      document.getElementById("plLogin").onclick = async () => {
+        const email = document.getElementById("plEmail").value;
+        const password = document.getElementById("plPassword").value;
+        const { error } = await supabase.auth.signInWithPassword({ email, password });
+        if (error) document.getElementById("plMsg").textContent = "Errore: " + error.message;
+        else { document.getElementById("plMsg").textContent = "Accesso effettuato!"; renderProlocoModal(); }
+      };
+      document.getElementById("plSignup").onclick = async () => {
+        const email = document.getElementById("plEmail").value;
+        const password = document.getElementById("plPassword").value;
+        const { error } = await supabase.auth.signUp({ email, password });
+        if (error) document.getElementById("plMsg").textContent = "Errore: " + error.message;
+        else document.getElementById("plMsg").textContent = "Registrazione completata. Controlla la email.";
+      };
+    } else {
+      els.prolocoBody.innerHTML = `
+        <h2>🏛️ Inserisci una sagra</h2>
+        <p>Accesso: ${escapeHtml(user.email)}</p>
+        <div class="field" style="margin-bottom:8px;"><input type="text" id="plTitle" placeholder="Titolo sagra" /></div>
+        <div class="field" style="margin-bottom:8px;"><textarea id="plDesc" placeholder="Descrizione" rows="3" style="flex:1;border:none;background:transparent;color:var(--text);outline:none;font-family:inherit;"></textarea></div>
+        <div class="field" style="margin-bottom:8px;"><input type="datetime-local" id="plDate" /></div>
+        <div class="field" style="margin-bottom:8px;"><input type="text" id="plCity" placeholder="Città" /></div>
+        <div class="field" style="margin-bottom:8px;"><input type="text" id="plProvince" placeholder="Provincia" /></div>
+        <div class="field" style="margin-bottom:8px;"><input type="text" id="plRegion" placeholder="Regione (Lazio/Umbria)" /></div>
+        <div class="field" style="margin-bottom:8px;"><input type="text" id="plCategory" placeholder="Categoria (es. Sagre & Enogastronomia)" /></div>
+        <div class="field" style="margin-bottom:8px;"><input type="url" id="plImage" placeholder="URL immagine (opzionale)" /></div>
+        <div style="display:flex;gap:8px;margin-top:10px;">
+          <button class="btn btn-primary" id="plSubmit">Pubblica sagra</button>
+          <button class="btn btn-ghost" id="plLogout">Esci</button>
+        </div>
+        <p id="plMsg" style="margin-top:10px;color:var(--muted);"></p>
+      `;
+      document.getElementById("plLogout").onclick = async () => {
+        await supabase.auth.signOut();
+        renderProlocoModal();
+      };
+      document.getElementById("plSubmit").onclick = async () => {
+        const title = document.getElementById("plTitle").value.trim();
+        if (!title) { document.getElementById("plMsg").textContent = "Inserisci il titolo."; return; }
+        const { error } = await supabase.from("events").insert({
+          title,
+          description: document.getElementById("plDesc").value.trim(),
+          start_date: document.getElementById("plDate").value || null,
+          city: document.getElementById("plCity").value.trim(),
+          province: document.getElementById("plProvince").value.trim(),
+          region: document.getElementById("plRegion").value.trim(),
+          category: document.getElementById("plCategory").value.trim() || "Sagre & Enogastronomia",
+          image_url: document.getElementById("plImage").value.trim(),
+          source: "Pro Loco",
+          created_by: user.id
+        });
+        if (error) document.getElementById("plMsg").textContent = "Errore: " + error.message;
+        else {
+          document.getElementById("plMsg").textContent = "Sagra pubblicata!";
+          // ricarica eventi
+          load();
+        }
+      };
+    }
+  }
+
+  if (els.prolocoBtn) {
+    els.prolocoBtn.addEventListener("click", () => {
+      els.prolocoModal.hidden = false;
+      document.body.style.overflow = "hidden";
+      renderProlocoModal();
+    });
+  }
+  if (els.prolocoModal) {
+    els.prolocoModal.addEventListener("click", e => {
+      if (e.target.hasAttribute("data-close-proloco")) {
+        els.prolocoModal.hidden = true;
+        document.body.style.overflow = "";
+      }
+    });
+  }
+
   // Google Custom Search
   const G_API_KEY = "__GOOGLE_API_KEY__";
   const G_CX = "__GOOGLE_CX__";
@@ -407,16 +508,51 @@
   els.gQuery.addEventListener("keydown", e => { if (e.key === "Enter") googleSearch(); });
 
   // load data
+  function mapSupabaseEvent(row) {
+    return {
+      id: row.id,
+      title: row.title,
+      description: row.description || "",
+      startDate: row.start_date,
+      endDate: row.end_date,
+      location: {
+        name: "",
+        address: row.city || "",
+        city: row.city || "",
+        region: row.region || "",
+        province: row.province || row.city || ""
+      },
+      category: row.category || "Altro",
+      image: row.image_url || "",
+      url: "#",
+      source: row.source || "Pro Loco"
+    };
+  }
+
   async function load() {
     try {
       const [res, resComuni] = await Promise.all([
         fetch("data/events.json", { cache: "no-store" }),
         fetch("data/comuni.json", { cache: "no-store" })
       ]);
-      if (!res.ok) throw new Error("HTTP " + res.status);
-      const data = await res.json();
-      state.events = Array.isArray(data.events) ? data.events : [];
       if (resComuni.ok) state.comuni = await resComuni.json();
+
+      // Prova a caricare eventi da Supabase
+      let loaded = false;
+      if (supabase) {
+        try {
+          const { data: sbData, error } = await supabase.from("events").select("*").order("start_date", { ascending: true });
+          if (!error && sbData && sbData.length) {
+            state.events = sbData.map(mapSupabaseEvent);
+            loaded = true;
+          }
+        } catch (e) { console.warn("Supabase load failed", e); }
+      }
+      if (!loaded) {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const data = await res.json();
+        state.events = Array.isArray(data.events) ? data.events : [];
+      }
       els.updated.textContent = data.updated ? new Date(data.updated).toLocaleDateString("it-IT", { day: "2-digit", month: "short", year: "numeric" }) : "-";
       populateFilters();
       cascadedOptions();
