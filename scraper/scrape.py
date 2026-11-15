@@ -33,6 +33,7 @@ SOURCES = [
     {
         "name": "Zero",
         "kind": "jsonld",
+        "max_pages": 2,
         "urls": [
             "https://www.zero.eu/it/milano/eventi/",
             "https://www.zero.eu/it/roma/eventi/",
@@ -45,6 +46,7 @@ SOURCES = [
     {
         "name": "Eventbrite",
         "kind": "eventbrite",
+        "max_pages": 2,
         "urls": [
             "https://www.eventbrite.it/d/italy--milano/events/",
             "https://www.eventbrite.it/d/italy--roma/events/",
@@ -449,19 +451,27 @@ def main():
     all_events = []
     for src in SOURCES:
         kind = src["kind"]
+        max_pages = src.get("max_pages", 1)
         for url in src["urls"]:
-            html_text = fetch(url)
-            if not html_text:
-                continue
-            if kind == "jsonld":
-                evs = parse_jsonld(html_text, src["name"], url)
-            elif kind == "eventbrite":
-                evs = parse_eventbrite(html_text, src["name"], url)
-            else:
-                evs = []
-            print(f"[info] {src['name']} {url} -> {len(evs)} eventi", file=sys.stderr)
-            all_events.extend(evs)
-            time.sleep(1.2)
+            for page in range(1, max_pages + 1):
+                page_url = url
+                if page > 1:
+                    sep = "&" if "?" in url else "?"
+                    page_url = f"{url}{sep}page={page}"
+                html_text = fetch(page_url)
+                if not html_text:
+                    break
+                if kind == "jsonld":
+                    evs = parse_jsonld(html_text, src["name"], page_url)
+                elif kind == "eventbrite":
+                    evs = parse_eventbrite(html_text, src["name"], page_url)
+                else:
+                    evs = []
+                print(f"[info] {src['name']} {page_url} -> {len(evs)} eventi", file=sys.stderr)
+                if not evs:
+                    break
+                all_events.extend(evs)
+                time.sleep(1.2)
 
     all_events = dedup(all_events)
 
