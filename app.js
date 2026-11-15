@@ -2,6 +2,7 @@
   const state = {
     events: [],
     filtered: [],
+    comuni: null,
     filters: { search: "", category: "", region: "", province: "", city: "", dateFrom: "", dateTo: "", sort: "date-asc" },
   };
 
@@ -93,40 +94,47 @@
     if (values.includes(cur)) sel.value = cur;
   }
 
+  function regionOfProvince(prov) {
+    if (!state.comuni) return "";
+    for (const r of state.comuni.region) {
+      if (state.comuni.province[r].includes(prov)) return r;
+    }
+    return "";
+  }
+
   function populateFilters() {
     const cats = [...new Set(state.events.map(e => e.category).filter(Boolean))].sort();
-    const regions = [...new Set(state.events.map(e => e.location?.region).filter(Boolean))].sort();
-    const provinces = [...new Set(state.events.map(e => e.location?.province).filter(Boolean))].sort((a,b)=>a.localeCompare(b,"it"));
-    const cities = [...new Set(state.events.map(e => e.location?.city).filter(Boolean))].sort((a,b)=>a.localeCompare(b,"it"));
+    const regions = state.comuni ? state.comuni.regioni : [...new Set(state.events.map(e => e.location?.region).filter(Boolean))].sort();
 
     fillSelect(els.category, cats, "Tutte le categorie");
     fillSelect(els.region, regions, "Tutte le regioni");
-    fillSelect(els.province, provinces, "Tutte le province");
-    fillSelect(els.city, cities, "Tutte le città");
+    fillSelect(els.province, [], "Tutte le province");
+    fillSelect(els.city, [], "Tutte le città");
 
     els.countRegions.textContent = regions.length;
   }
 
   function cascadedOptions() {
-    // province filtrate per regione
-    let provinces = [...new Set(state.events.map(e => e.location?.province).filter(Boolean))];
+    if (!state.comuni) return;
+    // province per regione
+    let provinces = [];
     if (state.filters.region) {
-      provinces = provinces.filter(p => regionOf(p) === state.filters.region);
+      provinces = state.comuni.province[state.filters.region] || [];
+    } else {
+      provinces = Object.keys(state.comuni.comuni).sort((a,b)=>a.localeCompare(b,"it"));
     }
-    provinces.sort((a,b)=>a.localeCompare(b,"it"));
     fillSelect(els.province, provinces, "Tutte le province");
 
-    // città filtrate per provincia/regione
-    let cities = [...new Set(state.events.map(e => e.location?.city).filter(Boolean))];
-    if (state.filters.province) {
-      cities = cities.filter(c => provinceOfCity(c) === state.filters.province);
+    // città per provincia
+    let cities = [];
+    if (state.filters.province && state.comuni.comuni[state.filters.province]) {
+      cities = state.comuni.comuni[state.filters.province];
     } else if (state.filters.region) {
-      cities = cities.filter(c => {
-        const ev = state.events.find(e => e.location?.city === c);
-        return ev && ev.location?.region === state.filters.region;
-      });
+      // tutte le città della regione
+      const provs = state.comuni.province[state.filters.region] || [];
+      provs.forEach(p => { if (state.comuni.comuni[p]) cities = cities.concat(state.comuni.comuni[p]); });
+      cities = [...new Set(cities)].sort((a,b)=>a.localeCompare(b,"it"));
     }
-    cities.sort((a,b)=>a.localeCompare(b,"it"));
     fillSelect(els.city, cities, "Tutte le città");
   }
 
@@ -282,10 +290,14 @@
   // load data
   async function load() {
     try {
-      const res = await fetch("data/events.json", { cache: "no-store" });
+      const [res, resComuni] = await Promise.all([
+        fetch("data/events.json", { cache: "no-store" }),
+        fetch("data/comuni.json", { cache: "no-store" })
+      ]);
       if (!res.ok) throw new Error("HTTP " + res.status);
       const data = await res.json();
       state.events = Array.isArray(data.events) ? data.events : [];
+      if (resComuni.ok) state.comuni = await resComuni.json();
       els.updated.textContent = data.updated ? new Date(data.updated).toLocaleDateString("it-IT", { day: "2-digit", month: "short", year: "numeric" }) : "-";
       populateFilters();
       cascadedOptions();
