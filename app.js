@@ -2,7 +2,7 @@
   const state = {
     events: [],
     filtered: [],
-    filters: { search: "", category: "", region: "", city: "", dateFrom: "", dateTo: "", sort: "date-asc" },
+    filters: { search: "", category: "", region: "", province: "", city: "", onlySagre: false, dateFrom: "", dateTo: "", sort: "date-asc" },
   };
 
   const els = {
@@ -16,6 +16,8 @@
     category: document.getElementById("category"),
     region: document.getElementById("region"),
     city: document.getElementById("city"),
+    province: document.getElementById("province"),
+    onlySagre: document.getElementById("onlySagre"),
     dateFrom: document.getElementById("dateFrom"),
     dateTo: document.getElementById("dateTo"),
     sort: document.getElementById("sort"),
@@ -69,26 +71,65 @@
     return map[cat] || "#4f46e5";
   }
 
+  // mappe per filtri a cascata
+  const regionOf = (prov) => {
+    const ev = state.events.find(e => e.location?.province === prov);
+    return ev ? ev.location?.region : "";
+  };
+  const provinceOfCity = (city) => {
+    const ev = state.events.find(e => e.location?.city === city);
+    return ev ? ev.location?.province : "";
+  };
+
+  function fillSelect(sel, values, placeholder) {
+    const cur = sel.value;
+    sel.innerHTML = "";
+    const ph = document.createElement("option");
+    ph.value = ""; ph.textContent = placeholder;
+    sel.appendChild(ph);
+    values.forEach(v => {
+      const o = document.createElement("option");
+      o.value = v; o.textContent = v;
+      sel.appendChild(o);
+    });
+    if (values.includes(cur)) sel.value = cur;
+  }
+
   function populateFilters() {
     const cats = [...new Set(state.events.map(e => e.category).filter(Boolean))].sort();
     const regions = [...new Set(state.events.map(e => e.location?.region).filter(Boolean))].sort();
+    const provinces = [...new Set(state.events.map(e => e.location?.province).filter(Boolean))].sort((a,b)=>a.localeCompare(b,"it"));
     const cities = [...new Set(state.events.map(e => e.location?.city).filter(Boolean))].sort((a,b)=>a.localeCompare(b,"it"));
-    cats.forEach(c => {
-      const o = document.createElement("option");
-      o.value = c; o.textContent = c;
-      els.category.appendChild(o);
-    });
-    regions.forEach(r => {
-      const o = document.createElement("option");
-      o.value = r; o.textContent = r;
-      els.region.appendChild(o);
-    });
-    cities.forEach(c => {
-      const o = document.createElement("option");
-      o.value = c; o.textContent = c;
-      els.city.appendChild(o);
-    });
+
+    fillSelect(els.category, cats, "Tutte le categorie");
+    fillSelect(els.region, regions, "Tutte le regioni");
+    fillSelect(els.province, provinces, "Tutte le province");
+    fillSelect(els.city, cities, "Tutte le città");
+
     els.countRegions.textContent = regions.length;
+  }
+
+  function cascadedOptions() {
+    // province filtrate per regione
+    let provinces = [...new Set(state.events.map(e => e.location?.province).filter(Boolean))];
+    if (state.filters.region) {
+      provinces = provinces.filter(p => regionOf(p) === state.filters.region);
+    }
+    provinces.sort((a,b)=>a.localeCompare(b,"it"));
+    fillSelect(els.province, provinces, "Tutte le province");
+
+    // città filtrate per provincia/regione
+    let cities = [...new Set(state.events.map(e => e.location?.city).filter(Boolean))];
+    if (state.filters.province) {
+      cities = cities.filter(c => provinceOfCity(c) === state.filters.province);
+    } else if (state.filters.region) {
+      cities = cities.filter(c => {
+        const ev = state.events.find(e => e.location?.city === c);
+        return ev && ev.location?.region === state.filters.region;
+      });
+    }
+    cities.sort((a,b)=>a.localeCompare(b,"it"));
+    fillSelect(els.city, cities, "Tutte le città");
   }
 
   function updateSagreLink() {
@@ -108,7 +149,12 @@
       if (f.search && !blob.includes(f.search.toLowerCase())) return false;
       if (f.category && e.category !== f.category) return false;
       if (f.region && e.location?.region !== f.region) return false;
+      if (f.province && e.location?.province !== f.province) return false;
       if (f.city && e.location?.city !== f.city) return false;
+      if (f.onlySagre) {
+        const blob = [e.title, e.description, e.category].join(" ").toLowerCase();
+        if (!blob.includes("sagra") && e.category !== "Sagre & Enogastronomia") return false;
+      }
       const d = e.startDate ? new Date(e.startDate) : null;
       if (f.dateFrom && d && d < new Date(f.dateFrom)) return false;
       if (f.dateTo && d && d > new Date(f.dateTo + "T23:59:59")) return false;
@@ -186,17 +232,42 @@
   // events
   els.search.addEventListener("input", e => { state.filters.search = e.target.value; applyFilters(); });
   els.category.addEventListener("change", e => { state.filters.category = e.target.value; applyFilters(); });
-  els.region.addEventListener("change", e => { state.filters.region = e.target.value; applyFilters(); updateSagreLink(); });
-  els.city.addEventListener("change", e => { state.filters.city = e.target.value; applyFilters(); updateSagreLink(); });
+  els.region.addEventListener("change", e => {
+    state.filters.region = e.target.value;
+    state.filters.province = "";
+    state.filters.city = "";
+    cascadedOptions();
+    applyFilters();
+    updateSagreLink();
+  });
+  els.province.addEventListener("change", e => {
+    state.filters.province = e.target.value;
+    state.filters.city = "";
+    cascadedOptions();
+    applyFilters();
+    updateSagreLink();
+  });
+  els.city.addEventListener("change", e => {
+    state.filters.city = e.target.value;
+    applyFilters();
+    updateSagreLink();
+  });
+  els.onlySagre.addEventListener("change", e => {
+    state.filters.onlySagre = e.target.checked;
+    applyFilters();
+  });
   els.dateFrom.addEventListener("change", e => { state.filters.dateFrom = e.target.value; applyFilters(); });
   els.dateTo.addEventListener("change", e => { state.filters.dateTo = e.target.value; applyFilters(); });
   els.sort.addEventListener("change", e => { state.filters.sort = e.target.value; applyFilters(); });
   els.reset.addEventListener("click", () => {
-    state.filters = { search: "", category: "", region: "", city: "", dateFrom: "", dateTo: "", sort: "date-asc" };
+    state.filters = { search: "", category: "", region: "", province: "", city: "", onlySagre: false, dateFrom: "", dateTo: "", sort: "date-asc" };
     els.search.value = "";
     els.category.value = "";
     els.region.value = "";
+    els.province.value = "";
     els.city.value = "";
+    els.onlySagre.checked = false;
+    cascadedOptions();
     els.dateFrom.value = "";
     els.dateTo.value = "";
     els.sort.value = "date-asc";
@@ -239,6 +310,7 @@
       state.events = Array.isArray(data.events) ? data.events : [];
       els.updated.textContent = data.updated ? new Date(data.updated).toLocaleDateString("it-IT", { day: "2-digit", month: "short", year: "numeric" }) : "-";
       populateFilters();
+      cascadedOptions();
       applyFilters();
       updateSagreLink();
     } catch (err) {

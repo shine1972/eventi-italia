@@ -57,6 +57,10 @@ SOURCES = [
             "https://www.eventbrite.it/d/italy--viterbo/events/",
             "https://www.eventbrite.it/d/italy--rieti/events/",
             "https://www.eventbrite.it/d/italy--terni/events/",
+            "https://www.eventbrite.it/d/italy--venezia/events/",
+            "https://www.eventbrite.it/d/italy--padova/events/",
+            "https://www.eventbrite.it/d/italy--genova/events/",
+            "https://www.eventbrite.it/d/italy--bari/events/",
             "https://www.eventbrite.it/d/italy/events/?q=sagra",
         ],
     },
@@ -368,6 +372,54 @@ CITY_REGION = {
 
 PROVINCE_CODES = {"FI","MI","RM","TO","NA","BO","VE","PD","BG","BS","VA","GE","LE","BA","PA","CT","AL","AR","SI","TO"}
 
+CITY_PROVINCE = {
+    "aiello del friuli": "Udine",
+    "bagnarola": "Forli-Cesena",
+    "bevagna": "Perugia",
+    "bologna": "Bologna",
+    "borgo incoronata": "Foggia",
+    "campagnano di roma": "Roma",
+    "carbonelli": "Foggia",
+    "castel nuovo": "Napoli",
+    "cavernago": "Bergamo",
+    "citta del vaticano": "Roma",
+    "città del vaticano": "Roma",
+    "collevecchio": "Rieti",
+    "colognola ai colli": "Verona",
+    "cortina d'ampezzo": "Belluno",
+    "firenze": "Firenze",
+    "florence": "Firenze",
+    "formello": "Roma",
+    "genova": "Genova",
+    "giovinazzo": "Bari",
+    "manziana (rm)": "Roma",
+    "mazzano romano": "Roma",
+    "milano": "Milano",
+    "mompeo": "Rieti",
+    "montefiascone": "Viterbo",
+    "monterotondo": "Roma",
+    "naples": "Napoli",
+    "napoli": "Napoli",
+    "novegro-tregarezzo": "Milano",
+    "orvieto": "Terni",
+    "osoppo": "Udine",
+    "padova": "Padova",
+    "poggio mirteto": "Rieti",
+    "pozzuoli": "Napoli",
+    "ravenna": "Ravenna",
+    "reggio calabria": "Reggio Calabria",
+    "riano": "Roma",
+    "roma": "Roma",
+    "rome": "Roma",
+    "spoleto": "Perugia",
+    "terni": "Terni",
+    "todi": "Perugia",
+    "torino": "Torino",
+    "tuscania": "Viterbo",
+    "venezia": "Venezia",
+    "online": "Online",
+}
+
 def normalize_location(loc):
     if not isinstance(loc, dict):
         return {"name": "", "address": "", "city": "", "region": ""}
@@ -389,7 +441,10 @@ def normalize_location(loc):
         region = "Lazio"
     if not region:
         region = ""
-    return {"name": name, "address": address, "city": city, "region": region}
+    province = CITY_PROVINCE.get(city.lower(), city)
+    if city.lower() == "online":
+        province = "Online"
+    return {"name": name, "address": address, "city": city, "region": region, "province": province}
 
 
 def dedup(events):
