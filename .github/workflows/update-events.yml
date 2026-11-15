@@ -40,7 +40,7 @@ jobs:
             git push
           fi
 
-  deploy:
+    deploy:
     needs: scrape
     runs-on: ubuntu-latest
     steps:
@@ -48,6 +48,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
+      - name: Inserisci chiavi API
+        run: |
+          sed -i 's#__GOOGLE_API_KEY__#${{ secrets.GOOGLE_API_KEY }}#g' app.js
+          sed -i 's#__GOOGLE_CX__#${{ secrets.GOOGLE_CX }}#g' app.js
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
