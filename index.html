@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventi Italia - Aggregatore di sagre ed eventi culturali</title>
+  <meta name="description" content="Aggregatore quotidiano di sagre, eventi culturali, mostre, concerti e feste in tutta Italia." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="hero-top">
+        <div class="brand">
+          <span class="logo">📅</span>
+          <div>
+            <h1>Eventi Italia</h1>
+            <p class="tagline">Aggregatore quotidiano di sagre ed eventi culturali</p>
+          </div>
+        </div>
+        <button id="themeToggle" class="theme-toggle" aria-label="Cambia tema">🌙</button>
+      </div>
+      <div class="stats" id="stats">
+        <span id="countEvents">0</span> eventi raccolti
+        <span class="sep">•</span>
+        Ultimo aggiornamento: <span id="updatedAt">-</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="filters" aria-label="Filtri">
+      <div class="filter-row">
+        <input type="search" id="search" placeholder="Cerca per titolo, città, descrizione..." aria-label="Cerca" />
+        <select id="category" aria-label="Categoria">
+          <option value="">Tutte le categorie</option>
+        </select>
+        <select id="region" aria-label="Regione">
+          <option value="">Tutte le regioni</option>
+        </select>
+      </div>
+      <div class="filter-row">
+        <label>Data da <input type="date" id="dateFrom" /></label>
+        <label>Data a <input type="date" id="dateTo" /></label>
+        <select id="sort" aria-label="Ordinamento">
+          <option value="date-asc">Data crescente</option>
+          <option value="date-desc">Data decrescente</option>
+          <option value="title">Titolo A-Z</option>
+        </select>
+        <button id="resetFilters" class="btn-secondary">Reset</button>
+      </div>
+    </section>
+
+    <section id="results" class="results">
+      <div id="loading" class="loading">Caricamento eventi...</div>
+      <div id="grid" class="grid"></div>
+      <div id="empty" class="empty" hidden>Nessun evento trovato con i filtri selezionati.</div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Aggregatore automatico. Le informazioni provengono dalle fonti originali: verifica sempre data, luogo e disponibilità sul sito ufficiale.</p>
+    </div>
+  </footer>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button class="modal-close" data-close aria-label="Chiudi">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
