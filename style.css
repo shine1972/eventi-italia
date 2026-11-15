@@ -147,6 +147,14 @@ body {
   transition: background 0.2s, transform 0.15s;
 }
 .btn-reset:hover { background: var(--primary-soft); transform: translateY(-1px); }
+.btn-download {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 12px 18px; border-radius: var(--radius-sm);
+  border: 1px solid var(--border); background: var(--surface-solid);
+  color: var(--primary); font-weight: 600; cursor: pointer; font-family: inherit;
+  text-decoration: none; transition: background 0.2s, transform 0.15s;
+}
+.btn-download:hover { background: var(--primary-soft); transform: translateY(-1px); }
 
 /* RESULTS */
 .results { min-height: 300px; }
