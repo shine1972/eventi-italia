@@ -3,66 +3,128 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eventi Italia - Aggregatore di sagre ed eventi culturali</title>
+  <title>Eventi Italia — Sagre ed eventi culturali</title>
   <meta name="description" content="Aggregatore quotidiano di sagre, eventi culturali, mostre, concerti e feste in tutta Italia." />
+  <meta name="theme-color" content="#4f46e5" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+
   <header class="hero">
-    <div class="container">
-      <div class="hero-top">
-        <div class="brand">
-          <span class="logo">📅</span>
-          <div>
-            <h1>Eventi Italia</h1>
-            <p class="tagline">Aggregatore quotidiano di sagre ed eventi culturali</p>
-          </div>
-        </div>
-        <button id="themeToggle" class="theme-toggle" aria-label="Cambia tema">🌙</button>
+    <nav class="nav">
+      <div class="brand">
+        <span class="logo">📅</span>
+        <span class="brand-name">Eventi Italia</span>
       </div>
-      <div class="stats" id="stats">
-        <span id="countEvents">0</span> eventi raccolti
-        <span class="sep">•</span>
-        Ultimo aggiornamento: <span id="updatedAt">-</span>
+      <button id="themeToggle" class="theme-toggle" aria-label="Cambia tema">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </nav>
+
+    <div class="hero-content">
+      <span class="hero-badge">✨ Aggiornato ogni giorno</span>
+      <h1>Scopri le <span class="gradient-text">sagre</span> e gli <span class="gradient-text">eventi</span> vicino a te</h1>
+      <p class="hero-sub">Un unico posto per sagre, mostre, concerti, feste e appuntamenti culturali in tutta Italia.</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" id="countEvents">0</span>
+          <span class="stat-label">eventi raccolti</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" id="countRegions">0</span>
+          <span class="stat-label">regioni</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-label">Ultimo aggiornamento</span>
+          <span class="stat-date" id="updatedAt">-</span>
+        </div>
       </div>
     </div>
   </header>
 
   <main class="container">
-    <section class="filters" aria-label="Filtri">
-      <div class="filter-row">
-        <input type="search" id="search" placeholder="Cerca per titolo, città, descrizione..." aria-label="Cerca" />
-        <select id="category" aria-label="Categoria">
-          <option value="">Tutte le categorie</option>
-        </select>
-        <select id="region" aria-label="Regione">
-          <option value="">Tutte le regioni</option>
-        </select>
+    <section class="filters glass" aria-label="Filtri">
+      <div class="filter-grid">
+        <div class="field field-search">
+          <span class="field-icon">🔍</span>
+          <input type="search" id="search" placeholder="Cerca per titolo, città, descrizione..." aria-label="Cerca" />
+        </div>
+        <div class="field">
+          <span class="field-icon">🏷️</span>
+          <select id="category" aria-label="Categoria">
+            <option value="">Tutte le categorie</option>
+          </select>
+        </div>
+        <div class="field">
+          <span class="field-icon">🗺️</span>
+          <select id="region" aria-label="Regione">
+            <option value="">Tutte le regioni</option>
+          </select>
+        </div>
       </div>
-      <div class="filter-row">
-        <label>Data da <input type="date" id="dateFrom" /></label>
-        <label>Data a <input type="date" id="dateTo" /></label>
-        <select id="sort" aria-label="Ordinamento">
-          <option value="date-asc">Data crescente</option>
-          <option value="date-desc">Data decrescente</option>
-          <option value="title">Titolo A-Z</option>
-        </select>
-        <button id="resetFilters" class="btn-secondary">Reset</button>
+      <div class="filter-grid filter-grid-2">
+        <div class="field">
+          <span class="field-icon">📅</span>
+          <input type="date" id="dateFrom" aria-label="Data da" />
+        </div>
+        <div class="field">
+          <span class="field-icon">📅</span>
+          <input type="date" id="dateTo" aria-label="Data a" />
+        </div>
+        <div class="field">
+          <span class="field-icon">↕️</span>
+          <select id="sort" aria-label="Ordinamento">
+            <option value="date-asc">Data crescente</option>
+            <option value="date-desc">Data decrescente</option>
+            <option value="title">Titolo A-Z</option>
+          </select>
+        </div>
+        <button id="resetFilters" class="btn-reset">Reset filtri</button>
       </div>
     </section>
 
     <section id="results" class="results">
-      <div id="loading" class="loading">Caricamento eventi...</div>
+      <div id="loading" class="loading">
+        <div class="skeleton-grid">
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+        </div>
+      </div>
       <div id="grid" class="grid"></div>
-      <div id="empty" class="empty" hidden>Nessun evento trovato con i filtri selezionati.</div>
+      <div id="empty" class="empty" hidden>
+        <div class="empty-illustration">🔍</div>
+        <h3>Nessun evento trovato</h3>
+        <p>Prova a modificare i filtri o la ricerca.</p>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <p>Aggregatore automatico. Le informazioni provengono dalle fonti originali: verifica sempre data, luogo e disponibilità sul sito ufficiale.</p>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo">📅</span>
+        <span>Eventi Italia</span>
+      </div>
+      <p>Aggregatore automatico. Verifica sempre data, luogo e disponibilità sul sito ufficiale dell'evento.</p>
+      <p class="footer-small">Dati aggiornati quotidianamente · © 2026</p>
     </div>
   </footer>
+
+  <button id="scrollTop" class="scroll-top" aria-label="Torna su">↑</button>
 
   <div id="modal" class="modal" hidden>
     <div class="modal-backdrop" data-close></div>
