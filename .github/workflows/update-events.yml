@@ -40,7 +40,7 @@ jobs:
             git push
           fi
 
-    deploy:
+  deploy:
     needs: scrape
     runs-on: ubuntu-latest
     steps:
