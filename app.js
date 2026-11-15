@@ -8,6 +8,8 @@
 
   const els = {
     grid: document.getElementById("grid"),
+    weekendGrid: document.getElementById("weekendGrid"),
+    weekendEmpty: document.getElementById("weekendEmpty"),
     loading: document.getElementById("loading"),
     empty: document.getElementById("empty"),
     count: document.getElementById("countEvents"),
@@ -166,6 +168,54 @@
     render();
   }
 
+  function weekendRange() {
+    const now = new Date();
+    const day = now.getDay();
+    const sat = new Date(now);
+    if (day === 0) sat.setDate(now.getDate() - 1);
+    else if (day !== 6) sat.setDate(now.getDate() + (6 - day));
+    sat.setHours(0,0,0,0);
+    const sun = new Date(sat);
+    sun.setDate(sat.getDate() + 1);
+    sun.setHours(23,59,59,999);
+    return { sat, sun };
+  }
+
+  function renderWeekend() {
+    if (!els.weekendGrid) return;
+    const { sat, sun } = weekendRange();
+    const list = state.events.filter(e => {
+      if (!e.startDate) return false;
+      const d = new Date(e.startDate);
+      return d >= sat && d <= sun;
+    }).sort((a,b) => new Date(a.startDate) - new Date(b.startDate));
+    els.weekendGrid.innerHTML = "";
+    els.weekendEmpty.hidden = list.length !== 0;
+    list.forEach((e, i) => {
+      const card = document.createElement("article");
+      card.className = "card";
+      card.style.animationDelay = (i % 12) * 0.04 + "s";
+      const color = badgeColor(e.category);
+      const imgHtml = e.image
+        ? `<div class="card-img"><img src="${escapeHtml(e.image)}" alt="" loading="lazy" onerror="this.parentElement.innerHTML='<span class=img-fallback>${placeholderEmoji(e.category)}</span>'" /></div>`
+        : `<div class="card-img"><span class="img-fallback">${placeholderEmoji(e.category)}</span></div>`;
+      card.innerHTML = `
+        ${imgHtml}
+        <span class="card-badge" style="color:${color}">${escapeHtml(e.category || "Evento")}</span>
+        <div class="card-body">
+          <h3 class="card-title">${escapeHtml(e.title)}</h3>
+          <div class="card-meta">
+            <span>📅 ${escapeHtml(formatDate(e.startDate))}</span>
+            <span>📍 ${escapeHtml([e.location?.city, e.location?.province].filter(Boolean).join(", ") || "Luogo da confermare")}</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-ghost" data-detail="${escapeHtml(e.id)}">Dettagli</button>
+          </div>
+        </div>`;
+      els.weekendGrid.appendChild(card);
+    });
+  }
+
   function render() {
     els.grid.innerHTML = "";
     els.loading.hidden = true;
@@ -267,6 +317,12 @@
     const btn = e.target.closest("[data-detail]");
     if (btn) openDetail(btn.getAttribute("data-detail"));
   });
+  if (els.weekendGrid) {
+    els.weekendGrid.addEventListener("click", e => {
+      const btn = e.target.closest("[data-detail]");
+      if (btn) openDetail(btn.getAttribute("data-detail"));
+    });
+  }
   els.modal.addEventListener("click", e => {
     if (e.target.hasAttribute("data-close")) closeModal();
   });
@@ -365,6 +421,7 @@
       populateFilters();
       cascadedOptions();
       applyFilters();
+      renderWeekend();
   
     } catch (err) {
       els.loading.innerHTML = `<div class="empty"><div class="empty-illustration">⚠️</div><h3>Impossibile caricare gli eventi</h3><p>${escapeHtml(err.message)}</p></div>`;

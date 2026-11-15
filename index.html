@@ -22,7 +22,7 @@
     <nav class="nav">
       <div class="brand">
         <span class="logo">📅</span>
-        <span class="brand-name">Eventi Italia</span>
+        <span class="brand-name">Eventi Locali</span>
       </div>
       <button id="themeToggle" class="theme-toggle" aria-label="Cambia tema">
         <span class="theme-icon">🌙</span>
@@ -31,8 +31,8 @@
 
     <div class="hero-content">
       <span class="hero-badge">✨ Aggiornato ogni giorno</span>
-      <h1>Scopri le <span class="gradient-text">sagre</span> e gli <span class="gradient-text">eventi</span> vicino a te</h1>
-      <p class="hero-sub">Un unico posto per sagre, mostre, concerti, feste e appuntamenti culturali in tutta Italia.</p>
+      <h1>Sagre ed eventi a <span class="gradient-text">Roma</span>, <span class="gradient-text">Tuscia</span>, <span class="gradient-text">Sabina</span> e <span class="gradient-text">Umbria</span></h1>
+      <p class="hero-sub">Un unico posto per sagre, mostre, concerti, feste e appuntamenti culturali nel Lazio e in Umbria.</p>
       <div class="hero-stats">
         <div class="stat">
           <span class="stat-num" id="countEvents">0</span>
@@ -53,6 +53,12 @@
   </header>
 
   <main class="container">
+    <section class="weekend-section glass" aria-label="Eventi di questo weekend">
+      <h2>📅 Eventi di questo weekend</h2>
+      <div id="weekendGrid" class="grid weekend-grid"></div>
+      <div id="weekendEmpty" class="empty" hidden>Nessun evento in programma questo weekend.</div>
+    </section>
+
     <section class="filters glass" aria-label="Filtri">
       <div class="filter-grid">
         <div class="field field-search">
@@ -72,15 +78,15 @@
           </select>
         </div>
         <div class="field">
-          <span class="field-icon">🏙️</span>
-          <select id="city" aria-label="Città o provincia">
-            <option value="">Tutte le città</option>
-          </select>
-        </div>
-        <div class="field">
           <span class="field-icon">📍</span>
           <select id="province" aria-label="Provincia">
             <option value="">Tutte le province</option>
+          </select>
+        </div>
+        <div class="field">
+          <span class="field-icon">🏙️</span>
+          <select id="city" aria-label="Città o provincia">
+            <option value="">Tutte le città</option>
           </select>
         </div>
       </div>
@@ -140,7 +146,7 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <span class="logo">📅</span>
-        <span>Eventi Italia</span>
+        <span>Eventi Locali</span>
       </div>
       <p>Aggregatore automatico. Verifica sempre data, luogo e disponibilità sul sito ufficiale dell'evento.</p>
       <p class="footer-small">Dati aggiornati quotidianamente · © 2026</p>
