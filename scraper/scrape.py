@@ -35,12 +35,7 @@ SOURCES = [
         "kind": "jsonld",
         "max_pages": 2,
         "urls": [
-            "https://www.zero.eu/it/milano/eventi/",
             "https://www.zero.eu/it/roma/eventi/",
-            "https://www.zero.eu/it/torino/eventi/",
-            "https://www.zero.eu/it/bologna/eventi/",
-            "https://www.zero.eu/it/firenze/eventi/",
-            "https://www.zero.eu/it/napoli/eventi/",
         ],
     },
     {
@@ -48,19 +43,13 @@ SOURCES = [
         "kind": "eventbrite",
         "max_pages": 2,
         "urls": [
-            "https://www.eventbrite.it/d/italy--milano/events/",
             "https://www.eventbrite.it/d/italy--roma/events/",
-            "https://www.eventbrite.it/d/italy--napoli/events/",
-            "https://www.eventbrite.it/d/italy--torino/events/",
-            "https://www.eventbrite.it/d/italy--bologna/events/",
-            "https://www.eventbrite.it/d/italy--firenze/events/",
             "https://www.eventbrite.it/d/italy--viterbo/events/",
             "https://www.eventbrite.it/d/italy--rieti/events/",
+            "https://www.eventbrite.it/d/italy--latina/events/",
+            "https://www.eventbrite.it/d/italy--frosinone/events/",
             "https://www.eventbrite.it/d/italy--terni/events/",
-            "https://www.eventbrite.it/d/italy--venezia/events/",
-            "https://www.eventbrite.it/d/italy--padova/events/",
-            "https://www.eventbrite.it/d/italy--genova/events/",
-            "https://www.eventbrite.it/d/italy--bari/events/",
+            "https://www.eventbrite.it/d/italy--perugia/events/",
             "https://www.eventbrite.it/d/italy/events/?q=sagra",
         ],
     },
@@ -384,6 +373,14 @@ CITY_PROVINCE = {
     "cavernago": "Bergamo",
     "citta del vaticano": "Roma",
     "città del vaticano": "Roma",
+    "palestrina": "Roma",
+    "ardea": "Roma",
+    "pomezia": "Roma",
+    "aprilia": "Latina",
+    "ferentino": "Frosinone",
+    "ripi": "Frosinone",
+    "citta di castello": "Perugia",
+    "città di castello": "Perugia",
     "collevecchio": "Rieti",
     "colognola ai colli": "Verona",
     "cortina d'ampezzo": "Belluno",
@@ -413,6 +410,7 @@ CITY_PROVINCE = {
     "rome": "Roma",
     "spoleto": "Perugia",
     "terni": "Terni",
+    "norcia": "Perugia",
     "todi": "Perugia",
     "torino": "Torino",
     "tuscania": "Viterbo",
@@ -441,7 +439,14 @@ def normalize_location(loc):
         region = "Lazio"
     if not region:
         region = ""
-    province = CITY_PROVINCE.get(city.lower(), city)
+    if city in ("", "..."):
+        province = region if region else "Sconosciuta"
+    elif "vaticano" in city.lower():
+        province = "Roma"
+    elif "castello" in city.lower():
+        province = "Perugia"
+    else:
+        province = CITY_PROVINCE.get(city.lower(), city)
     if city.lower() == "online":
         province = "Online"
     return {"name": name, "address": address, "city": city, "region": region, "province": province}
@@ -463,26 +468,24 @@ def demo_events():
     """Eventi di esempio (sagre ed eventi culturali) per garantire contenuto."""
     today = datetime.now().date()
     items = [
-        ("Sagra della Castagna", "Tradizionale sagra con caldarroste, dolci e prodotti tipici del territorio.", "Sagre & Enogastronomia", "Borgo Val di Taro", "Emilia-Romagna", 5),
-        ("Mostra d'Arte Contemporanea", "Esposizione di artisti emergenti e installazioni interattive.", "Arte & Cultura", "Milano", "Lombardia", 3),
-        ("Festival della Musica Popolare", "Tre giorni di concerti, danze e laboratori di musica tradizionale.", "Musica", "Lecce", "Puglia", 10),
-        ("Sagra del Tartufo Bianco", "Degustazioni, mercatino e showcooking con chef stellati.", "Sagre & Enogastronomia", "Alba", "Piemonte", 12),
-        ("Notte dei Musei", "Apertura straordinaria serale di musei e siti culturali con visite guidate.", "Arte & Cultura", "Roma", "Lazio", 7),
-        ("Fiera del Libro Antico", "Mercato di libri rari, manoscritti e stampe d'epoca.", "Arte & Cultura", "Firenze", "Toscana", 14),
-        ("Sagra del Pesce", "Frittura di pesce fresco, vino locale e musica dal vivo sul lungomare.", "Sagre & Enogastronomia", "Camogli", "Liguria", 9),
-        ("Palio Storico", "Corteo storico, giochi medievali e rievocazione in costume.", "Comunita' & Tradizioni", "Siena", "Toscana", 20),
-        ("Concerto Sinfonico", "Orchestra sinfonica in piazza con repertorio classico e colonne sonore.", "Musica", "Verona", "Veneto", 6),
-        ("Sagra della Polenta", "Polenta concia, salsicce e formaggi di montagna, animazione per bambini.", "Sagre & Enogastronomia", "Bergamo", "Lombardia", 11),
-        ("Mercatino dell'Antiquariato", "Bancarelle di oggetti vintage, modernariato e collezionismo.", "Comunita' & Tradizioni", "Arezzo", "Toscana", 8),
-        ("Festival del Cinema Indipendente", "Proiezioni, incontri con registi e workshop di sceneggiatura.", "Arte & Cultura", "Torino", "Piemonte", 15),
-        ("Sagra dei Funghi Porcini", "Piatti a base di porcini, escursioni guidate e mostra micologica.", "Sagre & Enogastronomia", "Borgotaro", "Emilia-Romagna", 18),
-        ("Mostra Fotografica", "Ritratti e reportage: viaggio visivo attraverso l'Italia rurale.", "Arte & Cultura", "Bologna", "Emilia-Romagna", 4),
-        ("Festa Patronale", "Processione, fuochi d'artificio, stand gastronomici e musica popolare.", "Comunita' & Tradizioni", "Napoli", "Campania", 13),
-        ("Sagra del Miele", "Degustazioni di mieli monoflorali, laboratori per bambini e artigianato.", "Sagre & Enogastronomia", "Varese", "Lombardia", 16),
-        ("Teatro in Piazza", "Spettacolo di commedia dell'arte all'aperto con compagnia locale.", "Arte & Cultura", "Padova", "Veneto", 2),
-        ("Sagra della Pizza", "Pizzaioli da tutta Italia, forno a legna e gara della pizza piu' lunga.", "Sagre & Enogastronomia", "Napoli", "Campania", 17),
-        ("Giornata dello Sport", "Tornei amatoriali, dimostrazioni e prove gratuite per tutte le eta'.", "Sport", "Bari", "Puglia", 19),
-        ("Concerto Jazz", "Quartetto jazz internazionale in auditorium storico.", "Musica", "Palermo", "Sicilia", 21),
+        ("Sagra della Castagna", "Tradizionale sagra con caldarroste, dolci e prodotti tipici del territorio.", "Sagre & Enogastronomia", "Viterbo", "Lazio", 5),
+        ("Mostra d'Arte Contemporanea", "Esposizione di artisti emergenti e installazioni interattive.", "Arte & Cultura", "Roma", "Lazio", 3),
+        ("Festival della Musica Popolare", "Concerti, danze e laboratori di musica tradizionale.", "Musica", "Perugia", "Umbria", 10),
+        ("Sagra del Tartufo", "Degustazioni, mercatino e showcooking con chef locali.", "Sagre & Enogastronomia", "Norcia", "Umbria", 12),
+        ("Notte dei Musei", "Apertura straordinaria serale di musei e siti culturali.", "Arte & Cultura", "Roma", "Lazio", 7),
+        ("Sagra dei Funghi Porcini", "Piatti a base di porcini, escursioni guidate e mostra micologica.", "Sagre & Enogastronomia", "Montefiascone", "Lazio", 9),
+        ("Palio Storico", "Corteo storico, giochi medievali e rievocazione in costume.", "Comunita' & Tradizioni", "Viterbo", "Lazio", 20),
+        ("Concerto Sinfonico", "Orchestra sinfonica in piazza con repertorio classico.", "Musica", "Terni", "Umbria", 6),
+        ("Sagra della Polenta", "Polenta concia, salsicce e formaggi di montagna.", "Sagre & Enogastronomia", "Rieti", "Lazio", 11),
+        ("Festival del Cinema Indipendente", "Proiezioni, incontri con registi e workshop.", "Arte & Cultura", "Roma", "Lazio", 15),
+        ("Mostra Fotografica", "Ritratti e reportage dell'Italia rurale.", "Arte & Cultura", "Viterbo", "Lazio", 4),
+        ("Festa Patronale", "Processione, fuochi d'artificio e stand gastronomici.", "Comunita' & Tradizioni", "Roma", "Lazio", 13),
+        ("Sagra del Miele", "Degustazioni di mieli monoflorali e laboratori.", "Sagre & Enogastronomia", "Todi", "Umbria", 16),
+        ("Teatro in Piazza", "Spettacolo di commedia dell'arte all'aperto.", "Arte & Cultura", "Perugia", "Umbria", 2),
+        ("Sagra della Pizza", "Pizzaioli da tutta Italia e gara della pizza piu' lunga.", "Sagre & Enogastronomia", "Roma", "Lazio", 17),
+        ("Giornata dello Sport", "Tornei amatoriali e prove gratuite.", "Sport", "Latina", "Lazio", 19),
+        ("Concerto Jazz", "Quartetto jazz internazionale in auditorium.", "Musica", "Spoleto", "Umbria", 21),
+        ("Sagra del Vino", "Degustazioni di vini locali e prodotti tipici.", "Sagre & Enogastronomia", "Orvieto", "Umbria", 1),
     ]
     out = []
     for i, (title, desc, cat, city, region, off) in enumerate(items):
@@ -529,6 +532,8 @@ def main():
                 time.sleep(1.2)
 
     all_events = dedup(all_events)
+    # Tieni solo eventi del Lazio e dell'Umbria
+    all_events = [e for e in all_events if e.get("location", {}).get("region") in ("Lazio", "Umbria")]
 
     # Fallback demo se lo scraping ha prodotto poco
     if len(all_events) < 15:

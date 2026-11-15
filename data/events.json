@@ -1,45 +1,45 @@
 {
-  "updated": "2026-11-15T15:40:59.382799+00:00",
-  "count": 30,
+  "updated": "2026-11-15T16:04:08.090778+00:00",
+  "count": 28,
   "events": [
     {
-      "id": "Zero-7399046132395035503",
-      "title": "Speaker Music (DeForrest Brown, Jr.) LIVE! Off of the Tech-Dependency Plan",
-      "description": "ALMARE presenta DeForrest Brown Jr., artista e teorico che indaga il rapporto tra musica elettronica, tecnologia e cultura afroamericana. Con LIVE! Off of the Tech-Dependency Plan, Brown porta in Italia il suo ultimo album e chiude il percorso di Speaker Music, restituendo alla techno le sue radici.",
-      "startDate": "2026-11-16T00:00:00+00:00",
-      "endDate": "2026-11-16T00:00:00+00:00",
+      "id": "demo-17",
+      "title": "Sagra del Vino",
+      "description": "Degustazioni di vini locali e prodotti tipici.",
+      "startDate": "2026-11-16T18:00:00",
+      "endDate": null,
       "location": {
-        "name": "Archive Milan Space",
-        "address": "Via Arquà, 15, 20131, Milano",
-        "city": "Milano",
-        "region": "Lombardia",
-        "province": "Milano"
+        "name": "",
+        "address": "Orvieto",
+        "city": "Orvieto",
+        "region": "Umbria",
+        "province": "Terni"
       },
-      "category": "Musica",
-      "image": "https://cdn.zero.eu/uploads/2026/11/Speaker-Music-ph-Ting-Ding_02.jpg",
-      "url": "https://zero.eu/it/eventi/383758-speaker-music-deforrest-brown-jr-live-off-of-the-tech-dependency-plan-2,milano/",
-      "source": "Zero"
+      "category": "Sagre & Enogastronomia",
+      "image": "",
+      "url": "#",
+      "source": "Demo"
     },
     {
-      "id": "Zero-2422292888352567073",
-      "title": "SHEILA HICKS: IN THE THREAD OF LOVE",
-      "description": "Con oltre 200 opere da collezioni internazionali, la prima retrospettiva italiana dedicata all'artista ne attraversa l'intera ricerca, dai lavori intimi alle installazioni monumentali. Il filo diventa un linguaggio per ridefinire il tessuto e riflettere su identità, femminismo e spazio.",
-      "startDate": "2026-11-17T00:00:00+00:00",
-      "endDate": "2027-02-14T00:00:00+00:00",
+      "id": "demo-13",
+      "title": "Teatro in Piazza",
+      "description": "Spettacolo di commedia dell'arte all'aperto.",
+      "startDate": "2026-11-17T18:00:00",
+      "endDate": null,
       "location": {
-        "name": "PAC &#8211; Padiglione d&#8217;Arte Contemporanea",
-        "address": "Via Palestro, 14, 20121, Milano",
-        "city": "Milano",
-        "region": "Lombardia",
-        "province": "Milano"
+        "name": "",
+        "address": "Perugia",
+        "city": "Perugia",
+        "region": "Umbria",
+        "province": "Perugia"
       },
-      "category": "Eventi & Cultura",
-      "image": "https://cdn.zero.eu/uploads/2026/11/1.-Sheila-Hicks-Wow-Bush_Turmoil-scaled-e1794331280786.jpg",
-      "url": "https://zero.eu/it/eventi/384178-sheila-hicks-in-the-thread-of-love,milano/",
-      "source": "Zero"
+      "category": "Arte & Cultura",
+      "image": "",
+      "url": "#",
+      "source": "Demo"
     },
     {
-      "id": "Zero-4854180595933401678",
+      "id": "Zero-3883999435949937974",
       "title": "Ludovica Anzaldi &#8211; &#8220;Manifestə&#8221;",
       "description": "Un percorso immersivo che integra fotografia, video e suono, inediti e site specific, in cui emerge con forza il taglio trans-femminista della ricerca dell’artista. A cura di Maria Rosa Sossai. Inaugurazione lunedì 16 novembre 2026 alle 18:30.",
       "startDate": "2026-11-18T00:00:00+00:00",
@@ -57,7 +57,25 @@
       "source": "Zero"
     },
     {
-      "id": "Zero-8864985277937565971",
+      "id": "demo-1",
+      "title": "Mostra d'Arte Contemporanea",
+      "description": "Esposizione di artisti emergenti e installazioni interattive.",
+      "startDate": "2026-11-18T18:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Roma",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Arte & Cultura",
+      "image": "",
+      "url": "#",
+      "source": "Demo"
+    },
+    {
+      "id": "Zero-1271704904727047819",
       "title": "Su:ggestiva w/ Radwan Ghazi Moumneh &#038; Frédéric D Oberland",
       "description": "Moumneh (Jerusalem In My Heart) e Oberland (Oiseaux-Tempête) presentano dal vivo il loro album di debutto come duo, fondendo un’elettronica inquieta e frammentata con il canto in arabo e strumenti acustici come il buzuk, la rababa, il clarineau e il sassofono. Opening di Francesca Palamidessi.",
       "startDate": "2026-11-18T21:00:00+00:00",
@@ -75,61 +93,25 @@
       "source": "Zero"
     },
     {
-      "id": "Zero-786350818902274022",
-      "title": "VIDEO SOUND ART FESTIVAL &#8211; XVI EDIZIONE",
-      "description": "Preferiremmo andare fuori strada, così la pensa giustamente questa edizione di VSA. Si torna a Corvetto, si esplorano la Fondazione Galleria Milano, la Cartoleria e Tipografia Bonvini 1909 e la Piscina Mincio. E lo faremo attraverso il lavoro di un nuovo collettivo curatoriale. Quattro giorni di installazioni, performance, un public program e una sala cinema con le opere di Cem A., Ode de Kort, Michele Di Stefano, Edizioni Brigantino e Lucia Pescador; uno screening program con opere video di Ila Bêka e Louise Lemoine, Meriem Bennani, Jordi Colomer, Thomas Hirschhorn, Marta Innocenti, Florence Lazar, Ugo La Pietra, Randa Maroufi, Uriel Orlow, Nicola Pellegrini e Ottonella Mocellin, Caterina Erica Shanta.",
-      "startDate": "2026-11-19T00:00:00+00:00",
-      "endDate": "2026-11-22T00:00:00+00:00",
+      "id": "demo-10",
+      "title": "Mostra Fotografica",
+      "description": "Ritratti e reportage dell'Italia rurale.",
+      "startDate": "2026-11-19T18:00:00",
+      "endDate": null,
       "location": {
-        "name": "Milano luoghi vari",
-        "address": ",, Milano",
-        "city": "Milano",
-        "region": "Lombardia",
-        "province": "Milano"
+        "name": "",
+        "address": "Viterbo",
+        "city": "Viterbo",
+        "region": "Lazio",
+        "province": "Viterbo"
       },
-      "category": "Musica",
-      "image": "https://cdn.zero.eu/uploads/2026/10/Ode-de-Kort-Tra-le-Righe-nasce-2026-still-video.jpeg",
-      "url": "https://zero.eu/it/eventi/383084-video-sound-art-festival-xvi-edizione,milano/",
-      "source": "Zero"
+      "category": "Arte & Cultura",
+      "image": "",
+      "url": "#",
+      "source": "Demo"
     },
     {
-      "id": "Zero-6006480532820551934",
-      "title": "A Occhi Aperti 2026",
-      "description": "Dal 19 al 22 novembre torna a Bologna A occhi aperti, il Festival internazionale di fumetto e illustrazione curato da Hamelin, giunto alla quarta edizione.",
-      "startDate": "2026-11-19T00:00:00+00:00",
-      "endDate": "2026-11-22T00:00:00+00:00",
-      "location": {
-        "name": "Bologna",
-        "address": ",, Bologna",
-        "city": "Bologna",
-        "region": "Emilia-Romagna",
-        "province": "Bologna"
-      },
-      "category": "Musica",
-      "image": "https://cdn.zero.eu/uploads/2026/11/Mattotti_SOTTOLEBOMBE_13.jpg",
-      "url": "https://zero.eu/it/eventi/384606-a-occhi-aperti-2026,bologna/",
-      "source": "Zero"
-    },
-    {
-      "id": "Zero-5984895290170383837",
-      "title": "Transmissions Festival 2026",
-      "description": "Dal 19 al 21 novembre la XVIII edizione intitolata Teodorico, costruita attorno alla figura del sovrano ostrogoto a 1500 anni dalla sua morte.",
-      "startDate": "2026-11-19T00:00:00+00:00",
-      "endDate": "2026-11-21T00:00:00+00:00",
-      "location": {
-        "name": "Ravenna",
-        "address": ",, Ravenna",
-        "city": "Ravenna",
-        "region": "Emilia-Romagna",
-        "province": "Ravenna"
-      },
-      "category": "Musica",
-      "image": "https://cdn.zero.eu/uploads/2026/11/Radwan-Ghazi-Moumneh-Tim-van-Veen.jpeg",
-      "url": "https://zero.eu/it/eventi/384015-transmissions-festival-2026,ravenna/",
-      "source": "Zero"
-    },
-    {
-      "id": "Zero-2018703882414674112",
+      "id": "Zero-4853285800003176273",
       "title": "Organum Multiplum II &#8211; II Capitolo",
       "description": "Torna la rassegna di Villa Lontana che unisce contemporaneo, sacro, artistə internazionalə e organi antichi. Stasera James McVinnie e Tristan Perich presentano per la prima volta a Roma una rivisitazione di \"Infinity Gradient\" (2025), composizione per organo e diffusori sonori, concepita in relazione agli spazi e all’acustica della Basilica di Santa Maria in Aracoeli.",
       "startDate": "2026-11-19T20:30:00+00:00",
@@ -147,97 +129,43 @@
       "source": "Zero"
     },
     {
-      "id": "Zero-3131449207684891319",
-      "title": "MILANO DRAWING WEEK &#8211; PARTY",
-      "description": "Grande festa di apertura della Milano Drawing Week, un invito a immergersi a ritmo di musica nel bestiario fantastico dell’artista.",
-      "startDate": "2026-11-20T18:30:00+00:00",
-      "endDate": "2026-11-20T22:00:00+00:00",
+      "id": "demo-0",
+      "title": "Sagra della Castagna",
+      "description": "Tradizionale sagra con caldarroste, dolci e prodotti tipici del territorio.",
+      "startDate": "2026-11-20T18:00:00",
+      "endDate": null,
       "location": {
-        "name": "Cittadella degli Archivi del Comune di Milano",
-        "address": "Via Ferdinando Gregorovius, 15, Milano",
-        "city": "Milano",
-        "region": "Lombardia",
-        "province": "Milano"
+        "name": "",
+        "address": "Viterbo",
+        "city": "Viterbo",
+        "region": "Lazio",
+        "province": "Viterbo"
+      },
+      "category": "Sagre & Enogastronomia",
+      "image": "",
+      "url": "#",
+      "source": "Demo"
+    },
+    {
+      "id": "demo-7",
+      "title": "Concerto Sinfonico",
+      "description": "Orchestra sinfonica in piazza con repertorio classico.",
+      "startDate": "2026-11-21T18:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Terni",
+        "city": "Terni",
+        "region": "Umbria",
+        "province": "Terni"
       },
       "category": "Musica",
-      "image": "https://cdn.zero.eu/uploads/2026/10/unnamed-1-4.jpg",
-      "url": "https://zero.eu/it/eventi/383105-milano-drawing-week-party,milano/",
-      "source": "Zero"
+      "image": "",
+      "url": "#",
+      "source": "Demo"
     },
     {
-      "id": "Zero-1413316846092420477",
-      "title": "LOBO 14yrs x isciān: Deena Abdelwahed",
-      "description": "Deena Abdelwahed è la special guest per quest'occasione unica con il suo sound elettronico dalla cassa sbilenca e contaminazioni etniche.",
-      "startDate": "2026-11-20T22:00:00+00:00",
-      "endDate": "2026-11-20T00:00:00+00:00",
-      "location": {
-        "name": "NAMA &#8211; Nuovo Anfiteatro Martesana",
-        "address": "Parco Martiri della Libertà Iracheni Vittime del Terrorismo, Via Agordat,, Milano",
-        "city": "Milano",
-        "region": "Lombardia",
-        "province": "Milano"
-      },
-      "category": "Eventi & Cultura",
-      "image": "https://cdn.zero.eu/uploads/2024/05/Photo1_Deena_YassineMeddedHamrouni-1-1-scaled-e1714745030456.jpg",
-      "url": "https://zero.eu/it/eventi/383809-lobo-14yrs-x-iscian,milano/",
-      "source": "Zero"
-    },
-    {
-      "id": "Zero-577650966205245954",
-      "title": "Soulstice: Ryan Elliot + Saoirse",
-      "description": "House e techno di altissima qualità per questo appuntamento di Soulstice al Gate con il nostrano Ferrari.",
-      "startDate": "2026-11-20T23:00:00+00:00",
-      "endDate": "2026-11-20T00:00:00+00:00",
-      "location": {
-        "name": "Gate",
-        "address": "Via Valtellina, 21, Milano",
-        "city": "Milano",
-        "region": "Lombardia",
-        "province": "Milano"
-      },
-      "category": "Musica",
-      "image": "https://cdn.zero.eu/uploads/2023/06/Schermata-2023-06-12-alle-17.17.57-e1686583108573.png",
-      "url": "https://zero.eu/it/eventi/381235-soulstice-ryan-elliot-saoirse,milano/",
-      "source": "Zero"
-    },
-    {
-      "id": "Zero-7246948574154082895",
-      "title": "MILANO DRAWING WEEK &#8211; 2026",
-      "description": "10 mostre tra istituzioni e gallerie; artisti contemporanei in dialogo con i maestri del Novecento e un programma di talk, workshop, incontri e azioni collettive diffuso in città. Dalla Fondazione Scanavino alla Cittadella degli Archivi, dalle gallerie alla chiesa-museo San Fedele, da un negozio di fiori alla Pinacoteca Ambrosiana: la sesta edizione della Milano Drawing Week, ideata e prodotta dalla Collezione Ramo, porta il disegno fuori dai suoi confini abituali e invita il pubblico non soltanto a guardarlo, ma anche a praticarlo.",
-      "startDate": "2026-11-21T00:00:00+00:00",
-      "endDate": "2026-11-29T00:00:00+00:00",
-      "location": {
-        "name": "Milano luoghi vari",
-        "address": ",, Milano",
-        "city": "Milano",
-        "region": "Lombardia",
-        "province": "Milano"
-      },
-      "category": "Arte & Cultura",
-      "image": "https://cdn.zero.eu/uploads/2026/10/1378_fontana_i-vigliacchi_1933-scaled.jpg",
-      "url": "https://zero.eu/it/eventi/383097-milano-drawing-week-2026,milano/",
-      "source": "Zero"
-    },
-    {
-      "id": "Zero-3676451658135132972",
-      "title": "Len Faki",
-      "description": "Techno che va come un treno con il dj tedesco che non ve la manda a dire.",
-      "startDate": "2026-11-21T00:00:00+00:00",
-      "endDate": "2026-11-21T00:00:00+00:00",
-      "location": {
-        "name": "Link",
-        "address": "Via F. Fantoni, 21, 40127, Bologna",
-        "city": "Bologna",
-        "region": "Emilia-Romagna",
-        "province": "Bologna"
-      },
-      "category": "Musica",
-      "image": "https://cdn.zero.eu/uploads/2015/09/Len_Faki_truncate_.jpg",
-      "url": "https://zero.eu/it/eventi/384388-len-faki-9-3-2,bologna/",
-      "source": "Zero"
-    },
-    {
-      "id": "Zero-3465604464731214839",
+      "id": "Zero-7271436805489387097",
       "title": "Resisting Sounds, Resisting Images",
       "description": "In occasione di Musei in Musica, una conversazione (ore 19:00) con Noor Abed e Mo’min Swaitat e listening session del Palestinian Sound Archive (ore 21:00).",
       "startDate": "2026-11-21T19:00:00+00:00",
@@ -255,43 +183,7 @@
       "source": "Zero"
     },
     {
-      "id": "Zero-878915550995760024",
-      "title": "Amari",
-      "description": "Gli Amari presentano il nuovo \"Finta di Niente\".",
-      "startDate": "2026-11-21T20:30:00+00:00",
-      "endDate": "2026-11-21T00:00:00+00:00",
-      "location": {
-        "name": "Baumhaus (nuova sede)",
-        "address": "Via Jacopo Barozzi, 3/P, Bologna",
-        "city": "Bologna",
-        "region": "Emilia-Romagna",
-        "province": "Bologna"
-      },
-      "category": "Eventi & Cultura",
-      "image": "https://cdn.zero.eu/uploads/2026/11/amari-tagliamento-2-scaled-1.jpeg",
-      "url": "https://zero.eu/it/eventi/384098-amari-4,bologna/",
-      "source": "Zero"
-    },
-    {
-      "id": "Zero-1730633976285308596",
-      "title": "Elhzo + Jitsu Ken Tai",
-      "description": "Un live Afro Jazz e una selecta pronta a far muovere tutta la sala. Un ritmo, tante culture e un nuovo singolo da ascoltare dal vivo. Hip hop, funk, reggae e dancehall: una selezione per chiudere la notte con il volume giusto.",
-      "startDate": "2026-11-21T20:30:00+00:00",
-      "endDate": "2026-11-21T00:00:00+00:00",
-      "location": {
-        "name": "Binario69",
-        "address": "Via de' Carracci, 69/7, Bologna",
-        "city": "Bologna",
-        "region": "Emilia-Romagna",
-        "province": "Bologna"
-      },
-      "category": "Musica",
-      "image": "https://cdn.zero.eu/uploads/2026/11/Elhzo.jpeg",
-      "url": "https://zero.eu/it/eventi/383876-elhzo-jitsu-ken-tai,bologna/",
-      "source": "Zero"
-    },
-    {
-      "id": "Zero-2613915302794248124",
+      "id": "Zero-4325356153160220482",
       "title": "Altro",
       "description": "Festone autunnale con la storica band hardcore che presenta il nuovo album e poi Giovanni Pedersini, Doglie Blu, Guglielmo Contro i Merli, Quattroscelte Sbagliate.",
       "startDate": "2026-11-21T21:00:00+00:00",
@@ -309,25 +201,7 @@
       "source": "Zero"
     },
     {
-      "id": "Zero-4171525362671231134",
-      "title": "audiodas: Uzeda/Andrea Bruno + Burning Teslas/Samuele Canestrari",
-      "description": "AudioDas, in collaborazione con A Occhi Aperti e Sputnik Press, presenta una serata speciale dedicata all'incontro tra musica e disegno con il live dei mitici Uzeda accompagnati dal live painting di Andrea Bruno e quello dei Burning Teslas insieme a Samuele Canestrari.",
-      "startDate": "2026-11-21T21:00:00+00:00",
-      "endDate": "2026-11-21T00:00:00+00:00",
-      "location": {
-        "name": "DAS &#8211; Dispositivo Arti Sperimentali",
-        "address": "Via del Porto, 11/2, Bologna",
-        "city": "Bologna",
-        "region": "Emilia-Romagna",
-        "province": "Bologna"
-      },
-      "category": "Musica",
-      "image": "https://cdn.zero.eu/uploads/2025/08/Uzeda-live-25-giugno-Catania-by-Davide-Patania-pagina.jpg",
-      "url": "https://zero.eu/it/eventi/384274-audiodas-uzeda-andrea-bruno-burning-teslas-samuele-canestrari,bologna/",
-      "source": "Zero"
-    },
-    {
-      "id": "Zero-3589118768319146083",
+      "id": "Zero-1336665828541078542",
       "title": "Perra",
       "description": "Fiesta y sudor con i dj set di Don Simon, Santa Feroce, La Reina del Fomento, accompagnati dalla performance di Candy Gina, Ninni Deseo, Venezia Venere.",
       "startDate": "2026-11-21T21:30:00+00:00",
@@ -345,25 +219,7 @@
       "source": "Zero"
     },
     {
-      "id": "Zero-1106925538420131033",
-      "title": "Hugo Race Fatalists",
-      "description": "Torna dal vivo in Italia Hugo Race con il suo progetto parallelo Fatalists. Ex membro dei Bad Seeds di Nick Cave, il suo è un folk scuro che si sporca di elettronica e sperimentazione.",
-      "startDate": "2026-11-21T21:30:00+00:00",
-      "endDate": "2026-11-21T00:00:00+00:00",
-      "location": {
-        "name": "Mezz&#8217;Aria",
-        "address": "Via Frassinago, 6/2, Bologna",
-        "city": "Bologna",
-        "region": "Emilia-Romagna",
-        "province": "Bologna"
-      },
-      "category": "Eventi & Cultura",
-      "image": "https://cdn.zero.eu/uploads/2018/11/Hugo-Race.jpg",
-      "url": "https://zero.eu/it/eventi/383909-hugorace-2-3,bologna/",
-      "source": "Zero"
-    },
-    {
-      "id": "Zero-9155081620265010774",
+      "id": "Zero-4987380524587416798",
       "title": "Expansion Team Soundsystem",
       "description": "DJ Babu e Rakaa: un duo che fonde tradizione hip-hop e visione contemporanea con un’attitudine puramente party-rocking.",
       "startDate": "2026-11-21T22:00:00+00:00",
@@ -381,7 +237,7 @@
       "source": "Zero"
     },
     {
-      "id": "Zero-5894434444930084199",
+      "id": "Zero-7265396927978259136",
       "title": "Hundebiss Night",
       "description": "Una nottata firmata dall'etichetta di Simone Trabucchi con il live da Napoli di MIIN - - - AMOR e i dj set di Sky Apnea e STILL.",
       "startDate": "2026-11-21T22:00:00+00:00",
@@ -399,25 +255,7 @@
       "source": "Zero"
     },
     {
-      "id": "Zero-7190126737724201274",
-      "title": "Omasta",
-      "description": "Dopo la pubblicazione del nuovo album Hits Different la band instrumental jazz-hip-hop polacca arriva a Bologna.",
-      "startDate": "2026-11-21T22:00:00+00:00",
-      "endDate": "2026-11-21T00:00:00+00:00",
-      "location": {
-        "name": "Sghetto Club",
-        "address": "Via Zago, 16/B, Bologna",
-        "city": "Bologna",
-        "region": "Emilia-Romagna",
-        "province": "Bologna"
-      },
-      "category": "Eventi & Cultura",
-      "image": "https://cdn.zero.eu/uploads/2026/11/omasta.jpeg",
-      "url": "https://zero.eu/it/eventi/384327-omasta-2,bologna/",
-      "source": "Zero"
-    },
-    {
-      "id": "Zero-1590312614754187831",
+      "id": "Zero-6863799620030965389",
       "title": "Fleurs Sonores x Reveries",
       "description": "I due collettivi si incontrano nuovamente sotto cassa al Branca con tre back to back tra i resident: Collider B2B Mantis, Ame Noir B2B VSC, Blunderr B2B Her Nice Too.",
       "startDate": "2026-11-21T23:00:00+00:00",
@@ -435,61 +273,7 @@
       "source": "Zero"
     },
     {
-      "id": "Zero-5238159762984473902",
-      "title": "Roof x Neon: Carl H + Ekkel + Free.Zing",
-      "description": "Dopo il party a Masada si continua all'Amelia con un'altra maratona dall'elettronica in 4/4 e non solo con le sue più varie sfumature.",
-      "startDate": "2026-11-21T23:30:00+00:00",
-      "endDate": "2026-11-21T00:00:00+00:00",
-      "location": {
-        "name": "Circolo Amelia",
-        "address": "Via privata Venezia Giulia, 19, 20157, Milano",
-        "city": "Milano",
-        "region": "Lombardia",
-        "province": "Milano"
-      },
-      "category": "Eventi & Cultura",
-      "image": "https://cdn.zero.eu/uploads/2024/11/carl-h-rotated-e1733391956106.jpg",
-      "url": "https://zero.eu/it/eventi/384651-roof-x-neon-alex-neri-ivan-smagghe-2,milano/",
-      "source": "Zero"
-    },
-    {
-      "id": "Zero-3038895098456749627",
-      "title": "Raus with Surgeon + BSR Take Over",
-      "description": "Techno senza compromessi in sala 1, mentre in sale 2 al piano superiore con veranda Burro Studio Radio sound.",
-      "startDate": "2026-11-21T23:30:00+00:00",
-      "endDate": "2026-11-21T00:00:00+00:00",
-      "location": {
-        "name": "Studionotte",
-        "address": "Via Feltre, 30, 20132, Milano",
-        "city": "Milano",
-        "region": "Lombardia",
-        "province": "Milano"
-      },
-      "category": "Musica",
-      "image": "https://cdn.zero.eu/uploads/2017/03/surgeon-1.jpg",
-      "url": "https://zero.eu/it/eventi/383611-raus-with-surgeon-bsr-take-over,milano/",
-      "source": "Zero"
-    },
-    {
-      "id": "Zero-6537594704470909153",
-      "title": "Oxigène: Objekt",
-      "description": "Uno dei dj e producer che ha più stile che massa corporea. Techno, dub, IDM, electro tutto con una sapienza unica.",
-      "startDate": "2026-11-21T23:30:00+00:00",
-      "endDate": "2026-11-21T00:00:00+00:00",
-      "location": {
-        "name": "DURO",
-        "address": "Via Perin del Vaga, 8, 20156, Milano",
-        "city": "Milano",
-        "region": "Lombardia",
-        "province": "Milano"
-      },
-      "category": "Musica",
-      "image": "https://cdn.zero.eu/uploads/2020/02/001.jpg",
-      "url": "https://zero.eu/it/eventi/383278-oxigene-objekt,milano/",
-      "source": "Zero"
-    },
-    {
-      "id": "Zero-415365762901855384",
+      "id": "Zero-2336194160882256603",
       "title": "ØKSE",
       "description": "Flaming Creatures e Zen Arcade presentano il supergruppo svedese di avant-jazz pubblicato da Backwoodz Studioz.",
       "startDate": "2026-11-22T00:00:00+00:00",
@@ -507,40 +291,220 @@
       "source": "Zero"
     },
     {
-      "id": "Zero-5581724011397078983",
-      "title": "Rail Market",
-      "description": "Il market che spazia dalla musica, all’arte, all’artigianato.",
-      "startDate": "2026-11-22T11:00:00+00:00",
-      "endDate": "2026-11-22T00:00:00+00:00",
+      "id": "demo-4",
+      "title": "Notte dei Musei",
+      "description": "Apertura straordinaria serale di musei e siti culturali.",
+      "startDate": "2026-11-22T18:00:00",
+      "endDate": null,
       "location": {
-        "name": "DumBO",
-        "address": "Via Casarini, 19, Bologna",
-        "city": "Bologna",
-        "region": "Emilia-Romagna",
-        "province": "Bologna"
+        "name": "",
+        "address": "Roma",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
       },
-      "category": "Musica",
-      "image": "https://cdn.zero.eu/uploads/2023/10/10-settembre.jpg",
-      "url": "https://zero.eu/it/eventi/384264-rail-market-dumbo-2-2-2-2-2-2-2,bologna/",
-      "source": "Zero"
+      "category": "Arte & Cultura",
+      "image": "",
+      "url": "#",
+      "source": "Demo"
     },
     {
-      "id": "Zero-3120715380094575625",
-      "title": "Sondre Lerche",
-      "description": "Una delle voci più eclettiche e raffinate della scena indipendente internazionale.",
-      "startDate": "2026-11-22T18:30:00+00:00",
-      "endDate": "2026-11-22T00:00:00+00:00",
+      "id": "demo-5",
+      "title": "Sagra dei Funghi Porcini",
+      "description": "Piatti a base di porcini, escursioni guidate e mostra micologica.",
+      "startDate": "2026-11-24T18:00:00",
+      "endDate": null,
       "location": {
-        "name": "Baumhaus (nuova sede)",
-        "address": "Via Jacopo Barozzi, 3/P, Bologna",
-        "city": "Bologna",
-        "region": "Emilia-Romagna",
-        "province": "Bologna"
+        "name": "",
+        "address": "Montefiascone",
+        "city": "Montefiascone",
+        "region": "Lazio",
+        "province": "Viterbo"
       },
-      "category": "Eventi & Cultura",
-      "image": "https://cdn.zero.eu/uploads/2022/04/sondre-lerche_1_1474571298.jpg",
-      "url": "https://zero.eu/it/eventi/384100-sondre-lerche-2,bologna/",
-      "source": "Zero"
+      "category": "Sagre & Enogastronomia",
+      "image": "",
+      "url": "#",
+      "source": "Demo"
+    },
+    {
+      "id": "demo-2",
+      "title": "Festival della Musica Popolare",
+      "description": "Concerti, danze e laboratori di musica tradizionale.",
+      "startDate": "2026-11-25T18:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Perugia",
+        "city": "Perugia",
+        "region": "Umbria",
+        "province": "Perugia"
+      },
+      "category": "Musica",
+      "image": "",
+      "url": "#",
+      "source": "Demo"
+    },
+    {
+      "id": "demo-8",
+      "title": "Sagra della Polenta",
+      "description": "Polenta concia, salsicce e formaggi di montagna.",
+      "startDate": "2026-11-26T18:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Rieti",
+        "city": "Rieti",
+        "region": "Lazio",
+        "province": "Rieti"
+      },
+      "category": "Sagre & Enogastronomia",
+      "image": "",
+      "url": "#",
+      "source": "Demo"
+    },
+    {
+      "id": "demo-3",
+      "title": "Sagra del Tartufo",
+      "description": "Degustazioni, mercatino e showcooking con chef locali.",
+      "startDate": "2026-11-27T18:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Norcia",
+        "city": "Norcia",
+        "region": "Umbria",
+        "province": "Perugia"
+      },
+      "category": "Sagre & Enogastronomia",
+      "image": "",
+      "url": "#",
+      "source": "Demo"
+    },
+    {
+      "id": "demo-11",
+      "title": "Festa Patronale",
+      "description": "Processione, fuochi d'artificio e stand gastronomici.",
+      "startDate": "2026-11-28T18:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Roma",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Comunita' & Tradizioni",
+      "image": "",
+      "url": "#",
+      "source": "Demo"
+    },
+    {
+      "id": "demo-9",
+      "title": "Festival del Cinema Indipendente",
+      "description": "Proiezioni, incontri con registi e workshop.",
+      "startDate": "2026-11-30T18:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Roma",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Arte & Cultura",
+      "image": "",
+      "url": "#",
+      "source": "Demo"
+    },
+    {
+      "id": "demo-12",
+      "title": "Sagra del Miele",
+      "description": "Degustazioni di mieli monoflorali e laboratori.",
+      "startDate": "2026-12-01T18:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Todi",
+        "city": "Todi",
+        "region": "Umbria",
+        "province": "Perugia"
+      },
+      "category": "Sagre & Enogastronomia",
+      "image": "",
+      "url": "#",
+      "source": "Demo"
+    },
+    {
+      "id": "demo-14",
+      "title": "Sagra della Pizza",
+      "description": "Pizzaioli da tutta Italia e gara della pizza piu' lunga.",
+      "startDate": "2026-12-02T18:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Roma",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Sagre & Enogastronomia",
+      "image": "",
+      "url": "#",
+      "source": "Demo"
+    },
+    {
+      "id": "demo-15",
+      "title": "Giornata dello Sport",
+      "description": "Tornei amatoriali e prove gratuite.",
+      "startDate": "2026-12-04T18:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Latina",
+        "city": "Latina",
+        "region": "Lazio",
+        "province": "Latina"
+      },
+      "category": "Sport",
+      "image": "",
+      "url": "#",
+      "source": "Demo"
+    },
+    {
+      "id": "demo-6",
+      "title": "Palio Storico",
+      "description": "Corteo storico, giochi medievali e rievocazione in costume.",
+      "startDate": "2026-12-05T18:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Viterbo",
+        "city": "Viterbo",
+        "region": "Lazio",
+        "province": "Viterbo"
+      },
+      "category": "Comunita' & Tradizioni",
+      "image": "",
+      "url": "#",
+      "source": "Demo"
+    },
+    {
+      "id": "demo-16",
+      "title": "Concerto Jazz",
+      "description": "Quartetto jazz internazionale in auditorium.",
+      "startDate": "2026-12-06T18:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Spoleto",
+        "city": "Spoleto",
+        "region": "Umbria",
+        "province": "Perugia"
+      },
+      "category": "Musica",
+      "image": "",
+      "url": "#",
+      "source": "Demo"
     }
   ]
 }

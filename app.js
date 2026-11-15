@@ -2,7 +2,7 @@
   const state = {
     events: [],
     filtered: [],
-    filters: { search: "", category: "", region: "", province: "", city: "", onlySagre: false, dateFrom: "", dateTo: "", sort: "date-asc" },
+    filters: { search: "", category: "", region: "", province: "", city: "", dateFrom: "", dateTo: "", sort: "date-asc" },
   };
 
   const els = {
@@ -17,7 +17,6 @@
     region: document.getElementById("region"),
     city: document.getElementById("city"),
     province: document.getElementById("province"),
-    onlySagre: document.getElementById("onlySagre"),
     dateFrom: document.getElementById("dateFrom"),
     dateTo: document.getElementById("dateTo"),
     sort: document.getElementById("sort"),
@@ -151,10 +150,6 @@
       if (f.region && e.location?.region !== f.region) return false;
       if (f.province && e.location?.province !== f.province) return false;
       if (f.city && e.location?.city !== f.city) return false;
-      if (f.onlySagre) {
-        const blob = [e.title, e.description, e.category].join(" ").toLowerCase();
-        if (!blob.includes("sagra") && e.category !== "Sagre & Enogastronomia") return false;
-      }
       const d = e.startDate ? new Date(e.startDate) : null;
       if (f.dateFrom && d && d < new Date(f.dateFrom)) return false;
       if (f.dateTo && d && d > new Date(f.dateTo + "T23:59:59")) return false;
@@ -252,21 +247,17 @@
     applyFilters();
     updateSagreLink();
   });
-  els.onlySagre.addEventListener("change", e => {
-    state.filters.onlySagre = e.target.checked;
-    applyFilters();
-  });
+
   els.dateFrom.addEventListener("change", e => { state.filters.dateFrom = e.target.value; applyFilters(); });
   els.dateTo.addEventListener("change", e => { state.filters.dateTo = e.target.value; applyFilters(); });
   els.sort.addEventListener("change", e => { state.filters.sort = e.target.value; applyFilters(); });
   els.reset.addEventListener("click", () => {
-    state.filters = { search: "", category: "", region: "", province: "", city: "", onlySagre: false, dateFrom: "", dateTo: "", sort: "date-asc" };
+    state.filters = { search: "", category: "", region: "", province: "", city: "", dateFrom: "", dateTo: "", sort: "date-asc" };
     els.search.value = "";
     els.category.value = "";
     els.region.value = "";
     els.province.value = "";
     els.city.value = "";
-    els.onlySagre.checked = false;
     cascadedOptions();
     els.dateFrom.value = "";
     els.dateTo.value = "";
