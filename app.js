@@ -552,8 +552,10 @@
         if (!res.ok) throw new Error("HTTP " + res.status);
         const data = await res.json();
         state.events = Array.isArray(data.events) ? data.events : [];
+        els.updated.textContent = data.updated ? new Date(data.updated).toLocaleDateString("it-IT", { day: "2-digit", month: "short", year: "numeric" }) : "-";
+      } else {
+        els.updated.textContent = new Date().toLocaleDateString("it-IT", { day: "2-digit", month: "short", year: "numeric" });
       }
-      els.updated.textContent = data.updated ? new Date(data.updated).toLocaleDateString("it-IT", { day: "2-digit", month: "short", year: "numeric" }) : "-";
       populateFilters();
       cascadedOptions();
       applyFilters();
