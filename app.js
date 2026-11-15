@@ -2,7 +2,7 @@
   const state = {
     events: [],
     filtered: [],
-    filters: { search: "", category: "", region: "", dateFrom: "", dateTo: "", sort: "date-asc" },
+    filters: { search: "", category: "", region: "", city: "", dateFrom: "", dateTo: "", sort: "date-asc" },
   };
 
   const els = {
@@ -15,6 +15,7 @@
     search: document.getElementById("search"),
     category: document.getElementById("category"),
     region: document.getElementById("region"),
+    city: document.getElementById("city"),
     dateFrom: document.getElementById("dateFrom"),
     dateTo: document.getElementById("dateTo"),
     sort: document.getElementById("sort"),
@@ -23,6 +24,7 @@
     modalBody: document.getElementById("modalBody"),
     themeToggle: document.getElementById("themeToggle"),
     scrollTop: document.getElementById("scrollTop"),
+    sagreLink: document.getElementById("sagreLink"),
   };
 
   function escapeHtml(s) {
@@ -70,6 +72,7 @@
   function populateFilters() {
     const cats = [...new Set(state.events.map(e => e.category).filter(Boolean))].sort();
     const regions = [...new Set(state.events.map(e => e.location?.region).filter(Boolean))].sort();
+    const cities = [...new Set(state.events.map(e => e.location?.city).filter(Boolean))].sort((a,b)=>a.localeCompare(b,"it"));
     cats.forEach(c => {
       const o = document.createElement("option");
       o.value = c; o.textContent = c;
@@ -80,7 +83,21 @@
       o.value = r; o.textContent = r;
       els.region.appendChild(o);
     });
+    cities.forEach(c => {
+      const o = document.createElement("option");
+      o.value = c; o.textContent = c;
+      els.city.appendChild(o);
+    });
     els.countRegions.textContent = regions.length;
+  }
+
+  function updateSagreLink() {
+    const city = state.filters.city || state.filters.region || "";
+    const q = city ? encodeURIComponent("sagre " + city) : encodeURIComponent("sagre italia");
+    if (els.sagreLink) {
+      els.sagreLink.href = "https://www.google.com/search?q=" + q;
+      els.sagreLink.textContent = city ? "🔍 Cerca sagre a " + city : "🔍 Cerca sagre online";
+    }
   }
 
   function applyFilters() {
@@ -91,6 +108,7 @@
       if (f.search && !blob.includes(f.search.toLowerCase())) return false;
       if (f.category && e.category !== f.category) return false;
       if (f.region && e.location?.region !== f.region) return false;
+      if (f.city && e.location?.city !== f.city) return false;
       const d = e.startDate ? new Date(e.startDate) : null;
       if (f.dateFrom && d && d < new Date(f.dateFrom)) return false;
       if (f.dateTo && d && d > new Date(f.dateTo + "T23:59:59")) return false;
@@ -168,15 +186,17 @@
   // events
   els.search.addEventListener("input", e => { state.filters.search = e.target.value; applyFilters(); });
   els.category.addEventListener("change", e => { state.filters.category = e.target.value; applyFilters(); });
-  els.region.addEventListener("change", e => { state.filters.region = e.target.value; applyFilters(); });
+  els.region.addEventListener("change", e => { state.filters.region = e.target.value; applyFilters(); updateSagreLink(); });
+  els.city.addEventListener("change", e => { state.filters.city = e.target.value; applyFilters(); updateSagreLink(); });
   els.dateFrom.addEventListener("change", e => { state.filters.dateFrom = e.target.value; applyFilters(); });
   els.dateTo.addEventListener("change", e => { state.filters.dateTo = e.target.value; applyFilters(); });
   els.sort.addEventListener("change", e => { state.filters.sort = e.target.value; applyFilters(); });
   els.reset.addEventListener("click", () => {
-    state.filters = { search: "", category: "", region: "", dateFrom: "", dateTo: "", sort: "date-asc" };
+    state.filters = { search: "", category: "", region: "", city: "", dateFrom: "", dateTo: "", sort: "date-asc" };
     els.search.value = "";
     els.category.value = "";
     els.region.value = "";
+    els.city.value = "";
     els.dateFrom.value = "";
     els.dateTo.value = "";
     els.sort.value = "date-asc";
@@ -220,6 +240,7 @@
       els.updated.textContent = data.updated ? new Date(data.updated).toLocaleDateString("it-IT", { day: "2-digit", month: "short", year: "numeric" }) : "-";
       populateFilters();
       applyFilters();
+      updateSagreLink();
     } catch (err) {
       els.loading.innerHTML = `<div class="empty"><div class="empty-illustration">⚠️</div><h3>Impossibile caricare gli eventi</h3><p>${escapeHtml(err.message)}</p></div>`;
       console.error(err);

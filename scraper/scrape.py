@@ -52,6 +52,7 @@ SOURCES = [
             "https://www.eventbrite.it/d/italy--torino/events/",
             "https://www.eventbrite.it/d/italy--bologna/events/",
             "https://www.eventbrite.it/d/italy--firenze/events/",
+            "https://www.eventbrite.it/d/italy/events/?q=sagra",
         ],
     },
 ]
