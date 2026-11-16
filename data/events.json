@@ -1,12 +1,12 @@
 {
-  "updated": "2026-11-15T18:52:17.449000+00:00",
+  "updated": "2026-11-16T13:23:20.992231+00:00",
   "count": 28,
   "events": [
     {
       "id": "demo-17",
       "title": "Sagra del Vino",
       "description": "Degustazioni di vini locali e prodotti tipici.",
-      "startDate": "2026-11-16T18:00:00",
+      "startDate": "2026-11-17T18:00:00",
       "endDate": null,
       "location": {
         "name": "",
@@ -21,25 +21,7 @@
       "source": "Demo"
     },
     {
-      "id": "demo-13",
-      "title": "Teatro in Piazza",
-      "description": "Spettacolo di commedia dell'arte all'aperto.",
-      "startDate": "2026-11-17T18:00:00",
-      "endDate": null,
-      "location": {
-        "name": "",
-        "address": "Perugia",
-        "city": "Perugia",
-        "region": "Umbria",
-        "province": "Perugia"
-      },
-      "category": "Arte & Cultura",
-      "image": "",
-      "url": "#",
-      "source": "Demo"
-    },
-    {
-      "id": "Zero-4943757934615614025",
+      "id": "Zero-2457279743308764634",
       "title": "Ludovica Anzaldi &#8211; &#8220;Manifestə&#8221;",
       "description": "Un percorso immersivo che integra fotografia, video e suono, inediti e site specific, in cui emerge con forza il taglio trans-femminista della ricerca dell’artista. A cura di Maria Rosa Sossai. Inaugurazione lunedì 16 novembre 2026 alle 18:30.",
       "startDate": "2026-11-18T00:00:00+00:00",
@@ -57,17 +39,17 @@
       "source": "Zero"
     },
     {
-      "id": "demo-1",
-      "title": "Mostra d'Arte Contemporanea",
-      "description": "Esposizione di artisti emergenti e installazioni interattive.",
+      "id": "demo-13",
+      "title": "Teatro in Piazza",
+      "description": "Spettacolo di commedia dell'arte all'aperto.",
       "startDate": "2026-11-18T18:00:00",
       "endDate": null,
       "location": {
         "name": "",
-        "address": "Roma",
-        "city": "Roma",
-        "region": "Lazio",
-        "province": "Roma"
+        "address": "Perugia",
+        "city": "Perugia",
+        "region": "Umbria",
+        "province": "Perugia"
       },
       "category": "Arte & Cultura",
       "image": "",
@@ -75,7 +57,7 @@
       "source": "Demo"
     },
     {
-      "id": "Zero-5565369466919707611",
+      "id": "Zero-2484128197651216992",
       "title": "Su:ggestiva w/ Radwan Ghazi Moumneh &#038; Frédéric D Oberland",
       "description": "Moumneh (Jerusalem In My Heart) e Oberland (Oiseaux-Tempête) presentano dal vivo il loro album di debutto come duo, fondendo un’elettronica inquieta e frammentata con il canto in arabo e strumenti acustici come il buzuk, la rababa, il clarineau e il sassofono. Opening di Francesca Palamidessi.",
       "startDate": "2026-11-18T21:00:00+00:00",
@@ -93,17 +75,17 @@
       "source": "Zero"
     },
     {
-      "id": "demo-10",
-      "title": "Mostra Fotografica",
-      "description": "Ritratti e reportage dell'Italia rurale.",
+      "id": "demo-1",
+      "title": "Mostra d'Arte Contemporanea",
+      "description": "Esposizione di artisti emergenti e installazioni interattive.",
       "startDate": "2026-11-19T18:00:00",
       "endDate": null,
       "location": {
         "name": "",
-        "address": "Viterbo",
-        "city": "Viterbo",
+        "address": "Roma",
+        "city": "Roma",
         "region": "Lazio",
-        "province": "Viterbo"
+        "province": "Roma"
       },
       "category": "Arte & Cultura",
       "image": "",
@@ -111,7 +93,7 @@
       "source": "Demo"
     },
     {
-      "id": "Zero-8135331702309680564",
+      "id": "Zero-5991348662963521696",
       "title": "Organum Multiplum II &#8211; II Capitolo",
       "description": "Torna la rassegna di Villa Lontana che unisce contemporaneo, sacro, artistə internazionalə e organi antichi. Stasera James McVinnie e Tristan Perich presentano per la prima volta a Roma una rivisitazione di \"Infinity Gradient\" (2025), composizione per organo e diffusori sonori, concepita in relazione agli spazi e all’acustica della Basilica di Santa Maria in Aracoeli.",
       "startDate": "2026-11-19T20:30:00+00:00",
@@ -129,10 +111,28 @@
       "source": "Zero"
     },
     {
+      "id": "demo-10",
+      "title": "Mostra Fotografica",
+      "description": "Ritratti e reportage dell'Italia rurale.",
+      "startDate": "2026-11-20T18:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Viterbo",
+        "city": "Viterbo",
+        "region": "Lazio",
+        "province": "Viterbo"
+      },
+      "category": "Arte & Cultura",
+      "image": "",
+      "url": "#",
+      "source": "Demo"
+    },
+    {
       "id": "demo-0",
       "title": "Sagra della Castagna",
       "description": "Tradizionale sagra con caldarroste, dolci e prodotti tipici del territorio.",
-      "startDate": "2026-11-20T18:00:00",
+      "startDate": "2026-11-21T18:00:00",
       "endDate": null,
       "location": {
         "name": "",
@@ -147,43 +147,7 @@
       "source": "Demo"
     },
     {
-      "id": "demo-7",
-      "title": "Concerto Sinfonico",
-      "description": "Orchestra sinfonica in piazza con repertorio classico.",
-      "startDate": "2026-11-21T18:00:00",
-      "endDate": null,
-      "location": {
-        "name": "",
-        "address": "Terni",
-        "city": "Terni",
-        "region": "Umbria",
-        "province": "Terni"
-      },
-      "category": "Musica",
-      "image": "",
-      "url": "#",
-      "source": "Demo"
-    },
-    {
-      "id": "Zero-3227146159461356523",
-      "title": "Resisting Sounds, Resisting Images",
-      "description": "In occasione di Musei in Musica, una conversazione (ore 19:00) con Noor Abed e Mo’min Swaitat e listening session del Palestinian Sound Archive (ore 21:00).",
-      "startDate": "2026-11-21T19:00:00+00:00",
-      "endDate": "2026-11-21T00:00:00+00:00",
-      "location": {
-        "name": "MACRO",
-        "address": "Via Nizza, 138, 00198, Roma",
-        "city": "Roma",
-        "region": "Lazio",
-        "province": "Roma"
-      },
-      "category": "Musica",
-      "image": "https://cdn.zero.eu/uploads/2026/11/Screenshot-2026-11-06-101845-e1793956765979.png",
-      "url": "https://zero.eu/it/eventi/383826-resisting-sounds-resisting-images,roma/",
-      "source": "Zero"
-    },
-    {
-      "id": "Zero-6385938126991783179",
+      "id": "Zero-4291865999245756343",
       "title": "Altro",
       "description": "Festone autunnale con la storica band hardcore che presenta il nuovo album e poi Giovanni Pedersini, Doglie Blu, Guglielmo Contro i Merli, Quattroscelte Sbagliate.",
       "startDate": "2026-11-21T21:00:00+00:00",
@@ -201,25 +165,7 @@
       "source": "Zero"
     },
     {
-      "id": "Zero-5536723007621240352",
-      "title": "Perra",
-      "description": "Fiesta y sudor con i dj set di Don Simon, Santa Feroce, La Reina del Fomento, accompagnati dalla performance di Candy Gina, Ninni Deseo, Venezia Venere.",
-      "startDate": "2026-11-21T21:30:00+00:00",
-      "endDate": "2026-11-21T00:00:00+00:00",
-      "location": {
-        "name": "Esc Atelier Occupato",
-        "address": "Via dei Volsci, 159, 00185, Roma",
-        "city": "Roma",
-        "region": "Lazio",
-        "province": "Roma"
-      },
-      "category": "Musica",
-      "image": "https://cdn.zero.eu/uploads/2026/09/SnapInsta.to_672335885_17899041534428630_1794551826790235163_n-1.jpg",
-      "url": "https://zero.eu/it/eventi/384253-perra-novembre-2026,roma/",
-      "source": "Zero"
-    },
-    {
-      "id": "Zero-5035266922381372652",
+      "id": "Zero-5168007371941216819",
       "title": "Expansion Team Soundsystem",
       "description": "DJ Babu e Rakaa: un duo che fonde tradizione hip-hop e visione contemporanea con un’attitudine puramente party-rocking.",
       "startDate": "2026-11-21T22:00:00+00:00",
@@ -237,7 +183,7 @@
       "source": "Zero"
     },
     {
-      "id": "Zero-2464651517132958579",
+      "id": "Zero-2829149352803455957",
       "title": "Hundebiss Night",
       "description": "Una nottata firmata dall'etichetta di Simone Trabucchi con il live da Napoli di MIIN - - - AMOR e i dj set di Sky Apnea e STILL.",
       "startDate": "2026-11-21T22:00:00+00:00",
@@ -255,25 +201,7 @@
       "source": "Zero"
     },
     {
-      "id": "Zero-8230513833186837035",
-      "title": "Fleurs Sonores x Reveries",
-      "description": "I due collettivi si incontrano nuovamente sotto cassa al Branca con tre back to back tra i resident: Collider B2B Mantis, Ame Noir B2B VSC, Blunderr B2B Her Nice Too.",
-      "startDate": "2026-11-21T23:00:00+00:00",
-      "endDate": "2026-11-21T00:00:00+00:00",
-      "location": {
-        "name": "Brancaleone",
-        "address": "Via Levanna, 13, 00141, Roma",
-        "city": "Roma",
-        "region": "Lazio",
-        "province": "Roma"
-      },
-      "category": "Eventi & Cultura",
-      "image": "https://cdn.zero.eu/uploads/2019/04/brancaleone-e1554374645651.png",
-      "url": "https://zero.eu/it/eventi/383946-fleurs-sonores-x-reveries-2026-novembre,roma/",
-      "source": "Zero"
-    },
-    {
-      "id": "Zero-1286600229359740192",
+      "id": "Zero-8680821452535853083",
       "title": "ØKSE",
       "description": "Flaming Creatures e Zen Arcade presentano il supergruppo svedese di avant-jazz pubblicato da Backwoodz Studioz.",
       "startDate": "2026-11-22T00:00:00+00:00",
@@ -291,10 +219,82 @@
       "source": "Zero"
     },
     {
+      "id": "demo-7",
+      "title": "Concerto Sinfonico",
+      "description": "Orchestra sinfonica in piazza con repertorio classico.",
+      "startDate": "2026-11-22T18:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Terni",
+        "city": "Terni",
+        "region": "Umbria",
+        "province": "Terni"
+      },
+      "category": "Musica",
+      "image": "",
+      "url": "#",
+      "source": "Demo"
+    },
+    {
+      "id": "Zero-5668777364707145697",
+      "title": "Rosa Brunello: “We Are Surging Waters”",
+      "description": "La bassista presenta l'ultimo splendido album di nu world jazz con un quintetto d'eccezione: Yazz Ahmed alla tromba e flicorno, Tamar Osborn al sax baritono e flauto, Luca Tapino al trombone, Enrico Terragnoli alla chitarra e synths e Marco Frattini alla batteria.",
+      "startDate": "2026-11-22T18:00:00+00:00",
+      "endDate": "2026-11-22T00:00:00+00:00",
+      "location": {
+        "name": "Auditorium Parco della Musica Ennio Morricone",
+        "address": "Viale Pietro de Coubertin, 30, 00196, Roma",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Eventi & Cultura",
+      "image": "https://cdn.zero.eu/uploads/2025/03/Rosa-Brunello-0045.jpg",
+      "url": "https://zero.eu/it/eventi/384653-rosa-brunello-we-are-surging-waters,roma/",
+      "source": "Zero"
+    },
+    {
+      "id": "Zero-9070849525471880549",
+      "title": "Grande festa del vulcano laziale",
+      "description": "Undici produttori vinicoli e in cucina i manicarte di DLR e Amedeo. Tavoli a cena su prenotazione, calice € 6, mezzo calice € 3.",
+      "startDate": "2026-11-22T18:00:00+00:00",
+      "endDate": "2026-11-22T00:00:00+00:00",
+      "location": {
+        "name": "Vinificio",
+        "address": "Piazza dell’Emporio , 1, Roma",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Arte & Cultura",
+      "image": "https://cdn.zero.eu/uploads/2026/11/SnapInsta.to_829585618_17882595351623544_5149180531413382207_n-scaled-e1794826061240.jpg",
+      "url": "https://zero.eu/it/eventi/384671-grande-festa-del-vulcano-laziale,roma/",
+      "source": "Zero"
+    },
+    {
+      "id": "Zero-6032958895633682889",
+      "title": "On Improvisation: Sound, Space, Thought",
+      "description": "Tre giorni dedicati all'improvvisazione tra Villa Aurelia e Auditorium, a cura del pioniere George E. Lewis. Con conferenze di livello assoluto e un concerto collettivo finale.",
+      "startDate": "2026-11-23T00:00:00+00:00",
+      "endDate": "2026-11-25T00:00:00+00:00",
+      "location": {
+        "name": "Roma luoghi vari",
+        "address": ",, Roma",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Musica",
+      "image": "https://cdn.zero.eu/uploads/2026/11/On-Improvisation-Sound-Space-Thought-scaled.jpg",
+      "url": "https://zero.eu/it/eventi/383772-on-improvisation-sound-space-thought,roma/",
+      "source": "Zero"
+    },
+    {
       "id": "demo-4",
       "title": "Notte dei Musei",
       "description": "Apertura straordinaria serale di musei e siti culturali.",
-      "startDate": "2026-11-22T18:00:00",
+      "startDate": "2026-11-23T18:00:00",
       "endDate": null,
       "location": {
         "name": "",
@@ -312,7 +312,7 @@
       "id": "demo-5",
       "title": "Sagra dei Funghi Porcini",
       "description": "Piatti a base di porcini, escursioni guidate e mostra micologica.",
-      "startDate": "2026-11-24T18:00:00",
+      "startDate": "2026-11-25T18:00:00",
       "endDate": null,
       "location": {
         "name": "",
@@ -330,7 +330,7 @@
       "id": "demo-2",
       "title": "Festival della Musica Popolare",
       "description": "Concerti, danze e laboratori di musica tradizionale.",
-      "startDate": "2026-11-25T18:00:00",
+      "startDate": "2026-11-26T18:00:00",
       "endDate": null,
       "location": {
         "name": "",
@@ -348,7 +348,7 @@
       "id": "demo-8",
       "title": "Sagra della Polenta",
       "description": "Polenta concia, salsicce e formaggi di montagna.",
-      "startDate": "2026-11-26T18:00:00",
+      "startDate": "2026-11-27T18:00:00",
       "endDate": null,
       "location": {
         "name": "",
@@ -366,7 +366,7 @@
       "id": "demo-3",
       "title": "Sagra del Tartufo",
       "description": "Degustazioni, mercatino e showcooking con chef locali.",
-      "startDate": "2026-11-27T18:00:00",
+      "startDate": "2026-11-28T18:00:00",
       "endDate": null,
       "location": {
         "name": "",
@@ -384,7 +384,7 @@
       "id": "demo-11",
       "title": "Festa Patronale",
       "description": "Processione, fuochi d'artificio e stand gastronomici.",
-      "startDate": "2026-11-28T18:00:00",
+      "startDate": "2026-11-29T18:00:00",
       "endDate": null,
       "location": {
         "name": "",
@@ -402,7 +402,7 @@
       "id": "demo-9",
       "title": "Festival del Cinema Indipendente",
       "description": "Proiezioni, incontri con registi e workshop.",
-      "startDate": "2026-11-30T18:00:00",
+      "startDate": "2026-12-01T18:00:00",
       "endDate": null,
       "location": {
         "name": "",
@@ -420,7 +420,7 @@
       "id": "demo-12",
       "title": "Sagra del Miele",
       "description": "Degustazioni di mieli monoflorali e laboratori.",
-      "startDate": "2026-12-01T18:00:00",
+      "startDate": "2026-12-02T18:00:00",
       "endDate": null,
       "location": {
         "name": "",
@@ -438,7 +438,7 @@
       "id": "demo-14",
       "title": "Sagra della Pizza",
       "description": "Pizzaioli da tutta Italia e gara della pizza piu' lunga.",
-      "startDate": "2026-12-02T18:00:00",
+      "startDate": "2026-12-03T18:00:00",
       "endDate": null,
       "location": {
         "name": "",
@@ -456,7 +456,7 @@
       "id": "demo-15",
       "title": "Giornata dello Sport",
       "description": "Tornei amatoriali e prove gratuite.",
-      "startDate": "2026-12-04T18:00:00",
+      "startDate": "2026-12-05T18:00:00",
       "endDate": null,
       "location": {
         "name": "",
@@ -474,7 +474,7 @@
       "id": "demo-6",
       "title": "Palio Storico",
       "description": "Corteo storico, giochi medievali e rievocazione in costume.",
-      "startDate": "2026-12-05T18:00:00",
+      "startDate": "2026-12-06T18:00:00",
       "endDate": null,
       "location": {
         "name": "",
@@ -492,7 +492,7 @@
       "id": "demo-16",
       "title": "Concerto Jazz",
       "description": "Quartetto jazz internazionale in auditorium.",
-      "startDate": "2026-12-06T18:00:00",
+      "startDate": "2026-12-07T18:00:00",
       "endDate": null,
       "location": {
         "name": "",
