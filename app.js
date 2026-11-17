@@ -33,6 +33,7 @@
     themeToggle: document.getElementById("themeToggle"),
     scrollTop: document.getElementById("scrollTop"),
     prolocoBtn: document.getElementById("prolocoBtn"),
+    prolocoBtn2: document.getElementById("prolocoBtn2"),
     prolocoModal: document.getElementById("prolocoModal"),
     prolocoBody: document.getElementById("prolocoBody"),
     gQuery: null,
@@ -450,13 +451,15 @@
     }
   }
 
-  if (els.prolocoBtn) {
-    els.prolocoBtn.addEventListener("click", () => {
+  function openProloco() {
+    if (els.prolocoModal) {
       els.prolocoModal.hidden = false;
       document.body.style.overflow = "hidden";
       renderProlocoModal();
-    });
+    }
   }
+  if (els.prolocoBtn) els.prolocoBtn.addEventListener("click", openProloco);
+  if (els.prolocoBtn2) els.prolocoBtn2.addEventListener("click", openProloco);
   if (els.prolocoModal) {
     els.prolocoModal.addEventListener("click", e => {
       if (e.target.hasAttribute("data-close-proloco")) {

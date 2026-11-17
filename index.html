@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eventi Italia — Sagre ed eventi culturali</title>
-  <meta name="description" content="Aggregatore quotidiano di sagre, eventi culturali, mostre, concerti e feste in tutta Italia." />
+  <title>Eventi Locali — Sagre ed eventi culturali nel Lazio e in Umbria</title>
+  <meta name="description" content="Aggregatore quotidiano di sagre, eventi culturali, mostre, concerti e feste a Roma, nella Tuscia, nella Sabina e in Umbria." />
   <meta name="theme-color" content="#4f46e5" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -24,16 +24,27 @@
         <span class="logo">📅</span>
         <span class="brand-name">Eventi Locali</span>
       </div>
-      <button id="prolocoBtn" class="btn-reset" style="margin-right:8px;">🏛️ Area Pro Loco</button>
-      <button id="themeToggle" class="theme-toggle" aria-label="Cambia tema">
-        <span class="theme-icon">🌙</span>
-      </button>
+      <div class="nav-links">
+        <a href="#eventi">Eventi</a>
+        <a href="#partner">Per le Pro Loco</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+      <div class="nav-actions">
+        <button id="prolocoBtn" class="btn-nav">🏛️ Area riservata</button>
+        <button id="themeToggle" class="theme-toggle" aria-label="Cambia tema">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </div>
     </nav>
 
     <div class="hero-content">
-      <span class="hero-badge">✨ Aggiornato ogni giorno</span>
-      <h1>Sagre ed eventi a <span class="gradient-text">Roma</span>, <span class="gradient-text">Tuscia</span>, <span class="gradient-text">Sabina</span> e <span class="gradient-text">Umbria</span></h1>
-      <p class="hero-sub">Un unico posto per sagre, mostre, concerti, feste e appuntamenti culturali nel Lazio e in Umbria.</p>
+      <span class="hero-badge">✨ Aggiornato ogni giorno · 100% gratuito</span>
+      <h1>Scopri le <em>sagre</em> e gli <em>eventi</em><br/>del tuo territorio</h1>
+      <p class="hero-sub">Un unico punto di riferimento per sagre, mostre, concerti, feste e appuntamenti culturali a Roma, nella Tuscia, nella Sabina e in Umbria.</p>
+      <div class="hero-cta">
+        <a href="#eventi" class="btn btn-primary btn-lg">Esplora gli eventi</a>
+        <button id="prolocoBtn2" class="btn btn-ghost btn-lg">Pubblica la tua sagra</button>
+      </div>
       <div class="hero-stats">
         <div class="stat">
           <span class="stat-num" id="countEvents">0</span>
@@ -54,67 +65,16 @@
   </header>
 
   <main class="container">
-    <section class="weekend-section glass" aria-label="Eventi di questo weekend">
-      <h2>📅 Eventi di questo weekend</h2>
+    <section class="weekend-section glass" aria-label="Eventi di questo weekend" id="weekend">
+      <div class="section-head">
+        <h2>📅 Eventi di questo weekend</h2>
+        <p class="section-sub">Gli appuntamenti più vicini a te, da non perdere.</p>
+      </div>
       <div id="weekendGrid" class="grid weekend-grid"></div>
       <div id="weekendEmpty" class="empty" hidden>Nessun evento in programma questo weekend.</div>
     </section>
 
-    <section class="filters glass" aria-label="Filtri">
-      <div class="filter-grid">
-        <div class="field field-search">
-          <span class="field-icon">🔍</span>
-          <input type="search" id="search" placeholder="Cerca per titolo, città, descrizione..." aria-label="Cerca" />
-        </div>
-        <div class="field">
-          <span class="field-icon">🏷️</span>
-          <select id="category" aria-label="Categoria">
-            <option value="">Tutte le categorie</option>
-          </select>
-        </div>
-        <div class="field">
-          <span class="field-icon">🗺️</span>
-          <select id="region" aria-label="Regione">
-            <option value="">Tutte le regioni</option>
-          </select>
-        </div>
-        <div class="field">
-          <span class="field-icon">📍</span>
-          <select id="province" aria-label="Provincia">
-            <option value="">Tutte le province</option>
-          </select>
-        </div>
-        <div class="field">
-          <span class="field-icon">🏙️</span>
-          <select id="city" aria-label="Città o provincia">
-            <option value="">Tutte le città</option>
-          </select>
-        </div>
-      </div>
-      <div class="filter-grid filter-grid-2">
-        <div class="field">
-          <span class="field-icon">📅</span>
-          <input type="date" id="dateFrom" aria-label="Data da" />
-        </div>
-        <div class="field">
-          <span class="field-icon">📅</span>
-          <input type="date" id="dateTo" aria-label="Data a" />
-        </div>
-        <div class="field">
-          <span class="field-icon">↕️</span>
-          <select id="sort" aria-label="Ordinamento">
-            <option value="date-asc">Data crescente</option>
-            <option value="date-desc">Data decrescente</option>
-            <option value="title">Titolo A-Z</option>
-          </select>
-        </div>
-
-        <button id="resetFilters" class="btn-reset">Reset filtri</button>
-        <a class="btn-download" href="data/events.json" download="eventi-italia.json">⬇️ Scarica eventi (JSON)</a>
-      </div>
-    </section>
-
-    <section class="google-search glass">
+    <section class="google-search glass" id="cerca">
       <h2>🔎 Cerca eventi su Google</h2>
       <div class="google-search-row">
         <input type="search" id="gQuery" placeholder="Es. sagre Viterbo questo weekend" aria-label="Cerca su Google" />
@@ -123,39 +83,169 @@
       <div id="gResults" class="g-results"></div>
     </section>
 
-    <section id="results" class="results">
-      <div id="loading" class="loading">
-        <div class="skeleton-grid">
-          <div class="skeleton-card"></div>
-          <div class="skeleton-card"></div>
-          <div class="skeleton-card"></div>
-          <div class="skeleton-card"></div>
-          <div class="skeleton-card"></div>
-          <div class="skeleton-card"></div>
+    <section id="eventi" class="filters-section">
+      <div class="section-head">
+        <h2>🗓️ Tutti gli eventi</h2>
+        <p class="section-sub">Filtra per regione, provincia, città, categoria e data.</p>
+      </div>
+      <section class="filters glass" aria-label="Filtri">
+        <div class="filter-grid">
+          <div class="field field-search">
+            <span class="field-icon">🔍</span>
+            <input type="search" id="search" placeholder="Cerca per titolo, città, descrizione..." aria-label="Cerca" />
+          </div>
+          <div class="field">
+            <span class="field-icon">🏷️</span>
+            <select id="category" aria-label="Categoria">
+              <option value="">Tutte le categorie</option>
+            </select>
+          </div>
+          <div class="field">
+            <span class="field-icon">🗺️</span>
+            <select id="region" aria-label="Regione">
+              <option value="">Tutte le regioni</option>
+            </select>
+          </div>
+          <div class="field">
+            <span class="field-icon">📍</span>
+            <select id="province" aria-label="Provincia">
+              <option value="">Tutte le province</option>
+            </select>
+          </div>
+        </div>
+        <div class="filter-grid filter-grid-2">
+          <div class="field">
+            <span class="field-icon">🏙️</span>
+            <select id="city" aria-label="Città o provincia">
+              <option value="">Tutte le città</option>
+            </select>
+          </div>
+          <div class="field">
+            <span class="field-icon">📅</span>
+            <input type="date" id="dateFrom" aria-label="Data da" />
+          </div>
+          <div class="field">
+            <span class="field-icon">📅</span>
+            <input type="date" id="dateTo" aria-label="Data a" />
+          </div>
+          <div class="field">
+            <span class="field-icon">↕️</span>
+            <select id="sort" aria-label="Ordinamento">
+              <option value="date-asc">Data crescente</option>
+              <option value="date-desc">Data decrescente</option>
+              <option value="title">Titolo A-Z</option>
+            </select>
+          </div>
+          <button id="resetFilters" class="btn-reset">Reset</button>
+          <a class="btn-download" href="data/events.json" download="eventi-locali.json">⬇️ Scarica (JSON)</a>
+        </div>
+      </section>
+
+      <section id="results" class="results">
+        <div id="loading" class="loading">
+          <div class="skeleton-grid">
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+          </div>
+        </div>
+        <div id="grid" class="grid"></div>
+        <div id="empty" class="empty" hidden>
+          <div class="empty-illustration">🔍</div>
+          <h3>Nessun evento trovato</h3>
+          <p>Prova a modificare i filtri o la ricerca.</p>
+        </div>
+      </section>
+    </section>
+
+    <section id="partner" class="partner-section">
+      <div class="section-head center">
+        <span class="hero-badge">🏛️ Per le Pro Loco, i teatri e le associazioni</span>
+        <h2>Diventa protagonista del tuo territorio</h2>
+        <p class="section-sub">Inserisci le tue sagre e i tuoi eventi direttamente nell'agenda. Gratis, in autonomia, in pochi clic.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card glass">
+          <div class="feature-icon">📝</div>
+          <h3>Inserisci in autonomia</h3>
+          <p>Crea un account riservato e pubblica le tue sagre con foto, date e descrizioni.</p>
+        </div>
+        <div class="feature-card glass">
+          <div class="feature-icon">📈</div>
+          <h3>Visibilità gratuita</h3>
+          <p>Raggiungi cittadini e turisti interessati al tuo territorio.</p>
+        </div>
+        <div class="feature-card glass">
+          <div class="feature-icon">🤝</div>
+          <h3>Rete territoriale</h3>
+          <p>Unisciti alle Pro Loco, ai teatri e alle associazioni del Lazio e dell'Umbria.</p>
         </div>
       </div>
-      <div id="grid" class="grid"></div>
-      <div id="empty" class="empty" hidden>
-        <div class="empty-illustration">🔍</div>
-        <h3>Nessun evento trovato</h3>
-        <p>Prova a modificare i filtri o la ricerca.</p>
+      <div class="partner-cta">
+        <button id="prolocoBtn2" class="btn btn-primary btn-lg">Accedi all'Area riservata</button>
+      </div>
+    </section>
+
+    <section class="how-section">
+      <div class="section-head center">
+        <h2>Come funziona</h2>
+        <p class="section-sub">Tre passi per non perdere nessun evento.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-num">1</span>
+          <h3>Esplora</h3>
+          <p>Naviga tra regioni, province e città. Filtra per categoria e data.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">2</span>
+          <h3>Dettagli</h3>
+          <p>Apri la scheda evento per data, luogo, descrizione e immagine.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">3</span>
+          <h3>Partecipa</h3>
+          <p>Organizza la tua uscita e condividi con amici e famiglia.</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="logo">📅</span>
-        <span>Eventi Locali</span>
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand"><span class="logo">📅</span><span>Eventi Locali</span></div>
+          <p>Aggregatore di sagre ed eventi culturali nel Lazio e in Umbria.</p>
+        </div>
+        <div>
+          <h4>Navigazione</h4>
+          <a href="#eventi">Eventi</a>
+          <a href="#partner">Per le Pro Loco</a>
+          <a href="#cerca">Cerca</a>
+        </div>
+        <div>
+          <h4>Legale</h4>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="cookie.html">Cookie Policy</a>
+        </div>
       </div>
-      <p>Aggregatore automatico. Verifica sempre data, luogo e disponibilità sul sito ufficiale dell'evento.</p>
-      <p><a href="privacy.html">Privacy</a> · <a href="cookie.html">Cookie</a></p>
-      <p class="footer-small">Dati aggiornati quotidianamente · © 2026</p>
+      <p class="footer-small">Dati aggiornati quotidianamente · © 2026 Eventi Locali</p>
     </div>
   </footer>
 
   <button id="scrollTop" class="scroll-top" aria-label="Torna su">↑</button>
+
+  <div id="cookieBanner" class="cookie-banner" hidden>
+    <p>Questo sito utilizza cookie tecnici e servizi di terze parti. Leggi la <a href="cookie.html">Cookie Policy</a> e la <a href="privacy.html">Privacy Policy</a>.</p>
+    <div class="cookie-actions">
+      <button id="cookieAccept" class="btn btn-primary">Accetta</button>
+      <button id="cookieReject" class="btn btn-ghost">Rifiuta</button>
+    </div>
+  </div>
 
   <div id="modal" class="modal" hidden>
     <div class="modal-backdrop" data-close></div>
@@ -170,14 +260,6 @@
     <div class="modal-content" role="dialog" aria-modal="true">
       <button class="modal-close" data-close-proloco aria-label="Chiudi">×</button>
       <div id="prolocoBody"></div>
-    </div>
-  </div>
-
-  <div id="cookieBanner" class="cookie-banner" hidden>
-    <p>Questo sito utilizza cookie tecnici e servizi di terze parti. Leggi la <a href="cookie.html">Cookie Policy</a> e la <a href="privacy.html">Privacy Policy</a>.</p>
-    <div class="cookie-actions">
-      <button id="cookieAccept" class="btn btn-primary">Accetta</button>
-      <button id="cookieReject" class="btn btn-ghost">Rifiuta</button>
     </div>
   </div>
 
