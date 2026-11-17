@@ -353,6 +353,15 @@
   });
   els.scrollTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
+  // Cookie banner
+  const cookieBanner = document.getElementById("cookieBanner");
+  const cookieAccept = document.getElementById("cookieAccept");
+  const cookieReject = document.getElementById("cookieReject");
+  const consent = localStorage.getItem("cookieConsent");
+  if (!consent && cookieBanner) cookieBanner.hidden = false;
+  if (cookieAccept) cookieAccept.addEventListener("click", () => { localStorage.setItem("cookieConsent", "accepted"); if (cookieBanner) cookieBanner.hidden = true; });
+  if (cookieReject) cookieReject.addEventListener("click", () => { localStorage.setItem("cookieConsent", "rejected"); if (cookieBanner) cookieBanner.hidden = true; });
+
   // Area Pro Loco
   async function renderProlocoModal() {
     if (!els.prolocoBody) return;
@@ -368,6 +377,9 @@
           <button class="btn btn-primary" id="plLogin">Accedi</button>
           <button class="btn btn-ghost" id="plSignup">Registrati</button>
         </div>
+        <label style="display:flex;align-items:center;gap:6px;margin-top:10px;font-size:0.85rem;color:var(--muted);">
+          <input type="checkbox" id="plConsent" /> Ho letto e accetto la <a href="privacy.html" target="_blank">Privacy Policy</a>
+        </label>
         <p id="plMsg" style="margin-top:10px;color:var(--muted);"></p>
       `;
       document.getElementById("plLogin").onclick = async () => {
@@ -378,6 +390,8 @@
         else { document.getElementById("plMsg").textContent = "Accesso effettuato!"; renderProlocoModal(); }
       };
       document.getElementById("plSignup").onclick = async () => {
+        const consent = document.getElementById("plConsent")?.checked;
+        if (!consent) { document.getElementById("plMsg").textContent = "Devi accettare la Privacy Policy."; return; }
         const email = document.getElementById("plEmail").value;
         const password = document.getElementById("plPassword").value;
         const { error } = await supabase.auth.signUp({ email, password });
@@ -396,6 +410,9 @@
         <div class="field" style="margin-bottom:8px;"><input type="text" id="plRegion" placeholder="Regione (Lazio/Umbria)" /></div>
         <div class="field" style="margin-bottom:8px;"><input type="text" id="plCategory" placeholder="Categoria (es. Sagre & Enogastronomia)" /></div>
         <div class="field" style="margin-bottom:8px;"><input type="url" id="plImage" placeholder="URL immagine (opzionale)" /></div>
+        <label style="display:flex;align-items:center;gap:6px;margin-top:10px;font-size:0.85rem;color:var(--muted);">
+          <input type="checkbox" id="plConsentInsert" /> Confermo di avere il diritto di pubblicare questo contenuto e accetto la <a href="privacy.html" target="_blank">Privacy Policy</a>
+        </label>
         <div style="display:flex;gap:8px;margin-top:10px;">
           <button class="btn btn-primary" id="plSubmit">Pubblica sagra</button>
           <button class="btn btn-ghost" id="plLogout">Esci</button>
@@ -407,6 +424,8 @@
         renderProlocoModal();
       };
       document.getElementById("plSubmit").onclick = async () => {
+        const consent = document.getElementById("plConsentInsert")?.checked;
+        if (!consent) { document.getElementById("plMsg").textContent = "Devi accettare la Privacy Policy."; return; }
         const title = document.getElementById("plTitle").value.trim();
         if (!title) { document.getElementById("plMsg").textContent = "Inserisci il titolo."; return; }
         const { error } = await supabase.from("events").insert({

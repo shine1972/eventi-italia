@@ -306,6 +306,15 @@ body {
   pointer-events: none;
 }
 .scroll-top.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.cookie-banner {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+  background: var(--surface-solid); border-top: 1px solid var(--border);
+  padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+}
+.cookie-banner p { margin: 0; font-size: 0.9rem; color: var(--muted); }
+.cookie-banner a { color: var(--primary); }
+.cookie-actions { display: flex; gap: 8px; }
 
 /* responsive */
 @media (max-width: 860px) {
