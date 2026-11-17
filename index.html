@@ -5,91 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eventi Locali — Sagre ed eventi culturali nel Lazio e in Umbria</title>
   <meta name="description" content="Aggregatore quotidiano di sagre, eventi culturali, mostre, concerti e feste a Roma, nella Tuscia, nella Sabina e in Umbria." />
-  <meta name="theme-color" content="#4f46e5" />
+  <meta name="theme-color" content="#0f172a" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="bg-orbs" aria-hidden="true">
-    <span class="orb orb-1"></span>
-    <span class="orb orb-2"></span>
-    <span class="orb orb-3"></span>
-  </div>
-
   <header class="hero">
     <div class="hero-bg" id="heroBg" aria-hidden="true"></div>
-    <nav class="nav">
-      <div class="brand">
-        <span class="logo">📅</span>
-        <span class="brand-name">Eventi Locali</span>
-      </div>
-      <div class="nav-links">
-        <a href="#eventi">Eventi</a>
-        <a href="#partner">Per le Pro Loco</a>
-        <a href="privacy.html">Privacy</a>
-      </div>
-      <div class="nav-actions">
-        <button id="prolocoBtn" class="btn-nav">🏛️ Area riservata</button>
-        <button id="themeToggle" class="theme-toggle" aria-label="Cambia tema">
-          <span class="theme-icon">🌙</span>
-        </button>
-      </div>
-    </nav>
-
+    <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
-      <span class="hero-badge">✨ Aggiornato ogni giorno · 100% gratuito</span>
-      <h1>Scopri le <em>sagre</em> e gli <em>eventi</em><br/>del tuo territorio</h1>
-      <p class="hero-sub">Un unico punto di riferimento per sagre, mostre, concerti, feste e appuntamenti culturali a Roma, nella Tuscia, nella Sabina e in Umbria.</p>
-      <div class="hero-cta">
-        <a href="#eventi" class="btn btn-primary btn-lg">Esplora gli eventi</a>
-        <button id="prolocoBtn2" class="btn btn-ghost btn-lg">Pubblica la tua sagra</button>
-      </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-num" id="countEvents">0</span>
-          <span class="stat-label">eventi raccolti</span>
+      <nav class="nav">
+        <div class="brand">
+          <span class="logo">📅</span>
+          <span class="brand-name">Eventi Locali</span>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num" id="countRegions">0</span>
-          <span class="stat-label">regioni</span>
+        <div class="nav-links">
+          <a href="#eventi">Eventi</a>
+          <a href="#partner">Per le Pro Loco</a>
+          <a href="privacy.html">Privacy</a>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-label">Ultimo aggiornamento</span>
-          <span class="stat-date" id="updatedAt">-</span>
+        <div class="nav-actions">
+          <button id="prolocoBtn" class="btn-nav">Area riservata</button>
+          <button id="themeToggle" class="theme-toggle" aria-label="Cambia tema">
+            <span class="theme-icon">🌙</span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="hero-inner">
+        <span class="hero-badge">Aggiornato ogni giorno · 100% gratuito</span>
+        <h1>Scopri le <em>sagre</em> e gli <em>eventi</em><br/>del tuo territorio</h1>
+        <p class="hero-sub">Un unico punto di riferimento per sagre, mostre, concerti, feste e appuntamenti culturali a Roma, nella Tuscia, nella Sabina e in Umbria.</p>
+        <div class="hero-cta">
+          <a href="#eventi" class="btn btn-primary btn-lg">Esplora gli eventi</a>
+          <button id="prolocoBtn2" class="btn btn-glass btn-lg">Pubblica la tua sagra</button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num" id="countEvents">0</span>
+            <span class="stat-label">eventi raccolti</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" id="countRegions">0</span>
+            <span class="stat-label">regioni</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Ultimo aggiornamento</span>
+            <span class="stat-date" id="updatedAt">-</span>
+          </div>
         </div>
       </div>
     </div>
   </header>
 
   <main class="container">
-    <section class="weekend-section glass" aria-label="Eventi di questo weekend" id="weekend">
+    <section class="weekend-section" aria-label="Eventi di questo weekend" id="weekend">
       <div class="section-head">
-        <h2>📅 Eventi di questo weekend</h2>
+        <h2>Eventi di questo weekend</h2>
         <p class="section-sub">Gli appuntamenti più vicini a te, da non perdere.</p>
       </div>
       <div id="weekendGrid" class="grid weekend-grid"></div>
       <div id="weekendEmpty" class="empty" hidden>Nessun evento in programma questo weekend.</div>
     </section>
 
-    <section class="google-search glass" id="cerca">
-      <h2>🔎 Cerca eventi su Google</h2>
+    <section class="google-search" id="cerca">
+      <h2>Cerca eventi su Google</h2>
       <div class="google-search-row">
         <input type="search" id="gQuery" placeholder="Es. sagre Viterbo questo weekend" aria-label="Cerca su Google" />
-        <button id="gSearchBtn" class="btn-reset">Cerca</button>
+        <button id="gSearchBtn" class="btn btn-primary">Cerca</button>
       </div>
       <div id="gResults" class="g-results"></div>
     </section>
 
-    <section id="eventi" class="filters-section">
+    <section id="eventi" class="events-section">
       <div class="section-head">
-        <h2>🗓️ Tutti gli eventi</h2>
+        <h2>Tutti gli eventi</h2>
         <p class="section-sub">Filtra per regione, provincia, città, categoria e data.</p>
       </div>
-      <section class="filters glass" aria-label="Filtri">
+      <section class="filters" aria-label="Filtri">
         <div class="filter-grid">
           <div class="field field-search">
             <span class="field-icon">🔍</span>
@@ -163,30 +158,30 @@
     </section>
 
     <section id="partner" class="partner-section">
-      <div class="section-head center">
-        <span class="hero-badge">🏛️ Per le Pro Loco, i teatri e le associazioni</span>
-        <h2>Diventa protagonista del tuo territorio</h2>
-        <p class="section-sub">Inserisci le tue sagre e i tuoi eventi direttamente nell'agenda. Gratis, in autonomia, in pochi clic.</p>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card glass">
-          <div class="feature-icon">📝</div>
-          <h3>Inserisci in autonomia</h3>
-          <p>Crea un account riservato e pubblica le tue sagre con foto, date e descrizioni.</p>
+      <div class="partner-inner">
+        <div class="partner-text">
+          <span class="hero-badge">Per le Pro Loco, i teatri e le associazioni</span>
+          <h2>Diventa protagonista del tuo territorio</h2>
+          <p>Inserisci le tue sagre e i tuoi eventi direttamente nell'agenda. Gratis, in autonomia, in pochi clic. Raggiungi cittadini e turisti interessati al tuo territorio.</p>
+          <button id="prolocoBtn2" class="btn btn-primary btn-lg">Accedi all'Area riservata</button>
         </div>
-        <div class="feature-card glass">
-          <div class="feature-icon">📈</div>
-          <h3>Visibilità gratuita</h3>
-          <p>Raggiungi cittadini e turisti interessati al tuo territorio.</p>
+        <div class="partner-visual">
+          <div class="feature-card">
+            <div class="feature-icon">📝</div>
+            <h3>Inserisci in autonomia</h3>
+            <p>Pubblica le tue sagre con foto, date e descrizioni.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📈</div>
+            <h3>Visibilità gratuita</h3>
+            <p>Raggiungi il pubblico del tuo territorio.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🤝</div>
+            <h3>Rete territoriale</h3>
+            <p>Unisciti alle Pro Loco del Lazio e dell'Umbria.</p>
+          </div>
         </div>
-        <div class="feature-card glass">
-          <div class="feature-icon">🤝</div>
-          <h3>Rete territoriale</h3>
-          <p>Unisciti alle Pro Loco, ai teatri e alle associazioni del Lazio e dell'Umbria.</p>
-        </div>
-      </div>
-      <div class="partner-cta">
-        <button id="prolocoBtn2" class="btn btn-primary btn-lg">Accedi all'Area riservata</button>
       </div>
     </section>
 
