@@ -1,9 +1,9 @@
 {
-  "updated": "2026-11-17T15:19:28.966894+00:00",
+  "updated": "2026-11-17T19:47:56.064981+00:00",
   "count": 28,
   "events": [
     {
-      "id": "Zero-6040807378519261024",
+      "id": "Zero-1170494251876250047",
       "title": "Ludovica Anzaldi &#8211; &#8220;Manifestə&#8221;",
       "description": "Un percorso immersivo che integra fotografia, video e suono, inediti e site specific, in cui emerge con forza il taglio trans-femminista della ricerca dell’artista. A cura di Maria Rosa Sossai. Inaugurazione lunedì 16 novembre 2026 alle 18:30.",
       "startDate": "2026-11-18T00:00:00+00:00",
@@ -39,7 +39,7 @@
       "source": "Demo"
     },
     {
-      "id": "Zero-2398246519995878670",
+      "id": "Zero-3000110441769463187",
       "title": "Su:ggestiva w/ Radwan Ghazi Moumneh &#038; Frédéric D Oberland",
       "description": "Moumneh (Jerusalem In My Heart) e Oberland (Oiseaux-Tempête) presentano dal vivo il loro album di debutto come duo, fondendo un’elettronica inquieta e frammentata con il canto in arabo e strumenti acustici come il buzuk, la rababa, il clarineau e il sassofono. Opening di Francesca Palamidessi.",
       "startDate": "2026-11-18T21:00:00+00:00",
@@ -75,7 +75,7 @@
       "source": "Demo"
     },
     {
-      "id": "Zero-3511950854973214108",
+      "id": "Zero-1193249570981156853",
       "title": "Organum Multiplum II &#8211; II Capitolo",
       "description": "Torna la rassegna di Villa Lontana che unisce contemporaneo, sacro, artistə internazionalə e organi antichi. Stasera James McVinnie e Tristan Perich presentano per la prima volta a Roma una rivisitazione di \"Infinity Gradient\" (2025), composizione per organo e diffusori sonori, concepita in relazione agli spazi e all’acustica della Basilica di Santa Maria in Aracoeli.",
       "startDate": "2026-11-19T20:30:00+00:00",
@@ -129,25 +129,7 @@
       "source": "Demo"
     },
     {
-      "id": "Zero-8797861730165101034",
-      "title": "Expansion Team Soundsystem",
-      "description": "DJ Babu e Rakaa: un duo che fonde tradizione hip-hop e visione contemporanea con un’attitudine puramente party-rocking.",
-      "startDate": "2026-11-21T22:00:00+00:00",
-      "endDate": "2026-11-21T00:00:00+00:00",
-      "location": {
-        "name": "Palazzo San Lorenzo",
-        "address": "Piazza dei Sanniti, 9A, 00185, Roma",
-        "city": "Roma",
-        "region": "Lazio",
-        "province": "Roma"
-      },
-      "category": "Musica",
-      "image": "https://cdn.zero.eu/uploads/2026/03/Expansion_Team_Soundsystem.jpeg",
-      "url": "https://zero.eu/it/eventi/382646-expansion-team-soundsystem-palazzo-san-lorenzo,roma/",
-      "source": "Zero"
-    },
-    {
-      "id": "Zero-3307300157591837712",
+      "id": "Zero-4081175424990897883",
       "title": "ØKSE",
       "description": "Flaming Creatures e Zen Arcade presentano il supergruppo svedese di avant-jazz pubblicato da Backwoodz Studioz.",
       "startDate": "2026-11-22T00:00:00+00:00",
@@ -183,7 +165,7 @@
       "source": "Demo"
     },
     {
-      "id": "Zero-3485476085454918459",
+      "id": "Zero-562224776104829710",
       "title": "Rosa Brunello: “We Are Surging Waters”",
       "description": "La bassista presenta l'ultimo splendido album di nu world jazz con un quintetto d'eccezione: Yazz Ahmed alla tromba e flicorno, Tamar Osborn al sax baritono e flauto, Luca Tapino al trombone, Enrico Terragnoli alla chitarra e synths e Marco Frattini alla batteria.",
       "startDate": "2026-11-22T18:00:00+00:00",
@@ -201,7 +183,7 @@
       "source": "Zero"
     },
     {
-      "id": "Zero-1627251698521172182",
+      "id": "Zero-4278996941093834936",
       "title": "Grande festa del vulcano laziale",
       "description": "Undici produttori vinicoli e in cucina i manicarte di DLR e Amedeo. Tavoli a cena su prenotazione, calice € 6, mezzo calice € 3.",
       "startDate": "2026-11-22T18:00:00+00:00",
@@ -219,7 +201,25 @@
       "source": "Zero"
     },
     {
-      "id": "Zero-4356976404739564792",
+      "id": "Zero-2840883186229190601",
+      "title": "CESSIAMO &#8211; Cedere Non essere Amare",
+      "description": "Secondo ciclo di mostre per il format ideato da Jacopo Natoli e Nicola Rotiroti - per quest'anno con la curatela di Paolo Assenza e Francesco Pacifico - che trasformerà ancora una volta il bagno del Fanfulla in una galleria: sei esposizioni per dodici artist*. Stasera spazio a \"Glory Hall\" di Duo(bire) e \"Nasi. Una mostra di nasi\" di Antonio Pronostico.",
+      "startDate": "2026-11-22T21:00:00+00:00",
+      "endDate": "2026-11-22T00:00:00+00:00",
+      "location": {
+        "name": "Fanfulla 5/a",
+        "address": "Via Fanfulla da Lodi, 5/a, 00173, Roma",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Arte & Cultura",
+      "image": "https://cdn.zero.eu/uploads/2025/01/Screenshot-63-e1736507720329.png",
+      "url": "https://zero.eu/it/eventi/382202-cessiamo-cedere-non-essere-amare-novembre-2026,roma/",
+      "source": "Zero"
+    },
+    {
+      "id": "Zero-3460194975615272417",
       "title": "On Improvisation: Sound, Space, Thought",
       "description": "Tre giorni dedicati all'improvvisazione tra Villa Aurelia e Auditorium, a cura del pioniere George E. Lewis. Con conferenze di livello assoluto e un concerto collettivo finale.",
       "startDate": "2026-11-23T00:00:00+00:00",
@@ -255,7 +255,7 @@
       "source": "Demo"
     },
     {
-      "id": "Zero-2498797723300323469",
+      "id": "Zero-1127008190248910829",
       "title": "Manifesto Cinema",
       "description": "Oltre ai concerti e al clubbing, per il suo decennale Manifesto ci regala tre proiezioni cinematografiche dedicate alla musica. In collaborazione con Seeyousound.",
       "startDate": "2026-11-24T00:00:00+00:00",
@@ -291,7 +291,7 @@
       "source": "Demo"
     },
     {
-      "id": "Zero-357774625955452496",
+      "id": "Zero-3400818009618348131",
       "title": "Ludovica Manzo + Ka Baird",
       "description": "La cantante tra jazz ed elettronica presenta il nuovo album in collaborazione con Ruggero Fornari, \"In Vago Spirito\". In serata anche la cantante newyorkese già collaboratrice di Chris Ryan Williams.",
       "startDate": "2026-11-24T22:00:00+00:00",
