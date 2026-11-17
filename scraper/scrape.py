@@ -9,6 +9,7 @@ import os
 import re
 import sys
 import time
+import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urljoin, urlparse
 
@@ -37,6 +38,12 @@ SOURCES = [
         "urls": [
             "https://www.zero.eu/it/roma/eventi/",
         ],
+    },
+    {
+        "name": "Eventi della Tuscia",
+        "kind": "rss",
+        "max_pages": 1,
+        "urls": ["https://www.eventidellatuscia.it/feed/"],
     },
     {
         "name": "Eventbrite",
@@ -444,6 +451,7 @@ CITY_PROVINCE = {
     "todi": "Perugia",
     "torino": "Torino",
     "tuscania": "Viterbo",
+    "tuscia": "Viterbo",
     "venezia": "Venezia",
     "online": "Online",
 }
@@ -476,11 +484,98 @@ def normalize_location(loc):
     elif "castello" in city.lower():
         province = "Perugia"
     else:
+        province = loc.get("province") if isinstance(loc, dict) else None
+    if not province:
         province = CITY_PROVINCE.get(city.lower(), city)
     if city.lower() == "online":
         province = "Online"
     return {"name": name, "address": address, "city": city, "region": region, "province": province}
 
+
+def parse_rss(html_text, source_name, base_url):
+    events = []
+    try:
+        root = ET.fromstring(html_text)
+    except Exception:
+        try:
+            root = ET.fromstring(re.sub(r"[^\x09\x0A\x0D\x20-\uD7FF\uE000-\uFFFD]", "", html_text))
+        except Exception:
+            return events
+    channel = root.find("channel")
+    if channel is None:
+        return events
+    ns = {"content": "http://purl.org/rss/1.0/modules/content/"}
+    for item in channel.findall("item"):
+        raw_title = item.findtext("title", "")
+        raw_title = raw_title.replace("\ufffd", " ")
+        title = clean_text(raw_title)
+        if not title:
+            continue
+        link = clean_text(item.findtext("link", base_url))
+        pub_date = item.findtext("pubDate", "")
+        desc = ""
+        ce = item.find("content:encoded", ns)
+        if ce is not None and ce.text:
+            desc = clean_text(re.sub(r"<[^>]+>", " ", ce.text))
+            desc = desc.replace("\ufffd", " ")
+        if not desc:
+            desc = clean_text(re.sub(r"<[^>]+>", " ", item.findtext("description", "")))
+        image = ""
+        if ce is not None and ce.text:
+            m = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', ce.text, re.I)
+            if m:
+                image = m.group(1)
+        if not image:
+            enc = item.find("enclosure")
+            if enc is not None:
+                image = enc.get("url", "")
+        city = ""
+        parts = [p.strip() for p in title.split("|")]
+        if len(parts) >= 3:
+            seg = parts[2]
+            for sep in ["\u2013", "\u2014", "-", "\ufffd"]:
+                if sep in seg:
+                    seg = seg.split(sep)[0]
+                    break
+            city = re.sub(r"[^A-Za-zÀ-ÖØ-öø-ÿ' ]", "", seg).strip()
+            city = re.sub(r"\s+", " ", city).strip()
+        city = city.title() if city and city.isupper() else city
+        if city.lower() in ("orvieto",):
+            region = "Umbria"
+        else:
+            region = CITY_REGION.get(city.lower(), "Lazio")
+        if region not in ("Lazio", "Umbria"):
+            region = "Lazio"
+        prov = CITY_PROVINCE.get(city.lower(), "Viterbo" if region == "Lazio" else "Terni")
+        low = (title + " " + desc).lower()
+        if "sagra" in low:
+            category = "Sagre & Enogastronomia"
+        elif any(k in low for k in ["mostra", "arte", "museo", "galleria"]):
+            category = "Arte & Cultura"
+        elif any(k in low for k in ["concert", "musica", "jazz"]):
+            category = "Musica"
+        else:
+            category = "Eventi & Cultura"
+        start = None
+        try:
+            start = dateparser.parse(pub_date).isoformat() if pub_date else None
+        except Exception:
+            start = pub_date
+        ev = {
+            "id": "RSS-" + str(abs(hash(title + link))),
+            "title": title,
+            "description": desc[:500],
+            "startDate": start,
+            "endDate": None,
+            "location": normalize_location({"name": "", "address": city, "city": city, "region": region, "province": prov}),
+            "category": category,
+            "image": image,
+            "url": link,
+            "source": source_name,
+        }
+        if ev["location"].get("region") in ("Lazio", "Umbria"):
+            events.append(ev)
+    return events
 
 def dedup(events):
     seen = set()
@@ -553,6 +648,8 @@ def main():
                     evs = parse_jsonld(html_text, src["name"], page_url)
                 elif kind == "eventbrite":
                     evs = parse_eventbrite(html_text, src["name"], page_url)
+                elif kind == "rss":
+                    evs = parse_rss(html_text, src["name"], page_url)
                 else:
                     evs = []
                 print(f"[info] {src['name']} {page_url} -> {len(evs)} eventi", file=sys.stderr)
