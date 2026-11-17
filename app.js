@@ -551,6 +551,25 @@
     };
   }
 
+  // Sfondo hero dinamico
+  function setHeroBg() {
+    const images = [
+      "https://images.unsplash.com/photo-1529260830199-42c24126f269?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1600&q=80"
+    ];
+    const now = new Date();
+    const start = new Date(now.getFullYear(), 0, 0);
+    const diff = now - start;
+    const day = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const img = images[day % images.length];
+    const el = document.getElementById("heroBg");
+    if (el) el.style.backgroundImage = "url('" + img + "')";
+  }
+  setHeroBg();
+
   async function load() {
     try {
       const [res, resComuni] = await Promise.all([
