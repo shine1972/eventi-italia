@@ -400,25 +400,30 @@
         else document.getElementById("plMsg").textContent = "Registrazione completata. Controlla la email.";
       };
     } else {
+      const { data: adminRow } = await supabase.from("admins").select("user_id").eq("user_id", user.id).maybeSingle();
+      const isAdmin = !!adminRow;
+
       els.prolocoBody.innerHTML = `
-        <h2>🏛️ Inserisci una sagra</h2>
-        <p>Accesso: ${escapeHtml(user.email)}</p>
-        <div class="field" style="margin-bottom:8px;"><input type="text" id="plTitle" placeholder="Titolo sagra" /></div>
+        <h2>${isAdmin ? "Pannello Admin" : "Inserisci una sagra"}</h2>
+        <p>Accesso: ${escapeHtml(user.email)} ${isAdmin ? '<span style="color:var(--primary);font-weight:700;">(Admin)</span>' : ""}</p>
+        <div class="field" style="margin-bottom:8px;"><input type="text" id="plTitle" placeholder="Titolo evento" /></div>
         <div class="field" style="margin-bottom:8px;"><textarea id="plDesc" placeholder="Descrizione" rows="3" style="flex:1;border:none;background:transparent;color:var(--text);outline:none;font-family:inherit;"></textarea></div>
         <div class="field" style="margin-bottom:8px;"><input type="datetime-local" id="plDate" /></div>
-        <div class="field" style="margin-bottom:8px;"><input type="text" id="plCity" placeholder="Città" /></div>
+        <div class="field" style="margin-bottom:8px;"><input type="text" id="plCity" placeholder="Citta" /></div>
         <div class="field" style="margin-bottom:8px;"><input type="text" id="plProvince" placeholder="Provincia" /></div>
         <div class="field" style="margin-bottom:8px;"><input type="text" id="plRegion" placeholder="Regione (Lazio/Umbria)" /></div>
         <div class="field" style="margin-bottom:8px;"><input type="text" id="plCategory" placeholder="Categoria (es. Sagre & Enogastronomia)" /></div>
         <div class="field" style="margin-bottom:8px;"><input type="url" id="plImage" placeholder="URL immagine (opzionale)" /></div>
+        <div class="field" style="margin-bottom:8px;"><input type="text" id="plSource" placeholder="Fonte (es. Pro Loco, Teatro, Admin)" value="${isAdmin ? "Admin" : "Pro Loco"}" /></div>
         <label style="display:flex;align-items:center;gap:6px;margin-top:10px;font-size:0.85rem;color:var(--muted);">
           <input type="checkbox" id="plConsentInsert" /> Confermo di avere il diritto di pubblicare questo contenuto e accetto la <a href="privacy.html" target="_blank">Privacy Policy</a>
         </label>
         <div style="display:flex;gap:8px;margin-top:10px;">
-          <button class="btn btn-primary" id="plSubmit">Pubblica sagra</button>
+          <button class="btn btn-primary" id="plSubmit">Pubblica evento</button>
           <button class="btn btn-ghost" id="plLogout">Esci</button>
         </div>
         <p id="plMsg" style="margin-top:10px;color:var(--muted);"></p>
+        ${isAdmin ? '<div id="adminList" style="margin-top:16px;"></div>' : ''}
       `;
       document.getElementById("plLogout").onclick = async () => {
         await supabase.auth.signOut();
@@ -436,18 +441,37 @@
           city: document.getElementById("plCity").value.trim(),
           province: document.getElementById("plProvince").value.trim(),
           region: document.getElementById("plRegion").value.trim(),
-          category: document.getElementById("plCategory").value.trim() || "Sagre & Enogastronomia",
+          category: document.getElementById("plCategory").value.trim() || "Altro",
           image_url: document.getElementById("plImage").value.trim(),
-          source: "Pro Loco",
+          source: document.getElementById("plSource").value.trim() || (isAdmin ? "Admin" : "Pro Loco"),
           created_by: user.id
         });
         if (error) document.getElementById("plMsg").textContent = "Errore: " + error.message;
         else {
-          document.getElementById("plMsg").textContent = "Sagra pubblicata!";
-          // ricarica eventi
+          document.getElementById("plMsg").textContent = "Evento pubblicato!";
           load();
         }
       };
+      if (isAdmin) {
+        const { data: evs } = await supabase.from("events").select("id,title,city,created_at").order("created_at", { ascending: false }).limit(10);
+        const listEl = document.getElementById("adminList");
+        if (listEl && evs) {
+          listEl.innerHTML = "<h3>Ultimi eventi inseriti</h3>" + evs.map(e =>
+            `<div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--border);">
+              <span>${escapeHtml(e.title)} <small style="color:var(--muted);">(${escapeHtml(e.city || "")})</small></span>
+              <button class="btn btn-ghost" style="padding:4px 8px;font-size:0.8rem;" data-del="${e.id}">Elimina</button>
+            </div>`
+          ).join("");
+          listEl.querySelectorAll("[data-del]").forEach(btn => {
+            btn.onclick = async () => {
+              const id = btn.getAttribute("data-del");
+              const { error } = await supabase.from("events").delete().eq("id", id);
+              if (error) alert("Errore: " + error.message);
+              else { renderProlocoModal(); load(); }
+            };
+          });
+        }
+      }
     }
   }
 
