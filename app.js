@@ -424,6 +424,23 @@
         </div>
         <p id="plMsg" style="margin-top:10px;color:var(--muted);"></p>
         ${isAdmin ? '<div id="adminList" style="margin-top:16px;"></div>' : ''}
+        ${isAdmin ? `
+        <div id="sourcesAdmin" style="margin-top:24px;padding-top:16px;border-top:1px solid var(--border);">
+          <h3>Gestione fonti scraping</h3>
+          <div id="sourcesList"></div>
+          <div style="margin-top:12px;">
+            <input type="text" id="srcName" placeholder="Nome fonte" style="width:100%;padding:8px;margin-bottom:6px;" />
+            <select id="srcKind" style="width:100%;padding:8px;margin-bottom:6px;">
+              <option value="rss">RSS (WordPress)</option>
+              <option value="jsonld">JSON-LD</option>
+              <option value="eventbrite">Eventbrite</option>
+            </select>
+            <input type="number" id="srcMaxPages" placeholder="Max pagine" value="1" style="width:100%;padding:8px;margin-bottom:6px;" />
+            <textarea id="srcUrls" placeholder="URL (uno per riga)" rows="3" style="width:100%;padding:8px;margin-bottom:6px;"></textarea>
+            <button class="btn btn-primary" id="srcAdd">Aggiungi fonte</button>
+            <p id="srcMsg" style="margin-top:8px;color:var(--muted);font-size:0.85rem;"></p>
+          </div>
+        </div>` : ''}
       `;
       document.getElementById("plLogout").onclick = async () => {
         await supabase.auth.signOut();
@@ -470,6 +487,62 @@
               else { renderProlocoModal(); load(); }
             };
           });
+        }
+
+        // Gestione fonti
+        async function loadSourcesAdmin() {
+          const { data: srcs } = await supabase.from("sources").select("*").order("created_at", { ascending: true });
+          const el = document.getElementById("sourcesList");
+          if (!el) return;
+          if (!srcs || !srcs.length) { el.innerHTML = "<p>Nessuna fonte.</p>"; return; }
+          el.innerHTML = srcs.map(s =>
+            `<div style="padding:8px 0;border-bottom:1px solid var(--border);">
+              <strong>${escapeHtml(s.name)}</strong> <small style="color:var(--muted);">(${s.kind}, ${s.max_pages} pag)</small>
+              ${s.active ? "" : ' <span style="color:#ef4444;">(disattiva)</span>'}
+              <div style="font-size:0.8rem;color:var(--muted);margin-top:2px;">${(s.urls||[]).map(u=>escapeHtml(u)).join("<br/>")}</div>
+              <div style="margin-top:4px;display:flex;gap:6px;">
+                <button class="btn btn-ghost" style="padding:3px 8px;font-size:0.75rem;" data-toggle="${s.id}" data-active="${s.active}">${s.active ? "Disattiva" : "Attiva"}</button>
+                <button class="btn btn-ghost" style="padding:3px 8px;font-size:0.75rem;" data-del-src="${s.id}">Elimina</button>
+              </div>
+            </div>`
+          ).join("");
+          el.querySelectorAll("[data-toggle]").forEach(btn => {
+            btn.onclick = async () => {
+              const id = btn.getAttribute("data-toggle");
+              const active = btn.getAttribute("data-active") === "true";
+              await supabase.from("sources").update({ active: !active }).eq("id", id);
+              loadSourcesAdmin();
+            };
+          });
+          el.querySelectorAll("[data-del-src]").forEach(btn => {
+            btn.onclick = async () => {
+              if (!confirm("Eliminare questa fonte?")) return;
+              const id = btn.getAttribute("data-del-src");
+              await supabase.from("sources").delete().eq("id", id);
+              loadSourcesAdmin();
+            };
+          });
+        }
+        loadSourcesAdmin();
+
+        const addBtn = document.getElementById("srcAdd");
+        if (addBtn) {
+          addBtn.onclick = async () => {
+            const name = document.getElementById("srcName").value.trim();
+            const kind = document.getElementById("srcKind").value;
+            const maxPages = parseInt(document.getElementById("srcMaxPages").value) || 1;
+            const urls = document.getElementById("srcUrls").value.split("\n").map(u=>u.trim()).filter(Boolean);
+            const msg = document.getElementById("srcMsg");
+            if (!name || !urls.length) { msg.textContent = "Inserisci nome e almeno un URL."; return; }
+            const { error } = await supabase.from("sources").insert({ name, kind, max_pages: maxPages, urls });
+            if (error) msg.textContent = "Errore: " + error.message;
+            else {
+              msg.textContent = "Fonte aggiunta!";
+              document.getElementById("srcName").value = "";
+              document.getElementById("srcUrls").value = "";
+              loadSourcesAdmin();
+            }
+          };
         }
       }
     }
