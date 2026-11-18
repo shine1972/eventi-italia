@@ -1,0 +1,33 @@
+[
+  {
+    "name": "Zero",
+    "kind": "jsonld",
+    "max_pages": 2,
+    "urls": [
+      "https://www.zero.eu/it/roma/eventi/"
+    ]
+  },
+  {
+    "name": "Eventbrite",
+    "kind": "eventbrite",
+    "max_pages": 2,
+    "urls": [
+      "https://www.eventbrite.it/d/italy--roma/events/",
+      "https://www.eventbrite.it/d/italy--viterbo/events/",
+      "https://www.eventbrite.it/d/italy--rieti/events/",
+      "https://www.eventbrite.it/d/italy--latina/events/",
+      "https://www.eventbrite.it/d/italy--frosinone/events/",
+      "https://www.eventbrite.it/d/italy--terni/events/",
+      "https://www.eventbrite.it/d/italy--perugia/events/",
+      "https://www.eventbrite.it/d/italy/events/?q=sagra"
+    ]
+  },
+  {
+    "name": "Eventi della Tuscia",
+    "kind": "rss",
+    "max_pages": 1,
+    "urls": [
+      "https://www.eventidellatuscia.it/feed/"
+    ]
+  }
+]

@@ -30,37 +30,17 @@ HEADERS = {
 }
 
 # Fonti da cui aggregare. Ogni voce puo' avere piu' URL (citta'/pagine).
-SOURCES = [
-    {
-        "name": "Zero",
-        "kind": "jsonld",
-        "max_pages": 2,
-        "urls": [
-            "https://www.zero.eu/it/roma/eventi/",
-        ],
-    },
-    {
-        "name": "Eventi della Tuscia",
-        "kind": "rss",
-        "max_pages": 1,
-        "urls": ["https://www.eventidellatuscia.it/feed/"],
-    },
-    {
-        "name": "Eventbrite",
-        "kind": "eventbrite",
-        "max_pages": 2,
-        "urls": [
-            "https://www.eventbrite.it/d/italy--roma/events/",
-            "https://www.eventbrite.it/d/italy--viterbo/events/",
-            "https://www.eventbrite.it/d/italy--rieti/events/",
-            "https://www.eventbrite.it/d/italy--latina/events/",
-            "https://www.eventbrite.it/d/italy--frosinone/events/",
-            "https://www.eventbrite.it/d/italy--terni/events/",
-            "https://www.eventbrite.it/d/italy--perugia/events/",
-            "https://www.eventbrite.it/d/italy/events/?q=sagra",
-        ],
-    },
-]
+import json as _json
+import os as _os
+_SOURCES_PATH = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "sources.json")
+if _os.path.exists(_SOURCES_PATH):
+    with open(_SOURCES_PATH, encoding="utf-8") as _f:
+        SOURCES = _json.load(_f)
+else:
+    SOURCES = [
+        {"name": "Zero", "kind": "jsonld", "max_pages": 2, "urls": ["https://www.zero.eu/it/roma/eventi/"]},
+        {"name": "Eventbrite", "kind": "eventbrite", "max_pages": 2, "urls": ["https://www.eventbrite.it/d/italy--roma/events/"]},
+    ]
 
 # Categorie normalizzate
 CATEGORY_MAP = {
