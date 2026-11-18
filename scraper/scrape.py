@@ -32,15 +32,34 @@ HEADERS = {
 # Fonti da cui aggregare. Ogni voce puo' avere piu' URL (citta'/pagine).
 import json as _json
 import os as _os
-_SOURCES_PATH = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "sources.json")
-if _os.path.exists(_SOURCES_PATH):
-    with open(_SOURCES_PATH, encoding="utf-8") as _f:
-        SOURCES = _json.load(_f)
-else:
-    SOURCES = [
+SUPABASE_URL = "https://fnhzcphwfedmhoigyyet.supabase.co"
+SUPABASE_KEY = "sb_publishable_jos0Aj1lGdA_khgaiqXCTA___I4B6gL"
+
+def load_sources():
+    # Prova a leggere le fonti da Supabase
+    try:
+        r = requests.get(
+            SUPABASE_URL + "/rest/v1/sources?select=*&active=eq.true&order=created_at.asc",
+            headers={"apikey": SUPABASE_KEY, "Authorization": "Bearer " + SUPABASE_KEY},
+            timeout=20,
+        )
+        if r.status_code == 200:
+            data = r.json()
+            if data:
+                return [{"name": s["name"], "kind": s["kind"], "max_pages": s.get("max_pages", 1), "urls": s.get("urls", [])} for s in data]
+    except Exception as e:
+        print(f"[warn] Supabase sources fetch failed: {e}", file=sys.stderr)
+    # Fallback a sources.json locale
+    _SOURCES_PATH = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "sources.json")
+    if _os.path.exists(_SOURCES_PATH):
+        with open(_SOURCES_PATH, encoding="utf-8") as _f:
+            return _json.load(_f)
+    return [
         {"name": "Zero", "kind": "jsonld", "max_pages": 2, "urls": ["https://www.zero.eu/it/roma/eventi/"]},
         {"name": "Eventbrite", "kind": "eventbrite", "max_pages": 2, "urls": ["https://www.eventbrite.it/d/italy--roma/events/"]},
     ]
+
+SOURCES = load_sources()
 
 # Categorie normalizzate
 CATEGORY_MAP = {
