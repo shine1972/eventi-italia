@@ -657,7 +657,15 @@ def main():
                 all_events.extend(evs)
                 time.sleep(1.2)
 
-    all_events = dedup(all_events)
+    # Merge con dati esistenti per non perdere eventi in caso di errori parziali
+    existing_events = []
+    if os.path.exists(OUT):
+        try:
+            with open(OUT, encoding="utf-8") as f:
+                existing_events = json.load(f).get("events", [])
+        except Exception:
+            existing_events = []
+    all_events = dedup(all_events + existing_events)
     # Tieni solo eventi del Lazio e dell'Umbria
     all_events = [e for e in all_events if e.get("location", {}).get("region") in ("Lazio", "Umbria")]
 
