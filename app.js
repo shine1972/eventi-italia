@@ -482,11 +482,25 @@
           const msg = document.getElementById("plMsg");
           msg.textContent = "Estrazione in corso...";
           try {
-            const proxy = "https://api.allorigins.win/get?url=" + encodeURIComponent(url);
-            const res = await fetch(proxy);
-            if (!res.ok) throw new Error("HTTP " + res.status);
-            const data = await res.json();
-            const html = data.contents || "";
+            const proxies = [
+              "https://api.allorigins.win/get?url=" + encodeURIComponent(url),
+              "https://corsproxy.io/?" + encodeURIComponent(url),
+              "https://api.codetabs.com/v1/proxy?quest=" + encodeURIComponent(url)
+            ];
+            let html = "";
+            let lastErr = null;
+            for (const proxy of proxies) {
+              try {
+                const res = await fetch(proxy);
+                if (!res.ok) throw new Error("HTTP " + res.status);
+                const text = await res.text();
+                let data = null;
+                try { data = JSON.parse(text); } catch (e) {}
+                if (data && data.contents) { html = data.contents; break; }
+                if (text && text.length > 100 && !text.trim().startsWith("{")) { html = text; break; }
+              } catch (e) { lastErr = e; }
+            }
+            if (!html) throw (lastErr || new Error("Nessun proxy disponibile"));
             const doc = new DOMParser().parseFromString(html, "text/html");
             const getMeta = (prop) => {
               const el = doc.querySelector(`meta[property="${prop}"], meta[name="${prop}"]`);
