@@ -415,6 +415,7 @@
       els.prolocoBody.innerHTML = `
         <h2>${isAdmin ? "Pannello Admin" : "Inserisci una sagra"}</h2>
         <p>Accesso: ${escapeHtml(user.email)} ${isAdmin ? '<span style="color:var(--primary);font-weight:700;">(Admin)</span>' : ""}</p>
+        <p style="font-size:0.8rem;color:var(--muted);">UUID: ${escapeHtml(user.id)}</p>
         <div style="display:flex;gap:6px;margin-bottom:8px;">
           <input type="url" id="plExtractUrl" placeholder="Incolla link evento per estrarre dati" style="flex:1;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius-xs);background:var(--surface-solid);color:var(--text);" />
           <button class="btn btn-ghost" id="plExtract" type="button">Estrai</button>
@@ -434,6 +435,7 @@
         <div style="display:flex;gap:8px;margin-top:10px;">
           <button class="btn btn-primary" id="plSubmit">Pubblica evento</button>
           <button class="btn btn-ghost" id="plLogout">Esci</button>
+          <button class="btn btn-ghost" id="plDebug">Verifica admin</button>
         </div>
         <p id="plMsg" style="margin-top:10px;color:var(--muted);"></p>
         ${isAdmin ? '<div id="adminList" style="margin-top:16px;"></div>' : ''}
@@ -458,6 +460,13 @@
       document.getElementById("plLogout").onclick = async () => {
         await supabase.auth.signOut();
         renderProlocoModal();
+      };
+      const dbg = document.getElementById("plDebug");
+      if (dbg) dbg.onclick = async () => {
+        const msg = document.getElementById("plMsg");
+        msg.textContent = "Verifica in corso...";
+        const { data, error } = await supabase.from("admins").select("*").eq("user_id", user.id);
+        msg.textContent = "Admin row: " + JSON.stringify(data) + " | Error: " + (error ? error.message : "nessuno");
       };
       document.getElementById("plSubmit").onclick = async () => {
         const consent = document.getElementById("plConsentInsert")?.checked;
