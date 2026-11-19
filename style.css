@@ -342,6 +342,7 @@ main { padding: 40px 0 60px; }
 .scroll-top.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
 
 /* COOKIE BANNER */
+.cookie-banner[hidden] { display: none !important; }
 .cookie-banner {
   position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
   background: var(--surface-solid); border-top: 1px solid var(--border);

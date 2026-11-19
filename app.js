@@ -406,6 +406,10 @@
       els.prolocoBody.innerHTML = `
         <h2>${isAdmin ? "Pannello Admin" : "Inserisci una sagra"}</h2>
         <p>Accesso: ${escapeHtml(user.email)} ${isAdmin ? '<span style="color:var(--primary);font-weight:700;">(Admin)</span>' : ""}</p>
+        <div style="display:flex;gap:6px;margin-bottom:8px;">
+          <input type="url" id="plExtractUrl" placeholder="Incolla link evento per estrarre dati" style="flex:1;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius-xs);background:var(--surface-solid);color:var(--text);" />
+          <button class="btn btn-ghost" id="plExtract" type="button">Estrai</button>
+        </div>
         <div class="field" style="margin-bottom:8px;"><input type="text" id="plTitle" placeholder="Titolo evento" /></div>
         <div class="field" style="margin-bottom:8px;"><textarea id="plDesc" placeholder="Descrizione" rows="3" style="flex:1;border:none;background:transparent;color:var(--text);outline:none;font-family:inherit;"></textarea></div>
         <div class="field" style="margin-bottom:8px;"><input type="datetime-local" id="plDate" /></div>
@@ -469,6 +473,37 @@
           load();
         }
       };
+
+      const extractBtn = document.getElementById("plExtract");
+      if (extractBtn) {
+        extractBtn.onclick = async () => {
+          const url = document.getElementById("plExtractUrl").value.trim();
+          if (!url) return;
+          const msg = document.getElementById("plMsg");
+          msg.textContent = "Estrazione in corso...";
+          try {
+            const proxy = "https://api.allorigins.win/get?url=" + encodeURIComponent(url);
+            const res = await fetch(proxy);
+            if (!res.ok) throw new Error("HTTP " + res.status);
+            const data = await res.json();
+            const html = data.contents || "";
+            const doc = new DOMParser().parseFromString(html, "text/html");
+            const getMeta = (prop) => {
+              const el = doc.querySelector(`meta[property="${prop}"], meta[name="${prop}"]`);
+              return el ? (el.getAttribute("content") || "") : "";
+            };
+            const title = getMeta("og:title") || (doc.querySelector("title")?.textContent || "").trim();
+            const desc = getMeta("og:description") || getMeta("description");
+            const img = getMeta("og:image");
+            if (title) document.getElementById("plTitle").value = title;
+            if (desc) document.getElementById("plDesc").value = desc;
+            if (img) document.getElementById("plImage").value = img;
+            msg.textContent = "Dati estratti. Verifica e pubblica.";
+          } catch (err) {
+            msg.textContent = "Estrazione fallita: " + err.message;
+          }
+        };
+      }
       if (isAdmin) {
         const { data: evs } = await supabase.from("events").select("id,title,city,created_at").order("created_at", { ascending: false }).limit(10);
         const listEl = document.getElementById("adminList");
