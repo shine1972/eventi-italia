@@ -388,8 +388,16 @@
         const email = document.getElementById("plEmail").value;
         const password = document.getElementById("plPassword").value;
         const { error } = await supabase.auth.signInWithPassword({ email, password });
-        if (error) document.getElementById("plMsg").textContent = "Errore: " + error.message;
-        else { document.getElementById("plMsg").textContent = "Accesso effettuato!"; renderProlocoModal(); }
+        if (error) {
+          if (error.message.toLowerCase().includes("email not confirmed")) {
+            document.getElementById("plMsg").textContent = "Email non confermata. Controlla la casella di posta (anche spam) o conferma l'utente su Supabase.";
+          } else {
+            document.getElementById("plMsg").textContent = "Errore: " + error.message;
+          }
+        } else {
+          document.getElementById("plMsg").textContent = "Accesso effettuato!";
+          setTimeout(() => renderProlocoModal(), 300);
+        }
       };
       document.getElementById("plSignup").onclick = async () => {
         const consent = document.getElementById("plConsent")?.checked;
