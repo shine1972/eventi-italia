@@ -482,33 +482,47 @@
           const msg = document.getElementById("plMsg");
           msg.textContent = "Estrazione in corso...";
           try {
-            const proxies = [
-              "https://api.allorigins.win/get?url=" + encodeURIComponent(url),
-              "https://corsproxy.io/?" + encodeURIComponent(url),
-              "https://api.codetabs.com/v1/proxy?quest=" + encodeURIComponent(url)
-            ];
-            let html = "";
-            let lastErr = null;
-            for (const proxy of proxies) {
+            let title = "", desc = "", img = "";
+            // Prova prima con Supabase Edge Function (più affidabile)
+            if (supabase) {
               try {
-                const res = await fetch(proxy);
-                if (!res.ok) throw new Error("HTTP " + res.status);
-                const text = await res.text();
-                let data = null;
-                try { data = JSON.parse(text); } catch (e) {}
-                if (data && data.contents) { html = data.contents; break; }
-                if (text && text.length > 100 && !text.trim().startsWith("{")) { html = text; break; }
-              } catch (e) { lastErr = e; }
+                const { data, error } = await supabase.functions.invoke("scrape-url", { body: { url } });
+                if (!error && data) {
+                  title = data.title || "";
+                  desc = data.description || "";
+                  img = data.image || "";
+                }
+              } catch (e) { /* fallback ai proxy */ }
             }
-            if (!html) throw (lastErr || new Error("Nessun proxy disponibile"));
-            const doc = new DOMParser().parseFromString(html, "text/html");
-            const getMeta = (prop) => {
-              const el = doc.querySelector(`meta[property="${prop}"], meta[name="${prop}"]`);
-              return el ? (el.getAttribute("content") || "") : "";
-            };
-            const title = getMeta("og:title") || (doc.querySelector("title")?.textContent || "").trim();
-            const desc = getMeta("og:description") || getMeta("description");
-            const img = getMeta("og:image");
+            // Fallback ai proxy CORS
+            if (!title && !desc && !img) {
+              const proxies = [
+                "https://api.allorigins.win/get?url=" + encodeURIComponent(url),
+                "https://corsproxy.io/?" + encodeURIComponent(url)
+              ];
+              let html = "";
+              let lastErr = null;
+              for (const proxy of proxies) {
+                try {
+                  const res = await fetch(proxy);
+                  if (!res.ok) throw new Error("HTTP " + res.status);
+                  const text = await res.text();
+                  let data = null;
+                  try { data = JSON.parse(text); } catch (e) {}
+                  if (data && data.contents) { html = data.contents; break; }
+                  if (text && text.length > 100 && !text.trim().startsWith("{")) { html = text; break; }
+                } catch (e) { lastErr = e; }
+              }
+              if (!html) throw (lastErr || new Error("Proxy non disponibili. Crea la Edge Function su Supabase."));
+              const doc = new DOMParser().parseFromString(html, "text/html");
+              const getMeta = (prop) => {
+                const el = doc.querySelector(`meta[property="${prop}"], meta[name="${prop}"]`);
+                return el ? (el.getAttribute("content") || "") : "";
+              };
+              title = getMeta("og:title") || (doc.querySelector("title")?.textContent || "").trim();
+              desc = getMeta("og:description") || getMeta("description");
+              img = getMeta("og:image");
+            }
             if (title) document.getElementById("plTitle").value = title;
             if (desc) document.getElementById("plDesc").value = desc;
             if (img) document.getElementById("plImage").value = img;
