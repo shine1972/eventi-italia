@@ -747,25 +747,37 @@
       ]);
       if (resComuni.ok) state.comuni = await resComuni.json();
 
-      // Prova a caricare eventi da Supabase
-      let loaded = false;
+      // Carica eventi locali (scraped)
+      let localEvents = [];
+      let localUpdated = null;
+      if (res.ok) {
+        const data = await res.json();
+        localEvents = Array.isArray(data.events) ? data.events : [];
+        localUpdated = data.updated;
+      }
+
+      // Carica eventi da Supabase (inseriti manualmente / Pro Loco)
+      let sbEvents = [];
       if (supabase) {
         try {
           const { data: sbData, error } = await supabase.from("events").select("*").order("start_date", { ascending: true });
-          if (!error && sbData && sbData.length) {
-            state.events = sbData.map(mapSupabaseEvent);
-            loaded = true;
-          }
+          if (!error && sbData) sbEvents = sbData.map(mapSupabaseEvent);
         } catch (e) { console.warn("Supabase load failed", e); }
       }
-      if (!loaded) {
-        if (!res.ok) throw new Error("HTTP " + res.status);
-        const data = await res.json();
-        state.events = Array.isArray(data.events) ? data.events : [];
-        els.updated.textContent = data.updated ? new Date(data.updated).toLocaleDateString("it-IT", { day: "2-digit", month: "short", year: "numeric" }) : "-";
-      } else {
-        els.updated.textContent = new Date().toLocaleDateString("it-IT", { day: "2-digit", month: "short", year: "numeric" });
-      }
+
+      // Merge e deduplicazione
+      const merged = [...localEvents, ...sbEvents];
+      const seen = new Set();
+      state.events = merged.filter(e => {
+        const key = (e.title || "").toLowerCase() + "|" + (e.startDate || "").slice(0,10) + "|" + (e.location?.city || "").toLowerCase();
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+
+      els.updated.textContent = localUpdated
+        ? new Date(localUpdated).toLocaleDateString("it-IT", { day: "2-digit", month: "short", year: "numeric" })
+        : new Date().toLocaleDateString("it-IT", { day: "2-digit", month: "short", year: "numeric" });
       populateFilters();
       cascadedOptions();
       applyFilters();
