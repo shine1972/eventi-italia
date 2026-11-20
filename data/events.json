@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-19T19:24:01.498184+00:00",
-  "count": 115,
+  "updated": "2026-11-20T13:52:52.094886+00:00",
+  "count": 152,
   "events": [
     {
       "id": "Eventbrite-2004163411715",
@@ -39,6 +39,42 @@
       "source": "Eventbrite"
     },
     {
+      "id": "Eventbrite-2001513890927",
+      "title": "Discover Perugiaâs treasures with a scavenger hunt by World City Trail!",
+      "description": "",
+      "startDate": "",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "oggi alle 13:00 + altri 528",
+        "city": "Perugia",
+        "region": "Umbria",
+        "province": "Perugia"
+      },
+      "category": "Viaggi & Outdoor",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F956999013%2F2256710623213%2F1%2Foriginal.20250210-150138?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.464646426114&fp-y=0.640644342926&s=62d7287f94cb2445d2942f029650b8c4",
+      "url": "https://www.eventbrite.sg/e/discover-perugias-treasures-with-a-scavenger-hunt-by-world-city-trail-tickets-1244934636009?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2001914281506",
+      "title": "Crack the codes of Perugia with our thrilling outdoor escape game!",
+      "description": "",
+      "startDate": "",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "oggi alle 13:00 + altri 183",
+        "city": "Perugia",
+        "region": "Umbria",
+        "province": "Perugia"
+      },
+      "category": "Viaggi & Outdoor",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F957004613%2F2256710623213%2F1%2Foriginal.20250210-150747?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.443813092781&fp-y=0.592317205379&s=ce3aca01cc3d12a97f6b6f2c27cd3b54",
+      "url": "https://www.eventbrite.sg/e/crack-the-codes-of-perugia-with-our-thrilling-outdoor-escape-game-tickets-1244948978909?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
       "id": "Eventbrite-2001363289474",
       "title": "PRIMA DI RISPONDERE",
       "description": "",
@@ -54,42 +90,6 @@
       "category": "Family And Education",
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193729552%2F1222941149483%2F1%2Foriginal.20260917-090140?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.467&fp-y=0.014&s=c5a2cda8efccc8f6a6168486998e2fe8",
       "url": "https://www.eventbrite.it/e/prima-di-rispondere-tickets-2001363163096?aff=ebdssbcitybrowse",
-      "source": "Eventbrite"
-    },
-    {
-      "id": "Eventbrite-2001513885912",
-      "title": "Discover Perugiaâs treasures with a scavenger hunt by World City Trail!",
-      "description": "",
-      "startDate": "",
-      "endDate": null,
-      "location": {
-        "name": "",
-        "address": "domani alle 07:00 + altri 533",
-        "city": "Perugia",
-        "region": "Umbria",
-        "province": "Perugia"
-      },
-      "category": "Viaggi & Outdoor",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F956999013%2F2256710623213%2F1%2Foriginal.20250210-150138?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.464646426114&fp-y=0.640644342926&s=62d7287f94cb2445d2942f029650b8c4",
-      "url": "https://www.eventbrite.sg/e/discover-perugias-treasures-with-a-scavenger-hunt-by-world-city-trail-tickets-1244934636009?aff=ebdssbcitybrowse",
-      "source": "Eventbrite"
-    },
-    {
-      "id": "Eventbrite-2001914038780",
-      "title": "Crack the codes of Perugia with our thrilling outdoor escape game!",
-      "description": "",
-      "startDate": "",
-      "endDate": null,
-      "location": {
-        "name": "",
-        "address": "sabato alle 07:00 + altri 5",
-        "city": "Perugia",
-        "region": "Umbria",
-        "province": "Perugia"
-      },
-      "category": "Viaggi & Outdoor",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F957004613%2F2256710623213%2F1%2Foriginal.20250210-150747?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.443813092781&fp-y=0.592317205379&s=ce3aca01cc3d12a97f6b6f2c27cd3b54",
-      "url": "https://www.eventbrite.sg/e/crack-the-codes-of-perugia-with-our-thrilling-outdoor-escape-game-tickets-1244948978909?aff=ebdssbcitybrowse",
       "source": "Eventbrite"
     },
     {
@@ -160,7 +160,7 @@
         "province": "Roma"
       },
       "category": "Sports And Fitness",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189458184%2F294662522561%2F1%2Foriginal.20260723-090228?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=92a6d515f431dcff95f04d9b7a1ced74",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1198225091%2F294662522561%2F1%2Foriginal.20261118-082931?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=7f1c3e4b61f4b3b8b92f9963ed38f72f",
       "url": "https://www.eventbrite.it/e/pwr-new-years-mayhem-tickets-1994931639235?aff=ebdssbcitybrowse",
       "source": "Eventbrite"
     },
@@ -273,7 +273,7 @@
       "source": "Eventi della Tuscia"
     },
     {
-      "id": "RSS-1732934651457803345",
+      "id": "RSS-8323886445117672579",
       "title": "| Dall’ 1 al 30 NOVEMBRE 2026 | CARBOGNANO – Alle Scuderie Farnese in mostra Simone Lipperi: “Oltre il corpo, dentro al colore”",
       "description": "Dal 1° al 30 novembre 2026 alle Scuderie Farnese di Carbognano è in mostra Simone Lipperi – Oltre il corpo, dentro al colore , la personale dedicata alla memoria del pittore carbognanese. Oltre 30 opere in esposizione che ripercorrono la storia artistica del pittore, dagli anni del Liceo Artistico, all’ Accademia delle Belle Arti di Roma, ai suoi lavori esposti nelle mostre capitoline, come quella nella sala del Bramante. Tra i lavori d’archivio si potranno ammirare alcune perle come il volume M",
       "startDate": "2026-11-09T00:15:00+00:00",
@@ -291,7 +291,7 @@
       "source": "Eventi della Tuscia"
     },
     {
-      "id": "RSS-1969082505422031276",
+      "id": "RSS-25711666448696523",
       "title": "| 6,7,8,13,14,15 NOVEMBRE 2026 | VIGNANELLO – XXVI Festa dell’Olio e del Vino novello: due weekend tra sapori, storia e tradizioni",
       "description": "Olio appena franto e vino novello, antiche cantine scavate nel tufo, taverne, rievocazioni storiche e il patrimonio di uno dei borghi della Tuscia viterbese: per due fine settimana, dal 6 all’8 e dal 13 al 15 novembre 2026 , Vignanello torna a celebrare i prodotti e le tradizioni del territorio con la XXVI Festa dell’Olio e del Vino Novello . L’evento è patrocinato dal patrocinio del Ministero della Cultura, dalla Regione Lazio e dal Comune di Vignanello. Sei giornate per conoscere e assaporare ",
       "startDate": "2026-11-09T02:02:00+00:00",
@@ -309,7 +309,7 @@
       "source": "Eventi della Tuscia"
     },
     {
-      "id": "RSS-6847741826908904757",
+      "id": "RSS-3415083946051978972",
       "title": "| 15 NOVEMBRE 2026 | VITERBO – JazzUp Festival: gran finale al Teatro dell’Unione: le note dei Matt Bianco per un’imperdibile data!",
       "description": "Sarà la raffinatezza inconfondibile dei Matt Bianco a calare il sipario sulla ventunesima edizione di JazzUp Festival . Organizzato dalle Associazioni Musica e Territorio , Factotum APS e Quattro Note Motrici , promosso dal Comune di Viterbo e inserito nel percorso di &#8220; Viterbo Tuscia 2033 &#8211; Capitale Europea della Cultura &#8220;, il festival conferma la sua vocazione internazionale ospitando per la prima volta nella città dei Papi una vera e propria icona della musica mondiale. L&#8",
       "startDate": "2026-11-09T07:34:21+00:00",
@@ -327,7 +327,7 @@
       "source": "Eventi della Tuscia"
     },
     {
-      "id": "RSS-6950715272607027897",
+      "id": "RSS-1627001515692877560",
       "title": "| 15 NOVEMBRE 2026 | SAN MARTINO AL CIMNO – Tutto pronto per “La Fiera de ‘na vorta”",
       "description": "Appuntamento da non perdere! Il 15 Novembre tutto lo staff ti aspetta in Fiera! Una giornata all’insegna delle tradizioni, dei sapori e della convivialità in quel di San Martino al Cimino. VAI A SCOPRIRE: Gli animali della fiera Tante bancarelle con prodotti e curiosità Un’occasione speciale per vivere le tradizioni del territorio, tra genuinità, divertimento e buon cibo! L'articolo | 15 NOVEMBRE 2026 | SAN MARTINO AL CIMNO &#8211; Tutto pronto per &#8220;La Fiera de &#8216;na vorta&#8221; sembr",
       "startDate": "2026-11-10T08:45:35+00:00",
@@ -345,7 +345,7 @@
       "source": "Eventi della Tuscia"
     },
     {
-      "id": "RSS-7983652085487156017",
+      "id": "RSS-5538881487181270825",
       "title": "| 13 NOVEMBRE 2026 | RONCIGLIONE – “Il Baule dei Ricordi” arriva al Teatro Ettore Petrolini: teatro, musica, danza e solidarietà",
       "description": "Una serata all’insegna dello spettacolo, delle emozioni e della solidarietà. Venerdì 13 novembre 2026, alle ore 21.00 , il Teatro Comunale “Ettore Petrolini” di Ronciglione ospiterà l’undicesima edizione di “Insieme per un Sorriso” , la varietà di beneficenza che torna sul palcoscenico con un nuovo spettacolo dal titolo “Il Baule dei Ricordi” . Autore, regista e showman della serata sarà Leonardo Modanesi , alla guida di uno spettacolo che vedrà alternarsi sul palco recitazione, canto, danza ed ",
       "startDate": "2026-11-10T09:11:15+00:00",
@@ -363,7 +363,7 @@
       "source": "Eventi della Tuscia"
     },
     {
-      "id": "RSS-1386719941390142537",
+      "id": "RSS-694108762139513039",
       "title": "| 15 NOVEMBRE 2026 | BOLSENA – Al via BolsenArte Winter 2026/2027: 10 spettacoli gratuiti tra teatro, musica classica, jazz, gospel e musical",
       "description": "Prende il via domenica 15 novembre BolsenArte Winter 2026/2027 , il festival promosso dal Comune di Bolsena con la direzione artistica del maestro Francesco Traversi: dieci spettacoli a ingresso gratuito tra il Piccolo Teatro Cavour e il Teatro San Francesco . Il filo conduttore della nuova edizione è la convinzione che la musica sappia risvegliare umanità, libertà e desiderio di pace, in un presente segnato da guerre e tensioni internazionali. Dalla musica da camera al gospel, dal teatro al mus",
       "startDate": "2026-11-10T14:41:04+00:00",
@@ -381,7 +381,7 @@
       "source": "Eventi della Tuscia"
     },
     {
-      "id": "RSS-8991224348214199537",
+      "id": "RSS-7503201909750236160",
       "title": "| 15 NOVEMBRE 2026 | ACQUAPENDENTE – “Animal farm”, al Teatro Boni una rilettura di George Orwell",
       "description": "Nell&#8217;ambito della stagione 2026-27 del&nbsp; Teatro Boni &nbsp;di&nbsp; Acquapendente , con direzione artistica di Sandro Nardi,&nbsp; domenica 15 novembre &nbsp;alle ore&nbsp; 17:30 &nbsp;è in programma &#8220; Animal farm &#8220;, una rilettura drammaturgica del celebre romanzo &#8220; La fattoria degli animali &#8221; di George Orwell , nell&#8217;adattamento di Ludovico Precoma e Valerio Amato﻿ per la regia di Simone Precoma. Sul palco Margherita Iaschi, Valerio Amato, Ludovico Precoma",
       "startDate": "2026-11-10T16:13:33+00:00",
@@ -399,7 +399,7 @@
       "source": "Eventi della Tuscia"
     },
     {
-      "id": "RSS-8455068743907594671",
+      "id": "RSS-7751209125821188931",
       "title": "| 15 NOVEMBRE 2026 | VITERBO – JazzUp Festival: gran finale al Teatro dell’Unione: le note dei Matt Bianco per un’imperdibile data!",
       "description": "Sarà la raffinatezza inconfondibile dei Matt Bianco a calare il sipario sulla ventunesima edizione di JazzUp Festival . Organizzato dalle Associazioni Musica e Territorio , Factotum APS e Quattro Note Motrici , promosso dal Comune di Viterbo e inserito nel percorso di &#8220; Viterbo Tuscia 2033 &#8211; Capitale Europea della Cultura &#8220;, il festival conferma la sua vocazione internazionale ospitando per la prima volta nella città dei Papi una vera e propria icona della musica mondiale. L&#8",
       "startDate": "2026-11-11T08:58:10+00:00",
@@ -417,7 +417,7 @@
       "source": "Eventi della Tuscia"
     },
     {
-      "id": "RSS-2241402101133755324",
+      "id": "RSS-6672248234230547295",
       "title": "| 15 NOVEMBRE 2026 | VITERBO – XXII Stagione concertistica UNITUS: in concerto “Renzo Rossellini Klaviertrio”",
       "description": "Il prossimo concerto della XXII Stagione concertistica dell&#8217;Università della Tuscia, per motivi di forza maggiore, sarà non sabato 14 ma domenica 15 novembre, sempre alle 17 (Auditorium Carlo Azeglio Ciampi). Sarà tenuto da un complesso cameristico di grande valore, il Renzo Rossellini Klaviertrio costituito da Antonello Timpani, Clarinetto; Sandro De Blasio, Violoncello e Giacomo Bellucci, Pianoforte , docenti del Conservatorio di S. Cecilia di Roma e del Conservatorio &#8220;L. Refice&#8",
       "startDate": "2026-11-11T10:47:57+00:00",
@@ -435,7 +435,7 @@
       "source": "Eventi della Tuscia"
     },
     {
-      "id": "RSS-8276810199184000950",
+      "id": "RSS-252065269860737604",
       "title": "| 29 NOVEMBRE 2026 | TUSCIA – Sport e solidarietà: in arrivo la nona edizione del Tour Brulé!",
       "description": "Presentata a&nbsp; Vitorchiano&nbsp; la nona edizione del&nbsp; Tour Brulé , manifestazione&nbsp; cicloturistica non competitiva&nbsp; con finalità solidale, dedicata a mountain bike, e-bike, gravel e aperta a tutti. Un’edizione che consolida la positiva visione di un territorio dai confini ampliati, capace di sostenere manifestazioni intercomunali e che in eventi come la &#8220;cicloturistica dei tre borghi&#8221; trova elementi di forza. Il percorso parte da&nbsp; Vitorchiano&nbsp; per poi sno",
       "startDate": "2026-11-12T09:46:53+00:00",
@@ -453,7 +453,7 @@
       "source": "Eventi della Tuscia"
     },
     {
-      "id": "RSS-4242192479419124",
+      "id": "RSS-194454732853410670",
       "title": "| 15 NOVEMBRE 2026 | VITERBO – Mercatino dell’antico a Pratogiardino",
       "description": "Domenica 15 novembre torna il mercatino dell&#8217;antico. L’appuntamento, dedicato al collezionismo, all’hobbistica, all’oggettistica, all’antiquariato e al modernariato, in programma la terza domenica del mese, si sposta eccezionalmente a Pratogiardino, sia per l&#8217;appuntamento del 15 novembre, sia per quello del 20 dicembre. ORARIO: dalle 8.00 fino al tardo pomeriggio L'articolo | 15 NOVEMBRE 2026 | VITERBO &#8211; Mercatino dell&#8217;antico a Pratogiardino sembra essere il primo su Even",
       "startDate": "2026-11-14T10:55:58+00:00",
@@ -471,7 +471,7 @@
       "source": "Eventi della Tuscia"
     },
     {
-      "id": "RSS-2175755904361868805",
+      "id": "RSS-4117166012075660468",
       "title": "| 20 NOVEMBRE 2026 | VITERBO – Alvalenti al Teatro San Leonardo con il suo universo graficomico",
       "description": "Basta un piccolo disegno tracciato su una lavagna per dare vita a un universo. È da questa intuizione che prende forma lo spettacolo di Alvalenti , nome d’arte di Alessandro Valenti, poeta graficomico, illustratore, comico e live performer, che venerdì 20 novembre alle ore 19:30 sarà protagonista al Teatro San Leonardo con un originale intreccio di disegno dal vivo, comicità e poesia. Con il suo inconfondibile linguaggio graficomico, Alvalenti trasforma parole, segni e scarabocchi in immagini in",
       "startDate": "2026-11-15T19:01:29+00:00",
@@ -489,7 +489,7 @@
       "source": "Eventi della Tuscia"
     },
     {
-      "id": "RSS-1842361897374148353",
+      "id": "RSS-4514333441191321617",
       "title": "| 21,22 NOVEMBRE 2026 | CARBOGNANO – Michele La Ginestra torna al Teatro Bianconi con “Mi Pare Ieri!”",
       "description": "Dopo il clamoroso successo della scorsa stagione e il trionfo al Teatro Sistina di Roma, lo spettacolo che celebra i 40 anni di carriera dell&#8217;attore torna in scena in un imperdibile appuntamento fuori abbonamento. Per la regia di Roberto Marafante , l&#8217;attore romano sarà accompagnato in scena da Alessandro La Ginestra, Luca La Ginestra, Ilaria Nestovito e Fabrizia Scaccia . Questo atteso ritorno rappresenta un&#8217;occasione speciale per rivivere l&#8217;energia di uno spettacolo che",
       "startDate": "2026-11-15T23:41:00+00:00",
@@ -507,7 +507,7 @@
       "source": "Eventi della Tuscia"
     },
     {
-      "id": "RSS-7195582204528272679",
+      "id": "RSS-1252844328947543812",
       "title": "| 18,25 OTTOBRE – 1,15,22 NOVEMBRE 2026 | SUTRI – “Autunno in famiglia – Pic-nic in campagna”: appuntamento nell’Azienda Agricola Cavazza!",
       "description": "Torna l&#8217;appuntamento con &#8220;autunno in famiglia&#8221;! Cinque giornate tutte da vivere per grandi e piccini presso l&#8217; Azienda Agricola Cavazza (Via delle Tortore &#8211; Sutri VT) . Programma della Giornata 10:30 – 15:30 per ciascuna data del calendario. • 10:30 — accoglienza con ricca colazione di benvenuto • Per i bambini: laboratori creativi sull’autunno e i suoi frutti • Per gli adulti: incontro con il produttore + degustazioni • Passeggiata didattica con racconto di usi e t",
       "startDate": "2026-11-16T00:11:00+00:00",
@@ -525,7 +525,7 @@
       "source": "Eventi della Tuscia"
     },
     {
-      "id": "RSS-2822360192679316499",
+      "id": "RSS-7143665761834690039",
       "title": "| Fino al 27 NOVEMBRE 2026 | TUSCIA – Sinergie 2026: un viaggio tra biblioteche, teatro, musica e letteratura",
       "description": "Un viaggio tra biblioteche, teatro, musica e letteratura alla scoperta di alcuni dei luoghi più affascinanti del territorio laziale. È Sinergie 2026 – Il Festival delle biblioteche , un ricco calendario di appuntamenti che prenderà il via il 20 settembre e ci accompagnerà fino all’ultimo evento, in programma il 27 novembre. Il progetto, realizzato con il contributo della Regione Lazio, è organizzato dal Sistema Bibliotecario Lago di Bolsena insieme ad Archeoares e propone una serie di incontri a",
       "startDate": "2026-11-16T01:16:00+00:00",
@@ -543,7 +543,7 @@
       "source": "Eventi della Tuscia"
     },
     {
-      "id": "RSS-2993721741778829198",
+      "id": "RSS-8536662995293077188",
       "title": "| Dall’ 1 al 30 NOVEMBRE 2026 | CARBOGNANO – Alle Scuderie Farnese in mostra Simone Lipperi: “Oltre il corpo, dentro al colore”",
       "description": "Dal 1° al 30 novembre 2026 alle Scuderie Farnese di Carbognano è in mostra Simone Lipperi – Oltre il corpo, dentro al colore , la personale dedicata alla memoria del pittore carbognanese. Oltre 30 opere in esposizione che ripercorrono la storia artistica del pittore, dagli anni del Liceo Artistico, all’ Accademia delle Belle Arti di Roma, ai suoi lavori esposti nelle mostre capitoline, come quella nella sala del Bramante. Tra i lavori d’archivio si potranno ammirare alcune perle come il volume M",
       "startDate": "2026-11-16T02:18:00+00:00",
@@ -561,7 +561,7 @@
       "source": "Eventi della Tuscia"
     },
     {
-      "id": "RSS-5860112715348482024",
+      "id": "RSS-6433200204565602756",
       "title": "| Dal 20 SETTEMBRE al 22 NOVEMBRE 2026 | CAPRANICA – Al Teatro Francigena torna Impact Festival!",
       "description": "Torna al Teatro Francigena di Capranica l’attesissimo IMPACT FESTIVAL 2026 . Il progetto culturale si compone di 10 imperdibili serate con grandi artisti ed eventi unici per promuovere l’arte e la cultura dal vivo in accordo con il territorio ed il patrimonio artistico locale. Con la Direzione Artistica di Gina Merulla , il programma dal 20 settembre 2026 al 22 novembre 2026 , propone performance teatrali dal vivo e in realtà virtuale, danza, coro e cabaret. Molteplici linguaggi artistici, stori",
       "startDate": "2026-11-16T04:20:00+00:00",
@@ -579,7 +579,7 @@
       "source": "Eventi della Tuscia"
     },
     {
-      "id": "RSS-7816499957169872372",
+      "id": "RSS-7479666589273955177",
       "title": "| 21,22,28,29 NOVEMBRE 2026 | PROCENO – Sagra della Polenta",
       "description": "Proceno , porta del Lazio al confine con la Toscana, si prepara a ospitare la 9ª edizione della Sagra della Polenta , in programma nei fine settimana del 21-22 e 28-29 novembre 2026 . La manifestazione si arricchisce di due appuntamenti dedicati agli amanti dello sport e della natura: Domenica 22 novembre: 6ª Cicloturistica Gravel “Anello di Proceno”, aperta anche a MTB ed e-bike. Domenica 29 dicembre: 6ª Camminata “Anello di Proceno”. Durante le quattro giornate della sagra, oltre a gustare un ",
       "startDate": "2026-11-17T08:00:14+00:00",
@@ -597,7 +597,7 @@
       "source": "Eventi della Tuscia"
     },
     {
-      "id": "RSS-4209787944794367941",
+      "id": "RSS-3583580326097505184",
       "title": "| Dal 21 NOVEMBRE 2026 al 6 GENNAIO 2027 | VITERBO – Nel quartiere medievale di S. Pallegrino è tempo di Viterbo Christmas Village!",
       "description": "Preparati a vivere la notte più incantata dell’anno nella cornice da favola del quartiere medievale di Viterbo , dove la magia delle feste ospita l’evento del Natale 2026 in una cornice storico-architettonica straordinaria, tra palazzi storici, vicoli suggestivi e piazzette caratteristiche, regalando un’atmosfera d’altri tempi che rende l’evento unico e inimitabile rispetto a qualsiasi altro villaggio natalizio. È proprio nel quartiere San Pellegrino dal 21 novembre 2026 al 6 gennaio 2027 , inse",
       "startDate": "2026-11-17T08:17:11+00:00",
@@ -615,7 +615,7 @@
       "source": "Eventi della Tuscia"
     },
     {
-      "id": "RSS-8673274681123477347",
+      "id": "RSS-7369404954985719303",
       "title": "| 21 NOVEMBRE 2026 | RONCIGLIONE – “Fa’ dder bbene scordite, fa’ dder mmale ppenzicce”: la commedia dialettale arriva al Teatro Petrolini!",
       "description": "Prosegue la Stagione Teatrale 2026 del Teatro Comunale “Ettore Petrolini” di Ronciglione, con un nuovo appuntamento dedicato alla comicità e alla valorizzazione delle tradizioni locali. Sabato 21 novembre alle ore 21.00 il palcoscenico ospiterà il Gruppo Spontaneo Canepinese (GSC) , che porterà in scena “Fa’ dder bbene scordite, fa’ dder mmale ppenzicce” , una commedia dialettale canepinese in tre atti, arricchita da intermezzi musicali. Lo spettacolo, scritto da Valter Palozzi, Giuseppe Palazzo",
       "startDate": "2026-11-17T23:53:00+00:00",
@@ -651,7 +651,7 @@
       "source": "Zero"
     },
     {
-      "id": "RSS-5139820287431427004",
+      "id": "RSS-4529615274470294382",
       "title": "| 21,22 NOVEMBRE 2026 | CARBOGNANO – Michele La Ginestra torna al Teatro Bianconi con “Mi Pare Ieri!”",
       "description": "Dopo il clamoroso successo della scorsa stagione e il trionfo al Teatro Sistina di Roma, lo spettacolo che celebra i 40 anni di carriera dell&#8217;attore torna in scena in un imperdibile appuntamento fuori abbonamento. Per la regia di Roberto Marafante , l&#8217;attore romano sarà accompagnato in scena da Alessandro La Ginestra, Luca La Ginestra, Ilaria Nestovito e Fabrizia Scaccia . Questo atteso ritorno rappresenta un&#8217;occasione speciale per rivivere l&#8217;energia di uno spettacolo che",
       "startDate": "2026-11-18T00:38:00+00:00",
@@ -1137,7 +1137,7 @@
       "source": "Eventbrite"
     },
     {
-      "id": "RSS-5481804582385345154",
+      "id": "RSS-7182488570036113145",
       "title": "| 22 NOVEMBRE 2026 | BOLSENA – Prosegue BolsenArte: al Piccolo Teatro Cavour in scena “Se dico donna”",
       "description": "Il 22 novembre, alle ore 18, il Piccolo Teatro Cavour di Bolsena ospita “Se dico donna”, secondo appuntamento di BolsenArte 2026/2027, il festival promosso dal Comune di Bolsena con la direzione artistica del maestro Francesco Traversi. L’ingresso è libero. Lo spettacolo, in programma a pochi giorni dal 25 novembre, Giornata internazionale contro la violenza sulle donne, sottolinea quanto sia importante riconoscere e smontare i condizionamenti culturali per contrastare ogni forma di violenza e d",
       "startDate": "2026-11-19T06:46:07+00:00",
@@ -1155,7 +1155,7 @@
       "source": "Eventi della Tuscia"
     },
     {
-      "id": "RSS-1719053566730067471",
+      "id": "RSS-6570876973666342872",
       "title": "| 21 NOVEMBRE 2026 | CIVITA CASTELLANA – “1946. La Repubblica e la Costituente.”: tutto pronto per il convegno con relatori ed accademici",
       "description": "Attesa a Civita Castellana per l’importante appuntamento di sabato 21 novembre 2026. A partire dalle 17, presso la Sala Conferenze della Curia vescovile di Civita Castellana si terrà il convegno annuale dell’associazione Giorgio La Pira Come sempre, di grande rilevanza storica ed istituzionale il tema che verrà affrontato dal titolo “1946. La Repubblica e la Costituente.” A ottant’anni dall’Assemblea Costituente &nbsp;lo scopo del Convegno è quello di approfondire ulteriormente le complesse e tr",
       "startDate": "2026-11-19T07:08:06+00:00",
@@ -1173,7 +1173,7 @@
       "source": "Eventi della Tuscia"
     },
     {
-      "id": "RSS-3000720456461887614",
+      "id": "RSS-4646128976685833373",
       "title": "| 21 NOVEMBRE 2026 | VITERBO – Alla Stagione concertistica UNITUS il trio Canocchi – Orefice – Buccarella",
       "description": "Il concerto di Sabato 21 novembre 2026, ore 17 (Auditorium Carlo Azeglio Ciampi) sarà tenuto dall&#8217;ottimo Trio costituito dalla violinista Stella Canocchi, dal flautista Marco Orefice e dal pianista Francesco Buccarella. Le interessanti composizioni in programma, di non frequente ascolto , sono di importanti musicisti del ventesimo secolo di culture musicali molto diverse. Saranno eseguite, infatti, di Mel Bonis (Parigi, 1858- Sarcelles, 1937) Suite en Trio, op. 59 ; di Nino Rota (Milano, 1",
       "startDate": "2026-11-19T07:32:43+00:00",
@@ -1191,7 +1191,7 @@
       "source": "Eventi della Tuscia"
     },
     {
-      "id": "RSS-1094549735703369786",
+      "id": "RSS-434333146435809348",
       "title": "| 21 NOVEMBRE 2026 | VASANELLO – Apertura e visita guidata del Castello Orsini, del giardino medievale e della fabbrica delle ceramiche",
       "description": "Sabato 21 novembre si torna al Castello Orsini Misciattelli di Vasanello con apertura speciale insieme alla guida turistica esperta delle dimore storiche della Tuscia, Anna Rita Properzi Vi ritroverete nel cuore della città di Vasanello ma immersi nell&#8217;atmosfera di un luogo in cui il tempo si è fermato: il Castello Orsini, la dimora che appartenne nel corso dei secoli a grandi donne che con intelligenza e grazia hanno plasmato il loro destino, tra queste in modo particolare Giulia Farnese ",
       "startDate": "2026-11-19T08:00:00+00:00",
@@ -1227,6 +1227,366 @@
       "source": "Zero"
     },
     {
+      "id": "Eventbrite-1982630143129",
+      "title": "ACCOMPAGNAMENTO DI PERSONE CON DISABILITA' MOTORIA",
+      "description": "",
+      "startDate": "2026-11-20T08:45:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Le vendite finiranno presto",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Salute & Benessere",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F921828123%2F791714405503%2F1%2Foriginal.20241222-212843?w=640&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C80%2C1280%2C640&s=365d7a093c49568b8ab839226b7e6a72",
+      "url": "https://www.eventbrite.it/e/biglietti-accompagnamento-di-persone-con-disabilita-motoria-1982630143129?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-1993997805112",
+      "title": "Open Day - In Presenza - Lauree Triennali e Magistrali a ciclo unico",
+      "description": "",
+      "startDate": "2026-11-20T09:30:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "In esaurimento",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Family And Education",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189950432%2F2541661024511%2F1%2Foriginal.20260730-113912?w=640&auto=format%2Ccompress&q=75&sharp=10&s=f91bdad3e34528128a7ba064bce05498",
+      "url": "https://www.eventbrite.it/e/biglietti-open-day-in-presenza-lauree-triennali-e-magistrali-a-ciclo-unico-1993997805112?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-1993932195873",
+      "title": "FIX TIME ROMA",
+      "description": "",
+      "startDate": "2026-11-20T10:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Le vendite finiranno presto",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Altro",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1188838244%2F3008087647842%2F1%2Foriginal.20260714-151644?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.502&fp-y=0.499&s=99775cbefbafe581cfcedf81448f57c7",
+      "url": "https://www.eventbrite.com/e/fix-time-roma-tickets-1993932195873?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2004059834914",
+      "title": "Workshop Insta360 Luna Ultra e Luna Pro",
+      "description": "",
+      "startDate": "2026-11-20T10:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Le vendite finiranno presto",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Scienza & Tecnologia",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196918450%2F3019561719019%2F1%2Foriginal.20261030-102455?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=b86e463bd230c6004acca6436ea7980b",
+      "url": "https://www.eventbrite.com/e/biglietti-workshop-insta360-luna-ultra-e-luna-pro-2004059834914?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2003126418039",
+      "title": "Tessitura spontanea con telaio a cornice",
+      "description": "",
+      "startDate": "2026-11-20T10:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Le vendite finiranno presto",
+        "city": "Formello",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Arte & Cultura",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195352673%2F153211630228%2F1%2Foriginal.20261008-094826?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=944876ad4c6ce7dd40cb32411e73bb4a",
+      "url": "https://www.eventbrite.it/e/biglietti-tessitura-spontanea-con-telaio-a-cornice-2003126418039?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2002290015336",
+      "title": "IN ITINERE ROMA | Passeggiata filosofica Cura",
+      "description": "",
+      "startDate": "2026-11-20T10:45:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Parco Regionale dell'Appia Antica",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Salute & Benessere",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194355634%2F188429894378%2F1%2Foriginal.20260925-124321?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=f5350f85dfc2ecc16974fd95cc564b40",
+      "url": "https://www.eventbrite.it/e/in-itinere-roma-passeggiata-filosofica-cura-tickets-2002290015336?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2004704406846",
+      "title": "Mini tour del Pigneto speciale libro \"Pigneto\" con l'autrice e la community",
+      "description": "",
+      "startDate": "2026-11-20T11:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Le vendite finiranno presto",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Comunita' & Tradizioni",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1197757514%2F107378574043%2F1%2Foriginal.20261111-111911?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=0674cff5bd1cccda7bb1f7e9d1b6bb02",
+      "url": "https://www.eventbrite.it/e/mini-tour-del-pigneto-speciale-libro-pigneto-con-lautrice-e-la-community-tickets-2004704406846?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2001558818306",
+      "title": "TechDojo 2.0 - 2026 | Cittadini Digitali di Domani",
+      "description": "",
+      "startDate": "2026-11-20T14:30:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Via Enrico Giglioli, 74",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Scienza & Tecnologia",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194119771%2F187229025731%2F1%2Foriginal.20260922-171118?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.031&fp-y=0.377&s=b139a2951001ce36ca36900f5ede5947",
+      "url": "https://www.eventbrite.it/e/biglietti-techdojo-20-2026-cittadini-digitali-di-domani-2001558818306?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2003817236295",
+      "title": "Atlante di salute urbana di Roma â Presentazione del libro",
+      "description": "",
+      "startDate": "2026-11-20T16:30:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Le vendite finiranno presto",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Salute & Benessere",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196432308%2F295073973698%2F1%2Foriginal.20261023-103904?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.21&fp-y=0.543&s=c366a935f58a633e4fe9d97b0889cd10",
+      "url": "https://www.eventbrite.it/e/biglietti-atlante-di-salute-urbana-di-roma-presentazione-del-libro-2003817236295?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2004131625642",
+      "title": "APERITIVO TROPICALE feat. Sfobbo",
+      "description": "",
+      "startDate": "2026-11-20T17:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Forno Ritorno",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Comunita' & Tradizioni",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196936644%2F718046404133%2F1%2Foriginal.20261030-155417?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.92&fp-y=0.218&s=89f6f6f28d0737bcd69c2b70bfb4be0c",
+      "url": "https://www.eventbrite.it/e/aperitivo-tropicale-feat-sfobbo-tickets-2004131625642?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2004643701274",
+      "title": "Apertura pubblica di Novembre dell'osservatorio V. Cesarini",
+      "description": "",
+      "startDate": "2026-11-20T17:45:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Le vendite finiranno presto",
+        "city": "Frasso Sabino",
+        "region": "Lazio",
+        "province": "Frasso Sabino"
+      },
+      "category": "Scienza & Tecnologia",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196099231%2F46577491005%2F1%2Foriginal.20261019-145345?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.198&fp-y=0.509&s=a7db7577958a14cc30c25c529426f66c",
+      "url": "https://www.eventbrite.it/e/biglietti-apertura-pubblica-di-novembre-dellosservatorio-v-cesarini-2004643701274?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2004588928447",
+      "title": "Tony Montecalvo & The Dream Catchers - Travelin'soul",
+      "description": "",
+      "startDate": "2026-11-20T18:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Le vendite finiranno presto",
+        "city": "Latina",
+        "region": "Lazio",
+        "province": "Latina"
+      },
+      "category": "Musica",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1197598731%2F336958927277%2F1%2Foriginal.20261109-153041?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.477&fp-y=0.013&s=2f06a71a1e4ee439c46191f3f4dc0397",
+      "url": "https://www.eventbrite.it/e/biglietti-tony-montecalvo-the-dream-catchers-travelinsoul-2004588928447?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2004217957864",
+      "title": "Francesco Il dito e la luna - Presentazione libro e incontro con gli autori",
+      "description": "",
+      "startDate": "2026-11-20T18:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "In esaurimento",
+        "city": "Todi",
+        "region": "Umbria",
+        "province": "Perugia"
+      },
+      "category": "Comunita' & Tradizioni",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1197071983%2F573909130851%2F1%2Foriginal.20261102-115352?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.519&fp-y=0.116&s=2812efe79f11d8d8ec8178cc2b225a50",
+      "url": "https://www.eventbrite.it/e/biglietti-francesco-il-dito-e-la-luna-presentazione-libro-e-incontro-con-gli-autori-2004217957864?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2003339919628",
+      "title": "CINEFORUM UNIPG - Never Rarely Sometimes Always",
+      "description": "",
+      "startDate": "2026-11-20T18:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Le vendite finiranno presto",
+        "city": "Perugia",
+        "region": "Umbria",
+        "province": "Perugia"
+      },
+      "category": "Cinema & Media",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196165032%2F200574765514%2F1%2Foriginal.20261020-072459?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.199&fp-y=0.141&s=a0a688b50548bf7f8ed22368108adc40",
+      "url": "https://www.eventbrite.it/e/biglietti-cineforum-unipg-never-rarely-sometimes-always-2003339919628?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2004278761730",
+      "title": "Lectio Petri - Il Cantico dei Cantici (2Â° incontro)",
+      "description": "",
+      "startDate": "2026-11-20T19:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "In esaurimento",
+        "city": "CittÃ del Vaticano",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Spiritualita'",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1197585350%2F368760980179%2F1%2Foriginal.20261109-120536?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=6187cc0c4f656fbd75f28de9b5158386",
+      "url": "https://www.eventbrite.it/e/biglietti-lectio-petri-il-cantico-dei-cantici-2-incontro-2004278761730?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2002191478610",
+      "title": "I limoni non possono entrare",
+      "description": "",
+      "startDate": "2026-11-20T19:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Teatro Finestra ex Claudia",
+        "city": "Aprilia",
+        "region": "Lazio",
+        "province": "Latina"
+      },
+      "category": "Arte & Cultura",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194262337%2F3015291396553%2F1%2Foriginal.20260924-083332?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.204&s=f6aeef470ad19c970d3afde9d6c49035",
+      "url": "https://www.eventbrite.it/e/i-limoni-non-possono-entrare-tickets-2002191478610?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2003719899157",
+      "title": "Cha Chai Ciao! â English Stand-Up Comedy in Rome",
+      "description": "",
+      "startDate": "2026-11-20T19:30:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Le vendite finiranno presto",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Cinema & Media",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196382769%2F1024419205833%2F1%2Foriginal.20261022-173519?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.275&fp-y=0.67&s=e0fb7c03d50d5aeb7f4a2c3e128fcb58",
+      "url": "https://www.eventbrite.it/e/cha-chai-ciao-english-stand-up-comedy-in-rome-tickets-2003719899157?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-1990962054099",
+      "title": "Inno alla Luce Archetipica",
+      "description": "",
+      "startDate": "2026-11-20T20:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Auditorium San Francesco al Prato",
+        "city": "Perugia",
+        "region": "Umbria",
+        "province": "Perugia"
+      },
+      "category": "Arte & Cultura",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1188155739%2F3004150447018%2F1%2Foriginal.20260703-135212?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=c580089f9387320f33f596a7f35cea24",
+      "url": "https://www.eventbrite.it/e/biglietti-inno-alla-luce-archetipica-1990962054099?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2003853211899",
+      "title": "RIGHE STORTE",
+      "description": "",
+      "startDate": "2026-11-20T20:30:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Le vendite finiranno presto",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Arte & Cultura",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196498967%2F3006945523547%2F1%2Foriginal.20261024-131736?w=640&auto=format%2Ccompress&q=75&sharp=10&s=ee7207fffe62a3d4f379fc4da7881959",
+      "url": "https://www.eventbrite.it/e/righe-storte-tickets-2003853211899?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2004124654792",
+      "title": "Leo de Hemingway & Filippo Simoniello - 30 minuti per uno",
+      "description": "",
+      "startDate": "2026-11-20T21:30:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Sinestetica",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Cinema & Media",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196931387%2F3019722539940%2F1%2Foriginal.20261030-144556?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.494&fp-y=0.357&s=4805bc070f4110b4518de52794038d4d",
+      "url": "https://www.eventbrite.it/e/biglietti-leo-de-hemingway-filippo-simoniello-30-minuti-per-uno-2004124654792?aff=ebdssbcitybrowsenightlife",
+      "source": "Eventbrite"
+    },
+    {
       "id": "Eventbrite-2003505650333",
       "title": "Horti Sallustiani",
       "description": "",
@@ -1245,7 +1605,7 @@
       "source": "Eventbrite"
     },
     {
-      "id": "Zero-6070972314502349373",
+      "id": "Zero-1465776336418244063",
       "title": "ØKSE",
       "description": "Flaming Creatures e Zen Arcade presentano il supergruppo svedese di avant-jazz pubblicato da Backwoodz Studioz.",
       "startDate": "2026-11-22T00:00:00+00:00",
@@ -1306,7 +1666,7 @@
       "endDate": null,
       "location": {
         "name": "",
-        "address": "Roma Â· Basilica di Sant'Andrea della Valle",
+        "address": "Le vendite finiranno presto",
         "city": "Roma",
         "region": "Lazio",
         "province": "Roma"
@@ -1407,7 +1767,7 @@
       "source": "Zero"
     },
     {
-      "id": "Zero-9187197951082715153",
+      "id": "Zero-8359170439781280824",
       "title": "USCITA &#8211; Festival espanso nelle librerie di Roma",
       "description": "Seconda edizione della rassegna curata da NERO nelle librerie di Roma. Quattro giorni per parlare di città, spazi, conflitto, ecologie, femminismi, amore, militanza, sud e cinema, attraverso assemblee, incontri, letture, presentazioni, ascolti, mostre, giochi e cortei.",
       "startDate": "2026-11-25T00:00:00+00:00",
@@ -1497,7 +1857,7 @@
       "source": "Eventbrite"
     },
     {
-      "id": "Zero-3940832719310314352",
+      "id": "Zero-1382796893043257011",
       "title": "Organum Multiplum II &#8211; III Capitolo",
       "description": "Torna la rassegna di Villa Lontana che unisce contemporaneo, sacro, artistə internazionalə e organi antichi. Stasera Heinali e Andriana-Yaroslava Saienko presentano \"Гільдеґарда\" (Hildegard), un progetto musicale ispirato alla musica di Ildegarda di Bingen, monaca benedettina, compositrice, mistica e Dottore della Chiesa.",
       "startDate": "2026-11-25T19:30:00+00:00",
@@ -1515,7 +1875,7 @@
       "source": "Zero"
     },
     {
-      "id": "Zero-2737328352260207699",
+      "id": "Zero-6805768624147222272",
       "title": "Daria Deflorian &#8211; &#8220;Che dolore terribile è l’amore&#8221;",
       "description": "Daria Deflorian porta in scena il romnanzo \"Non dico addio\" di Han Kang, Premio Nobel per la Letteratura 2024. Al centro dell’opera si trova una delle pagine più dolorose della storia della Corea del Sud: la repressione della rivolta del 1948 sull’isola di Jeju, che provocò il massacro di migliaia di civili.",
       "startDate": "2026-11-26T00:00:00+00:00",
@@ -1531,6 +1891,24 @@
       "image": "https://cdn.zero.eu/uploads/2026/10/Che-dolore-terribile-e-lamore-sito-1.png",
       "url": "https://zero.eu/it/eventi/382457-daria-deflorian-che-dolore-terribile-e-lamore-2,roma/",
       "source": "Zero"
+    },
+    {
+      "id": "Eventbrite-2001363307528",
+      "title": "PRIMA DI RISPONDERE",
+      "description": "",
+      "startDate": "2026-11-26T10:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Via Prenestina Nuova, 307A",
+        "city": "Palestrina",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Family And Education",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193729552%2F1222941149483%2F1%2Foriginal.20260917-090140?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.467&fp-y=0.014&s=c5a2cda8efccc8f6a6168486998e2fe8",
+      "url": "https://www.eventbrite.it/e/prima-di-rispondere-tickets-2001363163096?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
     },
     {
       "id": "Eventbrite-2003662809400",
@@ -1605,7 +1983,7 @@
       "source": "Eventbrite"
     },
     {
-      "id": "Zero-5078153602150274623",
+      "id": "Zero-6998365932066224616",
       "title": "Toni Zeno",
       "description": "Il rapper messinese, una delle nuove leve più convincenti nell'hip-hop conscious italiano, arriva a Roma sul palco dell'Alcazar.",
       "startDate": "2026-11-26T21:00:00+00:00",
@@ -1641,6 +2019,60 @@
       "source": "Zero"
     },
     {
+      "id": "Zero-8812458052877561168",
+      "title": "Funzilla &#8211; Rome Photozine Festival",
+      "description": "Tre giorni di immersione tra decine di fanzine fotografiche, italiane ed estere.",
+      "startDate": "2026-11-27T00:00:00+00:00",
+      "endDate": "2026-11-29T00:00:00+00:00",
+      "location": {
+        "name": "Città dell&#8217;Altra Economia",
+        "address": "Largo Dino Frisullo,, Roma",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Musica",
+      "image": "https://cdn.zero.eu/uploads/2026/09/funzilla-e1790767296507.jpg",
+      "url": "https://zero.eu/it/eventi/379752-funzilla-fest-2026,roma/",
+      "source": "Zero"
+    },
+    {
+      "id": "Zero-4759037549797286120",
+      "title": "Kim Westfall &#8211; &#8220;The Gap&#8221;",
+      "description": "Con fare pittorico, l'artista coreana realizza attraverso tessuti e fibre immagini che raccontano di confini remoti e zone di esclusione ereditate della Guerra Fredda. Opening venerdì 27 novembre dalle 19:00 1alle 21:00",
+      "startDate": "2026-11-27T00:00:00+00:00",
+      "endDate": "2027-01-22T00:00:00+00:00",
+      "location": {
+        "name": "T293",
+        "address": "Piazza del Catalone,, Roma",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Eventi & Cultura",
+      "image": "https://cdn.zero.eu/uploads/2026/11/unnamed-6-1-e1794913912513.jpg",
+      "url": "https://zero.eu/it/eventi/384322-kim-westfall-the-gap,roma/",
+      "source": "Zero"
+    },
+    {
+      "id": "Zero-8337780819060502030",
+      "title": "Blaze x Circolo dei Cerchi",
+      "description": "Un lungo viaggio al centro della notte sul dancefloor del Tag. In apertura Carlo Amadori, poi triplo b2b2 tra Costanza, LPLPLP e Gattonero, il tutto con il suppoto del TommySound.",
+      "startDate": "2026-11-27T02:00:00+00:00",
+      "endDate": "2026-11-27T00:00:00+00:00",
+      "location": {
+        "name": "Tevere Art Gallery",
+        "address": "Via di Santa Passera, 25, Roma",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Eventi & Cultura",
+      "image": "https://cdn.zero.eu/uploads/2026/11/SnapInsta.to_734067597_17957561694147292_2825080104059512052_n-e1794930761182.jpg",
+      "url": "https://zero.eu/it/eventi/384921-blaze-x-circolo-dei-cerchi,roma/",
+      "source": "Zero"
+    },
+    {
       "id": "Eventbrite-2004280609256",
       "title": "Energia Condivisa, Valore per il Territorio",
       "description": "",
@@ -1656,6 +2088,24 @@
       "category": "Business",
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1197157557%2F3020142572731%2F1%2Foriginal.20261103-100540?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=a3f38a106236e3d1e3f114065caf3a8e",
       "url": "https://www.eventbrite.it/e/biglietti-energia-condivisa-valore-per-il-territorio-2004280609256?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2005034952517",
+      "title": "Giornata sui beni confiscati organizzata da Libera Umbria e Scipol Unipg",
+      "description": "",
+      "startDate": "2026-11-27T09:30:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Pietralunga e Dipartimento di Scipol Unipg",
+        "city": "Perugia",
+        "region": "Umbria",
+        "province": "Perugia"
+      },
+      "category": "Beneficenza",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1198248569%2F3021694675929%2F1%2Foriginal.20261118-154127?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.496&fp-y=0.041&s=580da0d43e6e2d4987841144a6bceed5",
+      "url": "https://www.eventbrite.com/e/giornata-sui-beni-confiscati-organizzata-da-libera-umbria-e-scipol-unipg-tickets-2005034952517?aff=ebdssbcitybrowse",
       "source": "Eventbrite"
     },
     {
@@ -1693,6 +2143,42 @@
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189874702%2F220267506464%2F1%2Foriginal.20260729-134114?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=b0b5cb45bf83542707f9123b02773852",
       "url": "https://www.eventbrite.it/e/la-scelta-della-gioia-tickets-1995921626313?aff=ebdssbcitybrowse",
       "source": "Eventbrite"
+    },
+    {
+      "id": "Zero-2761751554639671690",
+      "title": "scivoliiii w/ Js Donny",
+      "description": "Dal vivo la chitarrista e producer francese, tra alternative rock e doom folk. A seguire dj set di Portamento.",
+      "startDate": "2026-11-27T22:00:00+00:00",
+      "endDate": "2026-11-27T00:00:00+00:00",
+      "location": {
+        "name": "30Formiche",
+        "address": "Via del Mandrione, 3, 00176, Roma",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Musica",
+      "image": "https://cdn.zero.eu/uploads/2026/10/475127489_627667092978284_4924802761627899731_n.jpg",
+      "url": "https://zero.eu/it/eventi/382957-js-donny,roma/",
+      "source": "Zero"
+    },
+    {
+      "id": "Zero-3231973649890048021",
+      "title": "Vestalia",
+      "description": "Torna il sound di Vestalia negli immortali spazi del Forte Prenestino. In line-up Neel Dep Maskk, Meg, Future Nomadz, Cosimo Damiano, Emi Maggi, Filippo Scorcucchi e Bluemarina.",
+      "startDate": "2026-11-27T22:00:00+00:00",
+      "endDate": "2026-11-27T00:00:00+00:00",
+      "location": {
+        "name": "Forte Prenestino",
+        "address": "Via Federico Delpino,, 00171, Roma",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Eventi & Cultura",
+      "image": "https://cdn.zero.eu/uploads/2025/11/Screenshot-2025-11-04-alle-15.11.18.png",
+      "url": "https://zero.eu/it/eventi/383935-vestalia-forte-prenestino,roma/",
+      "source": "Zero"
     },
     {
       "id": "Eventbrite-2004289268155",
@@ -1803,6 +2289,24 @@
       "source": "Eventbrite"
     },
     {
+      "id": "Eventbrite-2004660249771",
+      "title": "FUTURAMA - Semi di cittÃ possibili",
+      "description": "",
+      "startDate": "2026-12-01T14:30:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Acquario romano",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Comunita' & Tradizioni",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1197837050%2F3020893245916%2F1%2Foriginal.20261112-113507?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.015&fp-y=0.4&s=8cf20ea73b9c985d474f3e9f012ae1c0",
+      "url": "https://www.eventbrite.com/e/futurama-semi-di-citta-possibili-tickets-2004660249771?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
       "id": "Eventbrite-2004546694123",
       "title": "Oltre l'ultima nota. La musica finisce, il bene continua",
       "description": "",
@@ -1857,6 +2361,42 @@
       "source": "Eventbrite"
     },
     {
+      "id": "Eventbrite-1995922634328",
+      "title": "TikTok TAC â il risveglio del Principe",
+      "description": "",
+      "startDate": "2026-12-04T11:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Teatro Comunale Vittorio Gassman Ripi",
+        "city": "Ripi",
+        "region": "Lazio",
+        "province": "Frosinone"
+      },
+      "category": "Arte & Cultura",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189875019%2F220267506464%2F1%2Foriginal.20260729-134602?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=f660a654ff08de4caf7ff27bf978c608",
+      "url": "https://www.eventbrite.it/e/tiktok-tac-il-risveglio-del-principe-tickets-1995922634328?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2005061689488",
+      "title": "Isola di Einstein 2026 - La tavola delle meraviglie",
+      "description": "",
+      "startDate": "2026-12-05T18:30:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Auditorium Santa Cecilia",
+        "city": "Perugia",
+        "region": "Umbria",
+        "province": "Perugia"
+      },
+      "category": "Scienza & Tecnologia",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1198287807%2F40762922962%2F1%2Foriginal.20261119-003220?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=f48ed092cb1ea8d81ccd548abfa1165a",
+      "url": "https://www.eventbrite.it/e/biglietti-isola-di-einstein-2026-la-tavola-delle-meraviglie-2005061689488?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
       "id": "Eventbrite-1995923082669",
       "title": "La scelta della gioia",
       "description": "",
@@ -1872,6 +2412,24 @@
       "category": "Arte & Cultura",
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189874702%2F220267506464%2F1%2Foriginal.20260729-134114?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=b0b5cb45bf83542707f9123b02773852",
       "url": "https://www.eventbrite.it/e/la-scelta-della-gioia-tickets-1995923082669?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2004885235710",
+      "title": "MAS Gospel Choir per Marianna",
+      "description": "",
+      "startDate": "2026-12-05T21:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "NovitÃ",
+        "city": "Narni",
+        "region": "Umbria",
+        "province": "Narni"
+      },
+      "category": "Musica",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1198109997%2F964551656103%2F1%2Foriginal.20261116-211703?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.498&fp-y=0.39&s=7caf8811eb0e9db98d67edf66dc2799e",
+      "url": "https://www.eventbrite.it/e/biglietti-mas-gospel-choir-per-marianna-2004885235710?aff=ebdssbcitybrowse",
       "source": "Eventbrite"
     },
     {
@@ -1947,6 +2505,24 @@
       "source": "Eventbrite"
     },
     {
+      "id": "Eventbrite-2004970618091",
+      "title": "BWC - Bollicine Wine Fest 4Â° edizione",
+      "description": "",
+      "startDate": "2026-12-08T16:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "NovitÃ",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Sagre & Enogastronomia",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1198187969%2F2984333916565%2F1%2Foriginal.20261117-195210?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.494&fp-y=0.528&s=51a487624b636e197423e1f6e1bd5b76",
+      "url": "https://www.eventbrite.com/e/bwc-bollicine-wine-fest-4-edizione-tickets-2004970618091?aff=ebdssbdestsearch",
+      "source": "Eventbrite"
+    },
+    {
       "id": "Eventbrite-2003122461204",
       "title": "SMAU Umbria 2026",
       "description": "",
@@ -1962,6 +2538,24 @@
       "category": "Business",
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195782192%2F155166130626%2F1%2Foriginal.20261014-142713?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=f952c25bc22a41cf1df380f2e8c68617",
       "url": "https://www.eventbrite.it/e/biglietti-smau-umbria-2026-2003122461204?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2004885183554",
+      "title": "Multiplayer.it: la notte dei TGA Roma",
+      "description": "",
+      "startDate": "2026-12-10T18:30:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "NovitÃ",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Cinema & Media",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1198066672%2F205896777633%2F1%2Foriginal.20261116-120234?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.812&fp-y=0.687&s=4c5c6c61cb24f08fa055876fc52c2b1f",
+      "url": "https://www.eventbrite.it/e/biglietti-multiplayerit-la-notte-dei-tga-roma-2004885183554?aff=ebdssbdestsearch",
       "source": "Eventbrite"
     },
     {
@@ -2019,6 +2613,60 @@
       "source": "Eventbrite"
     },
     {
+      "id": "Eventbrite-2004917403926",
+      "title": "Attenti a quei 7...piÃ¹ uno",
+      "description": "",
+      "startDate": "2026-12-12T21:30:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Teatro Subasio",
+        "city": "Spello",
+        "region": "Umbria",
+        "province": "Spello"
+      },
+      "category": "Arte & Cultura",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195542367%2F259952004930%2F1%2Foriginal.20261011-111905?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.529&fp-y=0.669&s=67eefe984d8f190c4260f143b9899d20",
+      "url": "https://www.eventbrite.com/e/biglietti-attenti-a-quei-7piu-uno-2004917403926?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2004685579533",
+      "title": "Visita guidata ai santuari francescani della Valle Santa di Rieti",
+      "description": "",
+      "startDate": "2026-12-13T09:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "In esaurimento",
+        "city": "Pomezia",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Viaggi & Outdoor",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1197725705%2F145797085200%2F1%2Foriginal.20261110-224035?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.94&fp-y=0.017&s=e86946b4d1e3f311a25ba39abf90387e",
+      "url": "https://www.eventbrite.it/e/visita-guidata-ai-santuari-francescani-della-valle-santa-di-rieti-tickets-2004685579533?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2003807434979",
+      "title": "Vino e Cioccolato: una storia dâamore e di armoniaâ¦possibile!",
+      "description": "",
+      "startDate": "2026-12-16T20:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "Roma Â· Vinoteca Tempere Prati",
+        "city": "Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Sagre & Enogastronomia",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196424621%2F359805918495%2F1%2Foriginal.20261023-074814?crop=focalpoint&fit=crop&w=640&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.646&fp-y=0.542&s=42cafa5462616853698ba9efe28b04f7",
+      "url": "https://www.eventbrite.com/e/vino-e-cioccolato-una-storia-damore-e-di-armoniapossibile-tickets-2003807434979?aff=ebdssbdestsearch",
+      "source": "Eventbrite"
+    },
+    {
       "id": "Eventbrite-2003562219533",
       "title": "DUO PAOLTRONI - TEMPESTINI - La Voce dell'Uomo",
       "description": "",
@@ -2063,6 +2711,24 @@
       "location": {
         "name": "",
         "address": "sabato alle 10:00 + altri 3",
+        "city": "Campagnano di Roma",
+        "region": "Lazio",
+        "province": "Roma"
+      },
+      "category": "Viaggi & Outdoor",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F881502033%2F26019430927%2F1%2Foriginal.20241023-131331?w=640&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C31%2C1000%2C500&s=ec525c894d0b8a8094b475af3a95eb07",
+      "url": "https://www.eventbrite.it/e/visita-casa-lammonite-a-campagnano-tickets-1056629470189?aff=ebdssbcitybrowse",
+      "source": "Eventbrite"
+    },
+    {
+      "id": "Eventbrite-2003956720496",
+      "title": "Visita casa l'Ammonite a Campagnano",
+      "description": "",
+      "startDate": "2037-11-20T00:00:00",
+      "endDate": null,
+      "location": {
+        "name": "",
+        "address": "domani alle 12:00 + altri 3",
         "city": "Campagnano di Roma",
         "region": "Lazio",
         "province": "Roma"
